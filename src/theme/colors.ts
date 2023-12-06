@@ -21,14 +21,14 @@ function colors(darkMode: boolean): Colors {
     neutral1: darkMode ? '#FCFCFD' : '#141416',
 
     //primary colors
-    primary1: '#09DCAE',
-    primary2: '#00B58D',
+    primary1: '#C7EB00',
+    primary2: '#5A45FE',
     primary3: '#07C39A',
     primary4: '#9DE7CC',
 
     // secondary colors
-    secondary1: '#FA5547',
-    secondary2: '#EA850F',
+    secondary1: '#C7EB00',
+    secondary2: '#5A45FE',
 
     // other
     info1: '#3A8EEF',
