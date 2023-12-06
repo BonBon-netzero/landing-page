@@ -1,0 +1,10 @@
+## Please check .eslintignore and .gitignore when changing this file
+
+## file extensions
+*.css
+*.svg
+*.png
+*.jpg
+*.po
+*.md
+.*
