@@ -1,8 +1,5 @@
 import { ReactNode } from 'react'
 
-import TechComBankLogo from 'assets/icons/ic-tcb.png'
-import VietComBankLogo from 'assets/icons/ic-vcb.png'
-
 export const LINKS = {
   whitepaper: '',
   telegram: '',
@@ -45,16 +42,4 @@ interface BankInfoProps {
   id: string
   text: ReactNode
   icon: string
-}
-export const BANK_INFO: { [key: string]: BankInfoProps } = {
-  VIETCOMBANK: {
-    id: 'VIETCOMBANK',
-    text: 'Vietcombank',
-    icon: VietComBankLogo.src,
-  },
-  TECHCOMBANK: {
-    id: 'TECHCOMBANK',
-    text: 'Techcombank',
-    icon: TechComBankLogo.src,
-  },
 }
