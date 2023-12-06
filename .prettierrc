@@ -1,0 +1,8 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 120,
+  "importOrder": ["^(translations|abis|apis|entities|theme|pages|components|assets|hooks|utils)/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
