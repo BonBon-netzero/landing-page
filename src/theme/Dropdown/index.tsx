@@ -2,7 +2,7 @@
 import { CaretDown, CaretUp, Check } from '@phosphor-icons/react'
 import css, { SystemStyleObject } from '@styled-system/css'
 import RcDropdown from 'rc-dropdown'
-import React, { FC, ReactNode, useState } from 'react'
+import { FC, ReactNode, useState } from 'react'
 import OutsideClickHandler from 'react-outside-click-handler'
 import styled from 'styled-components/macro'
 import { GridProps, LayoutProps } from 'styled-system'

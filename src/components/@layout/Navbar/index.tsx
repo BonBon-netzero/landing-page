@@ -7,11 +7,10 @@ import styled from 'styled-components/macro'
 
 import flagEn from 'assets/ldp/flag_en.svg'
 import flagVn from 'assets/ldp/flag_vn.svg'
+import { LogoWithText } from 'components/@ui/Logo'
 import Dropdown, { DropdownItem } from 'theme/Dropdown'
 import { Box, Flex, Type } from 'theme/base'
 import zIndex from 'utils/config/zIndex'
-
-import { LogoWithText } from './Logo'
 
 export default function Navbar() {
   // const { show, scrollY } = useScrollVisible({ byDirection: true });

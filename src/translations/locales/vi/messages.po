@@ -13,6 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+msgid "“Above all, the world will definitely reach the net-zero goal in 2050” 🌏"
+msgstr ""
+
 msgid "{label} is required"
 msgstr "{label} là bắt buộc"
 
@@ -28,8 +31,29 @@ msgstr "{label} phải lớn hơn hoặc bằng {0}"
 msgid "{label} must be less than or equal to {0}"
 msgstr "{label} phải nhỏ hơn hoặc bằng {0}"
 
+msgid "© 2023 BonBon. All right reserved ☕"
+msgstr ""
+
+msgid "Accelerating humanity's transition"
+msgstr ""
+
 msgid "An error occurs. Please try again"
 msgstr "Đã có lỗi xảy ra, vui lòng thử lại."
+
+msgid "BonBon <0/> To Netzero"
+msgstr ""
+
+msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
+msgstr ""
+
+msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products"
+msgstr ""
+
+msgid "Creating global equality"
+msgstr ""
+
+msgid "Document"
+msgstr ""
 
 msgid "English"
 msgstr "Tiếng Anh"
@@ -37,11 +61,29 @@ msgstr "Tiếng Anh"
 msgid "Error"
 msgstr "Lỗi"
 
+msgid "Find & use green brands"
+msgstr ""
+
 msgid "Go to our <0>homepage</0> and start fresh."
 msgstr "Trở về <0>trang chủ</0> để bắt đầu lại."
 
 msgid "Go to page"
 msgstr "Đến trang"
+
+msgid "How BonBon works? ⚙"
+msgstr ""
+
+msgid "Join our community zalo here"
+msgstr ""
+
+msgid "Join Waitlist"
+msgstr ""
+
+msgid "Live Demo"
+msgstr ""
+
+msgid "Look for your favorite services and brands that you use frequently."
+msgstr ""
 
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Trang này không tồn tại."
@@ -52,8 +94,26 @@ msgstr "Không có dữ liệu"
 msgid "of {total} records"
 msgstr "của {total} dữ liệu"
 
+msgid "Open App"
+msgstr ""
+
+msgid "Open the Bonbon app and start your journey"
+msgstr ""
+
+msgid "Our mission is help the world reach the net-zero goal in 2050"
+msgstr ""
+
+msgid "Our partners and backers"
+msgstr ""
+
+msgid "Promote bussiness aplly ESG"
+msgstr ""
+
 msgid "Pseudo"
 msgstr "Pseudo"
+
+msgid "Received rewards"
+msgstr ""
 
 msgid "Share"
 msgstr "Chia sẻ"
@@ -61,8 +121,29 @@ msgstr "Chia sẻ"
 msgid "Show per page"
 msgstr "Hiện mỗi trang"
 
+msgid "Step 1"
+msgstr ""
+
+msgid "Step 3"
+msgstr ""
+
+msgid "Step 4"
+msgstr ""
+
+msgid "Step2"
+msgstr ""
+
 msgid "Success"
 msgstr "Thành công"
 
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
+
+msgid "What if we succeeded? ️🏆"
+msgstr ""
+
+msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa,it will create equity in the fight against climate change"
+msgstr ""
+
+msgid "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
+msgstr ""

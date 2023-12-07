@@ -13,7 +13,7 @@ const Logo = ({ size = 32 }: { size?: number | number[] }) => {
 }
 export const LogoWithText = ({ size = 32 }: { size?: number | number[] }) => {
   return (
-    <Box height={size} sx={{ aspectRatio: '134/36', position: 'relative' }} as="a" href="/">
+    <Box height={size} sx={{ aspectRatio: '134/36', position: 'relative', display: 'block' }} as="a" href="/">
       <Image src={logoWithText.src} fill alt="logo" />
     </Box>
   )

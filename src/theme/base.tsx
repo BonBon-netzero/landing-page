@@ -87,10 +87,10 @@ export const Type = {
     return (
       <TextWrapper
         as="h1"
-        fontSize={['64px', '64px', '72px', '110px']}
-        lineHeight={['64px', '64px', '72px', '110px']}
-        fontWeight="900"
-        letterSpacing="-2.2px"
+        fontSize={['40px', '40px', '64px', '64px']}
+        lineHeight={['48px', '48px', '64px', '64px']}
+        fontWeight="700"
+        letterSpacing="-0.96px"
         {...props}
       >
         {children}

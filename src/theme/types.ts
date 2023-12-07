@@ -1,5 +1,5 @@
 import { SystemStyleObject } from '@styled-system/css'
-import { HTMLAttributes, ReactNode } from 'react'
+import { HTMLAttributes, ReactNode, SVGAttributes } from 'react'
 import { DefaultTheme } from 'styled-components/macro'
 import { ColorProps, FlexboxProps, GridProps, LayoutProps, SpaceProps, TypographyProps } from 'styled-system'
 
@@ -48,6 +48,7 @@ export type Colors = {
   modalBG: Color
   cardBG: Color
   stroke: Color
+  stroke1: Color
 }
 
 export type VariantProps = {
@@ -72,7 +73,7 @@ export type BoxProps = SpaceProps &
   SxProps & { itemId?: number | string } & { color?: string }
 
 export type DivProps = BoxProps & HTMLAttributes<HTMLDivElement>
-
+export type SvgProps = SpaceProps & LayoutProps & ColorProps & SxProps & SVGAttributes<SVGElement>
 export type SpacingProps = SpaceProps & HTMLAttributes<HTMLDivElement>
 
 export type IconProps = BoxProps & {

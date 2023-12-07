@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ContentLoader from 'react-content-loader'
 
 import { Flex } from 'theme/base'
