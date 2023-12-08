@@ -89,7 +89,9 @@ function theme(darkMode: boolean): DefaultTheme {
     variants: {
       card: {
         border: '1px solid',
-        borderColor: 'stroke',
+        borderColor: 'stroke1',
+        boxShadow: '0px 8px 24px 0px rgba(149, 157, 165, 0.20)',
+        backgroundColor: 'white',
       },
       cardBlur: {
         border: '1px solid',

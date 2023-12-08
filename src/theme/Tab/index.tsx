@@ -153,7 +153,7 @@ const Tabs = ({
                     px={2}
                     bg="neutral7"
                     color={activeTab === tab.key ? 'primary2' : 'neutral5'}
-                    fontWeight="400"
+                    fontWeight="normal"
                     sx={{
                       borderRadius: 'xs',
                     }}

@@ -1,10 +1,30 @@
-export default function TwitterIcon() {
+import { Box, Svg } from 'theme/base'
+import { SvgProps } from 'theme/types'
+
+const TwitterIcon = ({
+  size = 24,
+  variant = 'Outline',
+  ...props
+}: { size?: number; variant?: 'Bold' | 'Outline' } & SvgProps) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-      <path
-        d="M22.96 6C22.19 6.35 21.36 6.58 20.5 6.69C21.38 6.16 22.06 5.32 22.38 4.31C21.55 4.81 20.63 5.16 19.66 5.36C18.87 4.5 17.76 4 16.5 4C14.15 4 12.23 5.92 12.23 8.29C12.23 8.63 12.27 8.96 12.34 9.27C8.78004 9.09 5.61004 7.38 3.50004 4.79C3.13004 5.42 2.92004 6.16 2.92004 6.94C2.92004 8.43 3.67004 9.75 4.83004 10.5C4.12004 10.5 3.46004 10.3 2.88004 10V10.03C2.88004 12.11 4.36004 13.85 6.32004 14.24C5.69077 14.4122 5.03013 14.4362 4.39004 14.31C4.66165 15.1625 5.19358 15.9084 5.91106 16.4429C6.62854 16.9775 7.49549 17.2737 8.39004 17.29C6.87367 18.4904 4.99404 19.1393 3.06004 19.13C2.72004 19.13 2.38004 19.11 2.04004 19.07C3.94004 20.29 6.20004 21 8.62004 21C16.5 21 20.83 14.46 20.83 8.79C20.83 8.6 20.83 8.42 20.82 8.23C21.66 7.63 22.38 6.87 22.96 6Z"
-        fill="#FCFCFD"
-      />
-    </svg>
+    <Box sx={{ width: size, height: size, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Svg
+        {...props}
+        width={size * 0.8125}
+        height={(24 * size * 0.8125) / 29}
+        viewBox="0 0 28 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M10.6146 12.7681L0.5 0H8.51151L14.7552 7.89154L21.4256 0.0355317H25.8379L16.8886 10.588L27.5 24H19.5124L12.7518 15.4658L5.5341 23.9763H1.09787L10.6146 12.7681ZM20.6766 21.6343L5.41239 2.3657H7.34636L22.5914 21.6343H20.6766Z"
+          fill="currentColor"
+        />
+      </Svg>
+    </Box>
   )
 }
+
+export default TwitterIcon

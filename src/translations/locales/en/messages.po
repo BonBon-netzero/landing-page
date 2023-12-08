@@ -13,6 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+msgid "“Above all, the world will definitely reach the net-zero goal in 2050” 🌏"
+msgstr "“Above all, the world will definitely reach the net-zero goal in 2050” 🌏"
+
 msgid "{label} is required"
 msgstr "{label} is required"
 
@@ -28,8 +31,29 @@ msgstr "{label} must be greater than or equal to {0}"
 msgid "{label} must be less than or equal to {0}"
 msgstr "{label} must be less than or equal to {0}"
 
+msgid "© 2023 BonBon. All right reserved ☕"
+msgstr "© 2023 BonBon. All right reserved ☕"
+
+msgid "Accelerating humanity's transition"
+msgstr "Accelerating humanity's transition"
+
 msgid "An error occurs. Please try again"
 msgstr "An error occurs. Please try again"
+
+msgid "BonBon <0/> To Netzero"
+msgstr "BonBon <0/> To Netzero"
+
+msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
+msgstr "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
+
+msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products"
+msgstr "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products"
+
+msgid "Creating global equality"
+msgstr "Creating global equality"
+
+msgid "Document"
+msgstr "Document"
 
 msgid "English"
 msgstr "English"
@@ -37,11 +61,32 @@ msgstr "English"
 msgid "Error"
 msgstr "Error"
 
+msgid "Find & use green brands"
+msgstr "Find & use green brands"
+
 msgid "Go to our <0>homepage</0> and start fresh."
 msgstr "Go to our <0>homepage</0> and start fresh."
 
 msgid "Go to page"
 msgstr "Go to page"
+
+msgid "How BonBon works? ⚙"
+msgstr "How BonBon works? ⚙"
+
+msgid "Join our community here"
+msgstr "Join our community here"
+
+msgid "Join our community zalo here"
+msgstr "Join our community zalo here"
+
+msgid "Join Waitlist"
+msgstr "Join Waitlist"
+
+msgid "Live Demo"
+msgstr "Live Demo"
+
+msgid "Look for your favorite services and brands that you use frequently."
+msgstr "Look for your favorite services and brands that you use frequently."
 
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Looks Like You've Hit a Dead End."
@@ -52,8 +97,26 @@ msgstr "No Data Found"
 msgid "of {total} records"
 msgstr "of {total} records"
 
+msgid "Open App"
+msgstr "Open App"
+
+msgid "Open the Bonbon app and start your journey"
+msgstr "Open the Bonbon app and start your journey"
+
+msgid "Our mission is help the world reach the net-zero goal in 2050"
+msgstr "Our mission is help the world reach the net-zero goal in 2050"
+
+msgid "Our partners and backers"
+msgstr "Our partners and backers"
+
+msgid "Promote business apply ESG"
+msgstr "Promote business apply ESG"
+
 msgid "Pseudo"
 msgstr "Pseudo"
+
+msgid "Received rewards"
+msgstr "Received rewards"
 
 msgid "Share"
 msgstr "Share"
@@ -61,8 +124,29 @@ msgstr "Share"
 msgid "Show per page"
 msgstr "Show per page"
 
+msgid "Step 1"
+msgstr "Step 1"
+
+msgid "Step 3"
+msgstr "Step 3"
+
+msgid "Step 4"
+msgstr "Step 4"
+
+msgid "Step2"
+msgstr "Step2"
+
 msgid "Success"
 msgstr "Success"
 
 msgid "Vietnamese"
 msgstr "Vietnamese"
+
+msgid "What if we succeeded? ️🏆"
+msgstr "What if we succeeded? ️🏆"
+
+msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa,it will create equity in the fight against climate change"
+msgstr "When reducing 1tCO2 in Europe is equally valuable as in Africa,it will create equity in the fight against climate change"
+
+msgid "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
+msgstr "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."

@@ -48,6 +48,7 @@ function colors(darkMode: boolean): Colors {
     modalBG: darkMode ? 'rgba(0, 0, 0, 0.3)' : 'rgba(0, 0, 0, 0.3)',
     cardBG: 'rgba(49, 56, 86, 0.20)',
     stroke: '#EEF0F1',
+    stroke1: '#E6EAEE',
   }
 }
 

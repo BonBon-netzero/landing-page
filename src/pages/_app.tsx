@@ -12,6 +12,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { ThemeProvider } from 'styled-components/macro'
 import { setLocale } from 'yup'
 
+import Footer from 'components/@layout/Footer'
 import Navbar from 'components/@layout/Navbar'
 import PageScript from 'components/@pages/Script'
 import { DialogProvider } from 'hooks/useDialog'
@@ -29,8 +30,8 @@ const queryClient = new QueryClient({
   },
 })
 
-const NAVBAR_HEIGHT = 72
-const FOOTER_HEIGHT = 205
+// const NAVBAR_HEIGHT = 72
+// const FOOTER_HEIGHT = 0
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const i18n = useLinguiInit(pageProps.i18n)
@@ -43,10 +44,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <ThemedGlobalStyle />
           <QueryClientProvider client={queryClient}>
             <Navbar />
-            <div style={{ paddingTop: NAVBAR_HEIGHT, minHeight: `calc(100svh - ${FOOTER_HEIGHT}px)` }}>
+            <div style={{ height: '100%', width: '100%', maxWidth: '2640px', margin: '0 auto' }}>
               <Hydrate state={pageProps.dehydratedState}>
                 <Component {...pageProps} />
               </Hydrate>
+              <Footer />
             </div>
           </QueryClientProvider>
         </DialogProvider>

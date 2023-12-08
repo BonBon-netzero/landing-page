@@ -17,7 +17,9 @@ export const WEBSITE_URL = process.env.NEXT_PUBLIC_URL
 export const API_URL = process.env.NEXT_PUBLIC_API
 export const SCAN_URL = process.env.NEXT_PUBLIC_SCAN
 
-export const FONT_FAMILY = 'Barlow'
+// export const FONT_FAMILY = 'Barlow'
+export const FONT_FAMILY = 'AeonikPro'
+export const SUB_FONT_FAMILY = 'Barlow'
 export const DATE_FORMAT = 'YYYY/MM/DD'
 export const DAYJS_FULL_DATE_FORMAT = 'YYYY/MM/DD - HH:mm A'
 

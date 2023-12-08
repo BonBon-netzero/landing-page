@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-restricted-imports
 import { Trans } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import Image from 'next/image'
@@ -7,23 +6,16 @@ import styled from 'styled-components/macro'
 
 import flagEn from 'assets/ldp/flag_en.svg'
 import flagVn from 'assets/ldp/flag_vn.svg'
+import { LogoWithText } from 'components/@ui/Logo'
+import useScrollVisible from 'hooks/helpers/useScrollVisible'
 import Dropdown, { DropdownItem } from 'theme/Dropdown'
 import { Box, Flex, Type } from 'theme/base'
 import zIndex from 'utils/config/zIndex'
 
-import { LogoWithText } from './Logo'
-
 export default function Navbar() {
-  // const { show, scrollY } = useScrollVisible({ byDirection: true });
-  // const [isVisible, setIsVisible] = useState(true)
-  // useEffect(() => {
-  //   let timeout = setTimeout(() => {
-  //     setIsVisible(true);
-  //   }, DELAY_INITIAL_LOAD);
-  //   return () => clearTimeout(timeout);
-  // }, []);
   const { i18n } = useLingui()
-  console.log('locale', i18n.locale)
+
+  const { show } = useScrollVisible()
 
   return (
     <Box
@@ -40,7 +32,7 @@ export default function Navbar() {
         bg: 'white',
         borderBottom: '1px solid',
         borderColor: 'neutral7',
-        // opacity: isVisible ? 1 : 0,
+        opacity: show ? 1 : 0,
       }}
       height={72}
     >

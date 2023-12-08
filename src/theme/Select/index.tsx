@@ -96,7 +96,7 @@ const StyledSelect = styled(ReactSelect)<SelectProps>(
             '&--is-selected:not([disabled])': {
               bg: 'neutral7',
               color: 'neutral1',
-              fontWeight: '600',
+              fontWeight: 'normal',
             },
             '&--is-focused:not([disabled])': {
               bg: 'neutral7',
@@ -119,7 +119,7 @@ const SelectDropdownIndicator = () => {
 const SelectStyles = {
   indicatorSeparator: () => ({ display: 'none' }),
   indicatorsContainer: (providedStyled: any) => ({ ...providedStyled, paddingRight: '16px' }),
-  singleValue: (providedStyled: any) => ({ ...providedStyled, fontWeight: 400 }),
+  singleValue: (providedStyled: any) => ({ ...providedStyled, fontWeight: 'normal' }),
 }
 
 const Select = (props: Omit<Props, 'theme'> & SelectProps) => {

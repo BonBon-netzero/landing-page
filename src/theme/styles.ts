@@ -1,13 +1,37 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
-import { FONT_FAMILY } from 'utils/config/constants'
+import { FONT_FAMILY, SUB_FONT_FAMILY } from 'utils/config/constants'
 
 const ThemedGlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'AeonikPro';
+    src: url('/fonts/AeonikPro-Bolder.otf');
+    fontWeight: bolder;
+    fontStyle: normal;
+  }
+  @font-face {
+    font-family: 'AeonikPro';
+    src: url('/fonts/AeonikPro-Bold.otf');
+    fontWeight: bold;
+    fontStyle: normal;
+  }
+  @font-face {
+    font-family: 'AeonikPro';
+    src: url('/fonts/AeonikPro-Medium.otf');
+    fontWeight: medium;
+    fontStyle: normal;
+  }
+  @font-face {
+    font-family: 'AeonikPro';
+    src: url('/fonts/AeonikPro-Regular.otf');
+    fontWeight: normal;
+    fontStyle: normal;
+  }
   html, body, #__next {
     height: 100%;
   }
   html {
-    font-family: '${FONT_FAMILY}', sans-serif;
+    font-family: '${FONT_FAMILY}', '${SUB_FONT_FAMILY}', sans-serif;
     font-size: 16px;
     color: ${({ theme }) => theme.colors.neutral1};
     background-color: ${({ theme }) => theme.colors.neutral8};
@@ -91,10 +115,10 @@ const ThemedGlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    background-color: ${({ theme }) => theme.colors.neutral7};
+    background-color: ${({ theme }) => theme.colors.neutral6};
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.neutral6};
+    background-color: ${({ theme }) => theme.colors.neutral5};
   }
   ::-webkit-scrollbar-track {
     padding: 2px;
