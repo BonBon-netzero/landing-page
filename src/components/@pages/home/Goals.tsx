@@ -20,7 +20,8 @@ export default function Goals() {
         width: '100%',
         maxWidth: 1260,
         mx: 'auto',
-        minHeight: '100%',
+        minHeight: 'min(100%, 1080px)',
+        maxHeight: 'max-content',
         pt: [140, 160],
         pb: [80, 180],
       }}

@@ -16,7 +16,7 @@ export default function HeroSection() {
   //   }, 1000)
   // }, [])
   return (
-    <Box sx={{ width: '100%', height: '100%', minHeight: 600, position: 'relative' }}>
+    <Box sx={{ width: '100%', height: '100%', minHeight: 600, maxHeight: 1080, position: 'relative' }}>
       <Flex
         sx={{
           p: 24,

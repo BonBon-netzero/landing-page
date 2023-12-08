@@ -25,9 +25,10 @@ export default function HowItWorkAndPartners() {
     <Box
       sx={{
         width: '100%',
-        minHeight: '100%',
         pt: [40, 100],
         pb: [40, 180],
+        minHeight: 'min(100%, 1080px)',
+        maxHeight: 'max-content',
         position: 'relative',
         overflow: 'hidden',
         px: 24,

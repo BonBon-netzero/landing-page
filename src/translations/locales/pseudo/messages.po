@@ -73,6 +73,9 @@ msgstr ""
 msgid "How BonBon works? ⚙"
 msgstr ""
 
+msgid "Join our community here"
+msgstr ""
+
 msgid "Join our community zalo here"
 msgstr ""
 
@@ -106,7 +109,7 @@ msgstr ""
 msgid "Our partners and backers"
 msgstr ""
 
-msgid "Promote bussiness aplly ESG"
+msgid "Promote business apply ESG"
 msgstr ""
 
 msgid "Pseudo"

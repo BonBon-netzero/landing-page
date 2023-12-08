@@ -18,8 +18,11 @@ export default function JoinCommunity() {
         borderRadius: '24px',
       }}
     >
-      <Type.Body color="neutral4">
+      <Type.Body color="neutral4" display={['none', 'block']}>
         <Trans>Join our community zalo here</Trans>
+      </Type.Body>
+      <Type.Body color="neutral4" display={['block', 'none']}>
+        <Trans>Join our community here</Trans>
       </Type.Body>
       <JoinWaitlistButton />
     </Flex>
