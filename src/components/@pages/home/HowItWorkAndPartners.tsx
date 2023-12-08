@@ -58,7 +58,7 @@ function HowItWork() {
   const currentContent = configs[currentSlide]
   return (
     <>
-      <Type.H3 as="h2" mb={64} sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
+      <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
         <Trans>How BonBon works? ⚙</Trans>
       </Type.H3>
       <Flex sx={{ alignItems: 'center', gap: 40, flexDirection: ['column', 'row'] }}>
@@ -145,12 +145,12 @@ function SliderContent({ details }: { details: Config['details'] }) {
 function Partners() {
   return (
     <>
-      <Type.H3 as="h2" mb={[32, 48]} sx={{ textAlign: 'center' }}>
+      <Type.H3 as="h2" mb={[32, 48]} color="neutral2" sx={{ textAlign: 'center' }}>
         <Trans>Our partners and backers</Trans>
       </Type.H3>
       <Box
         sx={{
-          display: ['none', 'flex'],
+          display: ['none', 'none', 'none', 'flex'],
           alignItems: 'center',
           width: '100%',
           maxWidth: 1260,
@@ -166,12 +166,12 @@ function Partners() {
       </Box>
       <Box
         sx={{
-          display: ['flex', 'none'],
+          display: ['flex', 'flex', 'flex', 'none'],
           alignItems: 'center',
           width: '100%',
-          justifyContent: ['center', 'space-between'],
+          justifyContent: ['center', 'center', 'center', 'space-between'],
           flexWrap: 'wrap',
-          gap: 40,
+          gap: [40, 60, 60, 60],
         }}
       >
         {partners.map((config, index) => (
@@ -264,23 +264,23 @@ type PartnerConfig = {
 }
 const partners: PartnerConfig[] = [
   {
-    link: '/google.com',
+    link: 'https://unsplash.com/',
     image: partner1,
   },
   {
-    link: '/google.com',
+    link: 'https://notion.so/',
     image: partner2,
   },
   {
-    link: '/google.com',
+    link: 'https://www.intercom.com/',
     image: partner3,
   },
   {
-    link: '/google.com',
+    link: 'https://www.descript.com/',
     image: partner4,
   },
   {
-    link: '/google.com',
+    link: 'https://www.grammarly.com/',
     image: partner5,
   },
 ]

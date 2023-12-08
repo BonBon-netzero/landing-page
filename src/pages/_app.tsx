@@ -44,7 +44,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <ThemedGlobalStyle />
           <QueryClientProvider client={queryClient}>
             <Navbar />
-            <div style={{ height: '100%', overflow: 'auto' }}>
+            <div style={{ height: '100%', width: '100%' }}>
               <Hydrate state={pageProps.dehydratedState}>
                 <Component {...pageProps} />
               </Hydrate>

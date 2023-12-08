@@ -91,10 +91,10 @@ const ThemedGlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    background-color: ${({ theme }) => theme.colors.neutral7};
+    background-color: ${({ theme }) => theme.colors.neutral6};
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.neutral6};
+    background-color: ${({ theme }) => theme.colors.neutral5};
   }
   ::-webkit-scrollbar-track {
     padding: 2px;

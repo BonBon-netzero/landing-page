@@ -31,12 +31,12 @@ export default function HeroSection() {
         }}
       >
         <Box sx={{ width: '100%', maxWidth: [300, 400] }}>
-          <Type.Hero sx={{ textAlign: 'center' }}>
+          <Type.Hero color="neutral2" sx={{ textAlign: 'center' }}>
             <Trans>
               BonBon <br /> To Netzero
             </Trans>
           </Type.Hero>
-          <Type.H5 mt={3} mb={24} as="h2" sx={{ textAlign: 'center', fontWeight: 400 }}>
+          <Type.H5 mt={3} mb={24} as="h2" color="neutral2" sx={{ textAlign: 'center', fontWeight: 400 }}>
             <Trans>Our mission is help the world reach the net-zero goal in 2050</Trans>
           </Type.H5>
           <Box mx="auto" width="max-content">
@@ -63,8 +63,10 @@ export default function HeroSection() {
           sx={{
             position: 'relative',
             left: '50%',
-            transform: 'translateX(-50%)',
-            height: '100%',
+            top: '50%',
+            transform: 'translateX(-50%) translateY(-50%)',
+            width: ['auto', 'auto', 'auto', 'auto', '100%'],
+            height: ['100%', '100%', '100%', '100%', 'auto'],
             aspectRatio: '1920 / 1080',
           }}
         >
@@ -91,7 +93,7 @@ function Decorators() {
           zIndex: 1,
           top: 72,
           left: '-5%',
-          transform: 'rotate(4deg)',
+          transform: 'rotate(2.8deg)',
         }}
       >
         <ChainText text="NETZERO" color="white" />
@@ -106,7 +108,7 @@ function Decorators() {
           zIndex: 1,
           left: '-5%',
           top: 72,
-          transform: 'rotate(-4deg)',
+          transform: 'rotate(-2.8deg)',
         }}
       >
         <ChainText text="BONBON" color="neutral3" />

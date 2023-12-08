@@ -25,19 +25,19 @@ export default function Goals() {
         pb: [80, 180],
       }}
     >
-      <Type.H3 as="h2" mb={4} sx={{ textAlign: 'center' }}>
+      <Type.H3 as="h2" mb={4} color="neutral2" sx={{ textAlign: 'center' }}>
         <Trans>What if we succeeded? ️🏆</Trans>
       </Type.H3>
-      <Box mb={150} sx={{ display: ['none', 'grid'], gridTemplateColumns: 'repeat(3, 1fr)', gap: 85 }}>
+      <Box mb={150} sx={{ display: ['none', 'none', 'none', 'grid'], gridTemplateColumns: 'repeat(3, 1fr)', gap: 85 }}>
         {configs.map((config, index) => (
           <GoalItem key={index} {...config} />
         ))}
       </Box>
-      <Box mb={64} sx={{ display: ['block', 'none'], width: 300 }}>
+      <Box mb={64} sx={{ display: ['block', 'block', 'block', 'none'], width: 300 }}>
         <GoalMobile />
       </Box>
 
-      <Type.H3 as="h2" mb={24} sx={{ maxWidth: 650 }}>
+      <Type.H3 as="h2" mb={24} color="neutral2" sx={{ maxWidth: 650 }}>
         <Trans>“Above all, the world will definitely reach the net-zero goal in 2050” 🌏</Trans>
       </Type.H3>
       <Box sx={{ width: '100%', maxWidth: 500 }}>
@@ -65,7 +65,7 @@ function GoalItem({ image, label, description }: Config) {
       <Box mb={24} sx={{ position: 'relative', width: '100%', height: '125px' }}>
         <Image src={image} fill objectFit="contain" alt="opt" />
       </Box>
-      <Type.H5 mb={2} as="h2" sx={{ textAlign: 'center' }}>
+      <Type.H5 mb={2} as="h2" color="neutral2" sx={{ textAlign: 'center' }}>
         {label}
       </Type.H5>
       <Type.Body as="h3" color="neutral4" sx={{ fontWeight: 400, textAlign: 'center' }}>

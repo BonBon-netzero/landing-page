@@ -18,7 +18,7 @@ export default function JoinCommunity() {
         borderRadius: '24px',
       }}
     >
-      <Type.Body>
+      <Type.Body color="neutral4">
         <Trans>Join our community zalo here</Trans>
       </Type.Body>
       <JoinWaitlistButton />
