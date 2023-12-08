@@ -17,7 +17,7 @@ export const Button = styled.button<ButtonProps>(
     color: 'neutral7',
     bg: 'neutral6',
     borderRadius: 'button',
-    fontWeight: '600',
+    fontWeight: 'medium',
     transition: 'all 240ms ease',
     '&[disabled]': {
       cursor: 'not-allowed',

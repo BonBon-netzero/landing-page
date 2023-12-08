@@ -74,6 +74,7 @@ export const TextWrapper = styled(Box)`
   color: ${({ theme, color }: { theme: any; color?: string }) => (color ? theme.colors[color] : 'inherit')};
   overflow-wrap: break-word;
   word-break: break-word;
+  letter-spacing: 0.015em;
 `
 // export const Link = forwardRef(
 //   (props, ref: ForwardedRef<HTMLAnchorElement>) => (
@@ -89,8 +90,8 @@ export const Type = {
         as="h1"
         fontSize={['40px', '40px', '64px', '64px']}
         lineHeight={['48px', '48px', '64px', '64px']}
-        fontWeight="700"
-        letterSpacing="-0.96px"
+        fontWeight="bolder"
+        // letterSpacing="0.015em"
         {...props}
       >
         {children}
@@ -103,8 +104,8 @@ export const Type = {
         as="h1"
         fontSize={['48px', '48px', '48px', '64px']}
         lineHeight={['56px', '56px', '56px', '72px']}
-        fontWeight="600"
-        letterSpacing="-1.5%"
+        fontWeight="bolder"
+        // letterSpacing="1.5%"
         {...props}
       >
         {children}
@@ -117,8 +118,8 @@ export const Type = {
         as="h2"
         fontSize={['40px', '40px', '40px', '48px']}
         lineHeight={['48px', '48px', '48px', '56px']}
-        fontWeight="600"
-        letterSpacing="-0.5%"
+        fontWeight="medium"
+        // letterSpacing="0.5%"
         {...props}
       >
         {children}
@@ -131,7 +132,7 @@ export const Type = {
         as="h3"
         fontSize={['40px', '40px', '40px', '40px']}
         lineHeight={['48px', '48px', '48px', '48px']}
-        fontWeight="600"
+        fontWeight="bold"
         // letterSpacing="0%"
         {...props}
       >
@@ -145,8 +146,8 @@ export const Type = {
         as="h4"
         fontSize={['24px', '24px', '24px', '32px']}
         lineHeight={['32px', '32px', '32px', '40px']}
-        fontWeight="600"
-        letterSpacing="0.25%"
+        fontWeight="bold"
+        // letterSpacing="0.25%"
         {...props}
       >
         {children}
@@ -155,7 +156,7 @@ export const Type = {
   },
   H5({ children, ...props }: TextProps) {
     return (
-      <TextWrapper as="h5" fontSize="24px" lineHeight="32px" fontWeight="600" letterSpacing="0.15%" {...props}>
+      <TextWrapper as="h5" fontSize="24px" lineHeight="32px" fontWeight="bold" {...props}>
         {children}
       </TextWrapper>
     )
@@ -164,31 +165,31 @@ export const Type = {
     return <TextWrapper fontSize="14px" lineHeight="24px" display="inline-block" {...props} />
   },
   CaptionBold(props: TextProps) {
-    return <TextWrapper fontSize="14px" lineHeight="24px" fontWeight="600" display="inline-block" {...props} />
+    return <TextWrapper fontSize="14px" lineHeight="24px" fontWeight="bold" display="inline-block" {...props} />
   },
   Small(props: TextProps) {
     return <TextWrapper fontSize="12px" lineHeight="20px" display="inline-block" {...props} />
   },
   SmallBold(props: TextProps) {
-    return <TextWrapper fontSize="12px" lineHeight="20px" display="inline-block" fontWeight="600" {...props} />
+    return <TextWrapper fontSize="12px" lineHeight="20px" display="inline-block" fontWeight="bold" {...props} />
   },
   Large(props: TextProps) {
     return <TextWrapper fontSize="20px" lineHeight="32px" display="inline-block" {...props} />
   },
   LargeBold(props: TextProps) {
-    return <TextWrapper fontSize="20px" lineHeight="32px" display="inline-block" fontWeight="600" {...props} />
+    return <TextWrapper fontSize="20px" lineHeight="32px" display="inline-block" fontWeight="bold" {...props} />
   },
   Body(props: TextProps) {
     return <TextWrapper fontSize="16px" lineHeight="24px" display="inline-block" {...props} />
   },
   BodyBold(props: TextProps) {
-    return <TextWrapper fontSize="16px" lineHeight="24px" display="inline-block" fontWeight="600" {...props} />
+    return <TextWrapper fontSize="16px" lineHeight="24px" display="inline-block" fontWeight="bold" {...props} />
   },
   HairlineLarge(props: TextProps) {
-    return <TextWrapper fontSize="16px" lineHeight="16px" fontWeight="700" {...props} />
+    return <TextWrapper fontSize="16px" lineHeight="16px" fontWeight="bold" {...props} />
   },
   HairlineSmall(props: TextProps) {
-    return <TextWrapper fontSize="12px" lineHeight="12px" fontWeight="700" {...props} />
+    return <TextWrapper fontSize="12px" lineHeight="12px" fontWeight="bold" {...props} />
   },
 }
 

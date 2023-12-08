@@ -42,7 +42,7 @@ export default function StyledButton({
           ...(buttonSx || {}),
         }}
       >
-        <Type.Body sx={{ fontWeight: 700 }}>{children}</Type.Body>
+        <Type.Body sx={{ fontWeight: 'bold' }}>{children}</Type.Body>
         <IconBox icon={<ArrowCircleRight size={24} />} />
       </Flex>
       <Box

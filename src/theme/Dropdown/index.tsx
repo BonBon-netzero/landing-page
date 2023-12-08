@@ -191,7 +191,7 @@ export const DropdownItem = styled(Button)<{ isActive?: boolean }>((props) =>
     textAlign: 'left',
     borderRadius: 0,
     border: 'none',
-    fontWeight: props.isActive ? '600' : '400',
+    fontWeight: props.isActive ? 'medium' : 'normal',
     color: 'neutral1',
     bg: 'transparent',
     '&:hover': {
@@ -224,7 +224,7 @@ export const CheckableDropdownItem = ({
   return (
     <DropdownItem disabled={disabled} onClick={onClick}>
       <Flex alignItems="center" justifyContent="space-between">
-        <Box color={selected ? 'primary2' : 'neutral1'} fontWeight={selected ? '600' : '400'} sx={{ ...textSx }}>
+        <Box color={selected ? 'primary2' : 'neutral1'} fontWeight={selected ? 'medium' : 'normal'} sx={{ ...textSx }}>
           {children}
         </Box>
         {selected && <IconBox color="primary2" ml={2} sx={{ ...iconSx }} icon={<Check size={iconSize || 16} />} />}

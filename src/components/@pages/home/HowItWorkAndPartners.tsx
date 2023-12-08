@@ -65,7 +65,7 @@ function HowItWork() {
       <Flex sx={{ alignItems: 'center', gap: 40, flexDirection: ['column', 'row'] }}>
         <Box sx={{ position: 'relative' }}>
           <Box sx={{ position: 'absolute', left: '-15px', top: '-15px', width: 330, height: 675, zIndex: 0 }}>
-            <Image src={phoneBorder} fill objectFit="contain" alt="phone" />
+            <Image src={phoneBorder} fill alt="phone" style={{ objectFit: 'contain' }} />
           </Box>
 
           <Box
@@ -111,7 +111,7 @@ const settings: Settings = {
 function SliderItem({ image }: { image: Config['image'] }) {
   return (
     <Box sx={{ position: 'relative', width: 300, height: 645, overflow: 'hidden' }}>
-      <Image src={image} fill objectFit="contain" alt="opt" />
+      <Image src={image} fill alt="opt" style={{ objectFit: 'contain' }} />
     </Box>
   )
 }

@@ -36,7 +36,7 @@ export default function HeroSection() {
               BonBon <br /> To Netzero
             </Trans>
           </Type.Hero>
-          <Type.H5 mt={3} mb={24} as="h2" color="neutral2" sx={{ textAlign: 'center', fontWeight: 400 }}>
+          <Type.H5 mt={3} mb={24} as="h2" color="neutral2" sx={{ textAlign: 'center', fontWeight: 'normal' }}>
             <Trans>Our mission is help the world reach the net-zero goal in 2050</Trans>
           </Type.H5>
           <Box mx="auto" width="max-content">
@@ -123,7 +123,7 @@ function ChainText({ text, color }: { text: ReactNode; color: string }) {
       {Array.from({ length: 20 }, (_, v) => v).map((v) => {
         return (
           <Fragment key={v}>
-            <Box sx={{ width: '6px', height: '6px', bg: color, fontWeight: 500, flexShrink: 0 }} />
+            <Box sx={{ width: '6px', height: '6px', bg: color, fontWeight: 'medium', flexShrink: 0 }} />
             <Type.H5 color={color} sx={{ flexShrink: 0 }}>
               {text}
             </Type.H5>

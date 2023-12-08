@@ -19,7 +19,7 @@ const TabItem = styled(Button)(({ active, isVertical, sx }: TabItemProps) =>
     px: '0',
     py: '12px',
     width: 'fit-content',
-    fontWeight: '600',
+    fontWeight: 'medium',
     background: 'transparent',
     color: active ? 'neutral1' : 'neutral5',
     '&:hover:not(:disabled),&:focus:not(:disabled),&:active:not(:disabled)': {

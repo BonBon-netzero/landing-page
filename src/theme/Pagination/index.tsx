@@ -121,7 +121,7 @@ const Pagination = ({
               borderRadius: '4px',
               minWidth: 24,
               color: pageNumber === currentPage ? 'neutral1' : 'neutral3',
-              fontWeight: pageNumber === currentPage ? '600' : '400',
+              fontWeight: pageNumber === currentPage ? 'medium' : 'normal',
               fontSize: '14px',
             }}
           >
@@ -224,7 +224,7 @@ export function PaginationWithLimit({
             </>
           }
         >
-          <Type.Caption fontWeight={400}>{currentLimit}</Type.Caption>
+          <Type.Caption fontWeight="normal">{currentLimit}</Type.Caption>
         </Dropdown>
         <Type.Caption>
           <Trans>of {total} records</Trans>
