@@ -7,16 +7,23 @@ import { Box, Flex, Type } from 'theme/base'
 
 export default function Footer() {
   return (
-    <Box sx={{ width: '100%', maxWidth: 1260, mx: 'auto', py: 48, px: 3 }}>
+    <Box sx={{ width: '100%', maxWidth: 1260, mx: 'auto', py: 48, px: 24 }}>
       <Flex
         mb={4}
-        sx={{ width: '100%', alignItems: 'center', gap: 3, justifyContent: 'space-between', flexWrap: 'wrap' }}
+        sx={{
+          width: '100%',
+          alignItems: 'center',
+          columnGap: 3,
+          rowGap: 4,
+          justifyContent: ['center', 'space-between'],
+          flexWrap: 'wrap',
+        }}
       >
-        <Box>
+        <Flex sx={{ flexDirection: 'column', alignItems: ['center', 'start'] }}>
           <LogoWithText size={40} />
           <Box mb={24} />
           <SocialLinks />
-        </Box>
+        </Flex>
         <Box>
           <JoinCommunity />
         </Box>

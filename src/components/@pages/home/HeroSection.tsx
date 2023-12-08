@@ -19,7 +19,7 @@ export default function HeroSection() {
     <Box sx={{ width: '100%', height: '100%', minHeight: 600, position: 'relative' }}>
       <Flex
         sx={{
-          p: 3,
+          p: 24,
           width: '100%',
           height: '100%',
           alignItems: 'center',
@@ -30,7 +30,7 @@ export default function HeroSection() {
           overflow: 'hidden',
         }}
       >
-        <Box sx={{ width: '100%', maxWidth: 400 }}>
+        <Box sx={{ width: '100%', maxWidth: [300, 400] }}>
           <Type.Hero sx={{ textAlign: 'center' }}>
             <Trans>
               BonBon <br /> To Netzero
@@ -84,7 +84,7 @@ function Decorators() {
       <Flex
         sx={{
           alignItems: 'center',
-          height: 60,
+          height: [35, 60],
           bg: 'secondary2',
           width: '110%',
           position: 'absolute',
@@ -99,7 +99,7 @@ function Decorators() {
       <Flex
         sx={{
           alignItems: 'center',
-          height: 60,
+          height: [35, 60],
           bg: 'secondary1',
           width: '110%',
           position: 'absolute',

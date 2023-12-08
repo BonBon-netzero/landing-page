@@ -4,8 +4,8 @@ import { Box } from 'theme/base'
 
 const ARROW_SIZE = 32
 const ARROW_POSITION = 0
-const DOTS_POSITION = -32
-const DOTS_SIZE = 8
+const DOTS_POSITION = 32
+const DOTS_SIZE = 10
 
 const CarouselWrapper = styled(Box)`
   width: 100%;
@@ -196,7 +196,8 @@ const CarouselWrapper = styled(Box)`
   .slick-dots {
     position: absolute;
     bottom: ${-1 * DOTS_POSITION}px;
-    right: 24px;
+    left: 0;
+    text-align: center;
 
     display: block;
 
@@ -205,8 +206,6 @@ const CarouselWrapper = styled(Box)`
     margin: 0;
 
     list-style: none;
-
-    text-align: right;
   }
   .slick-dots li {
     position: relative;

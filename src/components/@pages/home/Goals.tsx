@@ -3,9 +3,9 @@ import Image, { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 import Slider, { Settings } from 'react-slick'
 
-import image1 from 'assets/images/how_it_work_1.png'
-import image2 from 'assets/images/how_it_work_2.png'
-import image3 from 'assets/images/how_it_work_3.png'
+import image1 from 'assets/images/goal_1.png'
+import image2 from 'assets/images/goal_2.png'
+import image3 from 'assets/images/goal_3.png'
 import JoinCommunity from 'components/JoinCommunity'
 import { HorizontalCarouselWrapper } from 'theme/Carousel/Wrapper'
 import { Box, Flex, Type } from 'theme/base'
@@ -14,27 +14,27 @@ export default function Goals() {
   return (
     <Flex
       sx={{
-        px: 3,
+        px: 24,
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
         maxWidth: 1260,
         mx: 'auto',
         minHeight: '100%',
-        pt: 160,
-        pb: 180,
+        pt: [140, 160],
+        pb: [80, 180],
       }}
     >
-      <Type.H3 as="h2" mb={4}>
+      <Type.H3 as="h2" mb={4} sx={{ textAlign: 'center' }}>
         <Trans>What if we succeeded? ️🏆</Trans>
       </Type.H3>
-      <Box mb={150} sx={{ display: ['none', 'grid'], gridTemplateColumns: 'repeat(3, 1fr)', gap: 3 }}>
+      <Box mb={150} sx={{ display: ['none', 'grid'], gridTemplateColumns: 'repeat(3, 1fr)', gap: 85 }}>
         {configs.map((config, index) => (
-          <GoaldItem key={index} {...config} />
+          <GoalItem key={index} {...config} />
         ))}
       </Box>
-      <Box mb={150} sx={{ display: ['block', 'none'], width: 300 }}>
-        <GoaldMobile />
+      <Box mb={64} sx={{ display: ['block', 'none'], width: 300 }}>
+        <GoalMobile />
       </Box>
 
       <Type.H3 as="h2" mb={24} sx={{ maxWidth: 650 }}>
@@ -47,25 +47,25 @@ export default function Goals() {
   )
 }
 
-function GoaldMobile() {
+function GoalMobile() {
   return (
     <HorizontalCarouselWrapper>
       <Slider {...settings}>
         {configs.map((config, index) => (
-          <GoaldItem key={index} {...config} />
+          <GoalItem key={index} {...config} />
         ))}
       </Slider>
     </HorizontalCarouselWrapper>
   )
 }
 
-function GoaldItem({ image, label, description }: Config) {
+function GoalItem({ image, label, description }: Config) {
   return (
     <Flex sx={{ flexDirection: 'column', alignItems: 'center' }}>
       <Box mb={24} sx={{ position: 'relative', width: '100%', height: '125px' }}>
         <Image src={image} fill objectFit="contain" alt="opt" />
       </Box>
-      <Type.H5 mb={2} as="h2">
+      <Type.H5 mb={2} as="h2" sx={{ textAlign: 'center' }}>
         {label}
       </Type.H5>
       <Type.Body as="h3" color="neutral4" sx={{ fontWeight: 400, textAlign: 'center' }}>
@@ -77,7 +77,7 @@ function GoaldItem({ image, label, description }: Config) {
 
 const settings: Settings = {
   speed: 500,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 5000,
   pauseOnHover: true,
   infinite: true,
@@ -105,7 +105,7 @@ const configs: Config[] = [
   },
   {
     image: image2,
-    label: <Trans>Promote bussiness aplly ESG</Trans>,
+    label: <Trans>Promote business apply ESG</Trans>,
     description: (
       <Trans>
         Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices.

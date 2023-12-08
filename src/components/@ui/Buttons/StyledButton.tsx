@@ -3,13 +3,23 @@ import { ReactNode } from 'react'
 
 import { Box, Flex, IconBox, Type } from 'theme/base'
 
-export default function StyledButton({ children }: { children: ReactNode }) {
+export default function StyledButton({
+  children,
+  buttonSx,
+  wrapperSx,
+}: {
+  children: ReactNode
+  buttonSx?: any
+  wrapperSx?: any
+}) {
   return (
     <Box
       sx={{
         position: 'relative',
         width: 'max-content',
         cursor: 'pointer',
+        ...(wrapperSx || {}),
+        userSelect: 'none',
       }}
     >
       <Flex
@@ -24,11 +34,12 @@ export default function StyledButton({ children }: { children: ReactNode }) {
           borderColor: 'neutral1',
           bg: 'primary1',
           zIndex: 1,
-          transform: 'translateX(-3px) translateY(-3px)',
+          transform: 'translateX(-2px) translateY(-2px)',
           transition: '0.3s',
           '&:focus, &:active': {
             transform: 'translateX(0) translateY(0)',
           },
+          ...(buttonSx || {}),
         }}
       >
         <Type.Body sx={{ fontWeight: 700 }}>{children}</Type.Body>

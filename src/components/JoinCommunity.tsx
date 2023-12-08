@@ -11,10 +11,10 @@ export default function JoinCommunity() {
       sx={{
         width: '100%',
         alignItems: 'center',
-        gap: 3,
+        gap: [2, 3],
         justifyContent: 'space-between',
         p: 2,
-        pl: 24,
+        pl: [16, 24],
         borderRadius: '24px',
       }}
     >
