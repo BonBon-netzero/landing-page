@@ -40,12 +40,6 @@ export default class MyDocument extends Document {
           <link rel="preload" href="/fonts/AeonikPro-Medium.otf" as="font" type="font/otf" crossOrigin="" />
           <link rel="preload" href="/fonts/AeonikPro-Regular.otf" as="font" type="font/otf" crossOrigin="" />
           <link rel="preload" href="/fonts/AeonikPro-Bolder.otf" as="font" type="font/otf" crossOrigin="" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <body>
           <Main />

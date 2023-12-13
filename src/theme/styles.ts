@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro'
 
-import { FONT_FAMILY, SUB_FONT_FAMILY } from 'utils/config/constants'
+import { FONT_FAMILY } from 'utils/config/constants'
 
 const ThemedGlobalStyle = createGlobalStyle`
   @font-face {
@@ -31,7 +31,7 @@ const ThemedGlobalStyle = createGlobalStyle`
     height: 100%;
   }
   html {
-    font-family: '${FONT_FAMILY}', '${SUB_FONT_FAMILY}', sans-serif;
+    font-family: '${FONT_FAMILY}', sans-serif;
     font-size: 16px;
     color: ${({ theme }) => theme.colors.neutral1};
     background-color: ${({ theme }) => theme.colors.neutral8};

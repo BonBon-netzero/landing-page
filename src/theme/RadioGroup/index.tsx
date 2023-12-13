@@ -57,11 +57,11 @@ const RadioWrapper = styled(Box)<RadioWrapperProps>`
     background: ${({ theme }) => theme.colors.neutral8};
     line-height: 24px;
     text-align: center;
-    border: 1px solid ${({ active, theme }) => (active ? theme.colors.primary1 : theme.colors.neutral5)};
+    border: 1px solid ${({ active, theme }) => (active ? theme.colors.primary2 : theme.colors.neutral5)};
     border-radius: 50%;
   }
   &:hover .radio {
-    border: 1px solid ${({ active, theme }) => (active ? theme.colors.primary1 : theme.colors.neutral3)};
+    border: 1px solid ${({ active, theme }) => (active ? theme.colors.primary2 : theme.colors.neutral3)};
   }
 
   .radio:after {
@@ -75,7 +75,7 @@ const RadioWrapper = styled(Box)<RadioWrapperProps>`
     /* width: 13px;
     height: 13px; */
     transition: background 240ms ease-in;
-    background: ${(props) => (props.active ? props.theme.colors.primary1 : 'transparent')};
+    background: ${(props) => (props.active ? props.theme.colors.primary2 : 'transparent')};
   }
   &[disabled] {
     .radio {

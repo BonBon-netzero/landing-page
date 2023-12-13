@@ -1,3 +1,5 @@
+import { Envelope } from '@phosphor-icons/react'
+
 import { Box, Flex } from 'theme/base'
 import { LINKS } from 'utils/config/constants'
 
@@ -41,4 +43,5 @@ export default function SocialLinks() {
 const links = [
   { link: LINKS.github, icon: <GithubIcon size={20} /> },
   { link: LINKS.twitter, icon: <TwitterIcon size={20} /> },
+  { link: LINKS.gmail, icon: <Envelope size={20} weight="fill" /> },
 ]
