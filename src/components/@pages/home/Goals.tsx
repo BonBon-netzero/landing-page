@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/image'
 import { ReactNode } from 'react'
 import Slider, { Settings } from 'react-slick'
 
+import champion from 'assets/icons/champion.svg'
+import earth from 'assets/icons/earth.svg'
 import image1 from 'assets/images/goal_1.png'
 import image2 from 'assets/images/goal_2.png'
 import image3 from 'assets/images/goal_3.png'
@@ -30,8 +32,15 @@ export default function Goals() {
           zIndex: 1,
         }}
       >
-        <Type.H3 as="h2" mb={4} color="neutral2" sx={{ textAlign: 'center' }}>
-          <Trans>What if we succeeded? ️🏆</Trans>
+        <Type.H3 as="h2" mb={4} color="neutral2" sx={{ textAlign: 'center', verticalAlign: 'bottom' }}>
+          <Trans>What if we succeeded?</Trans>{' '}
+          <Image
+            src={champion}
+            width={40}
+            height={40}
+            style={{ display: 'inline', position: 'relative', transform: 'translateY(4px)' }}
+            alt=""
+          />
         </Type.H3>
         <Box
           mb={150}
@@ -45,8 +54,15 @@ export default function Goals() {
           <GoalMobile />
         </Box>
 
-        <Type.H3 as="h2" mb={24} color="neutral2" sx={{ maxWidth: 650 }}>
-          <Trans>“Above all, the world will definitely reach the net-zero goal in 2050” 🌏</Trans>
+        <Type.H3 as="h2" mb={24} color="neutral2" sx={{ maxWidth: 660, textAlign: 'center' }}>
+          <Trans>“Above all, the world will definitely reach the net-zero goal in 2050”</Trans>{' '}
+          <Image
+            src={earth}
+            width={40}
+            height={40}
+            style={{ display: 'inline', position: 'relative', transform: 'translateY(4px)' }}
+            alt=""
+          />
         </Type.H3>
         <Box sx={{ width: '100%', maxWidth: 500 }}>
           <JoinCommunity />
@@ -109,7 +125,7 @@ const configs: Config[] = [
     description: (
       <Trans>
         By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and
-        prioritizing the use of carbon-neutral products
+        prioritizing the use of carbon-neutral products.
       </Trans>
     ),
   },
@@ -127,8 +143,8 @@ const configs: Config[] = [
     label: <Trans>Creating global equality</Trans>,
     description: (
       <Trans>
-        When reducing 1tCO2 in Europe is equally valuable as in Africa,it will create equity in the fight against
-        climate change
+        When reducing 1tCO2 in Europe is equally valuable as in Africa, it will create equity in the fight against
+        climate change.
       </Trans>
     ),
   },
@@ -148,10 +164,11 @@ function Decorators() {
           overflow: 'hidden',
           transform: 'translateX(-50%) translateY(-50%)',
           alignItems: 'center',
-          justifyContent: 'space-between',
+          justifyContent: 'space-evenly',
+          display: 'flex',
         }}
       >
-        {Array.from({ length: 10 }, (_, v) => v).map((v) => {
+        {Array.from({ length: 8 }, (_, v) => v).map((v) => {
           return (
             <Box
               key={v}
@@ -160,7 +177,7 @@ function Decorators() {
                 height: '100%',
                 opacity: 0.21,
                 background:
-                  'linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.21) 54.17%, rgba(0, 0, 0, 0.00) 100%)',
+                  'linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.21) 54.17%, rgba(0, 0, 0, 0.00) 100%)',
               }}
             ></Box>
           )

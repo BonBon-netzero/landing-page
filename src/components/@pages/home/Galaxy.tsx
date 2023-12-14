@@ -2,8 +2,8 @@ import { Box } from 'theme/base'
 
 export default function Galaxy() {
   return (
-    <Box>
-      <svg width="1330" height="1330" viewBox="0 0 1330 1330" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <Box sx={{ width: [1300, 1300, 900, 900, 1300], height: [1300, 1300, 900, 900, 1300] }}>
+      <svg width="100%" height="100%" viewBox="0 0 1330 1330" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="665" cy="665.008" r="145.602" stroke="url(#paint0_linear_916_3366)" strokeWidth="2" />
         <circle
           cx="665"

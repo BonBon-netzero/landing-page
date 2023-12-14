@@ -1,17 +1,23 @@
 import { ArrowCircleRight } from '@phosphor-icons/react'
 import { ReactNode } from 'react'
 
-import { Box, Flex, IconBox, Type } from 'theme/base'
+import { Button, ButtonProps } from 'theme/Buttons'
+import { Box, IconBox, Type } from 'theme/base'
 
 export default function StyledButton({
   children,
-  buttonSx,
   wrapperSx,
+  onClick,
+  sx,
+  disabled,
+  icon = <IconBox icon={<ArrowCircleRight size={24} />} />,
+  ...props
 }: {
   children: ReactNode
-  buttonSx?: any
   wrapperSx?: any
-}) {
+  onClick?: () => void
+  icon?: ReactNode
+} & ButtonProps) {
   return (
     <Box
       sx={{
@@ -21,30 +27,42 @@ export default function StyledButton({
         ...(wrapperSx || {}),
         userSelect: 'none',
       }}
+      onClick={onClick}
     >
-      <Flex
+      <Button
         sx={{
+          display: 'flex',
+          width: '100%',
           alignItems: 'center',
-          gap: 2,
+          justifyContent: 'center',
           position: 'relative',
           px: 24,
-          py: 3,
+          py: '15px',
           borderRadius: '16px',
           border: 'small',
           borderColor: 'neutral1',
           bg: 'primary1',
           zIndex: 1,
-          transform: 'translateX(-2px) translateY(-2px)',
+          transform: disabled ? 'none' : 'translateX(-2px) translateY(-2px)',
           transition: '0.3s',
-          '&:focus, &:active': {
+          '&:hover:not(:disabled), &:focus:not(:disabled), &:active:not(:disabled)': {
+            bg: 'primary1',
             transform: 'translateX(0) translateY(0)',
           },
-          ...(buttonSx || {}),
+          '&[disabled]': {
+            cursor: 'not-allowed',
+            opacity: '0.8',
+          },
+          ...(sx || {}),
         }}
+        disabled={disabled}
+        {...props}
       >
-        <Type.Body sx={{ fontWeight: 'bold' }}>{children}</Type.Body>
-        <IconBox icon={<ArrowCircleRight size={24} />} />
-      </Flex>
+        <Type.Body as="p" sx={{ fontWeight: 'bold', height: '21px', mr: 2 }}>
+          {children}
+        </Type.Body>
+        {icon}
+      </Button>
       <Box
         sx={{
           position: 'absolute',

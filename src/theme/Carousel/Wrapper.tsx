@@ -289,7 +289,7 @@ export const VerticalCarouselWrapper = styled(CarouselWrapper)`
 export const HorizontalCarouselWrapper = styled(CarouselWrapper)`
   .slick-track {
     display: flex;
-    align-items: center;
+    // align-items: center;
   }
 
   .slick-list {

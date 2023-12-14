@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-msgid "“Above all, the world will definitely reach the net-zero goal in 2050” 🌏"
+msgid "“Above all, the world will definitely reach the net-zero goal in 2050”"
 msgstr ""
 
 msgid "{label} is required"
@@ -46,16 +46,28 @@ msgstr ""
 msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
 msgstr ""
 
-msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products"
+msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
+msgstr ""
+
+msgid "Confirm"
 msgstr ""
 
 msgid "Creating global equality"
+msgstr ""
+
+msgid "Credit Carbon Traders"
+msgstr ""
+
+msgid "Credits Suppliers"
 msgstr ""
 
 msgid "Document"
 msgstr ""
 
 msgid "English"
+msgstr ""
+
+msgid "Enter your email"
 msgstr ""
 
 msgid "Error"
@@ -70,13 +82,10 @@ msgstr ""
 msgid "Go to page"
 msgstr ""
 
-msgid "How BonBon works? ⚙"
+msgid "How BonBon works?"
 msgstr ""
 
-msgid "Join our community here"
-msgstr ""
-
-msgid "Join our community zalo here"
+msgid "Investors"
 msgstr ""
 
 msgid "Join Waitlist"
@@ -97,10 +106,13 @@ msgstr ""
 msgid "of {total} records"
 msgstr ""
 
+msgid "Offset Buyers"
+msgstr ""
+
 msgid "Open App"
 msgstr ""
 
-msgid "Open the Bonbon app and start your journey"
+msgid "Open the Bonbon app and start your journey."
 msgstr ""
 
 msgid "Our mission is help the world reach the net-zero goal in 2050"
@@ -124,16 +136,22 @@ msgstr ""
 msgid "Show per page"
 msgstr ""
 
-msgid "Step 1"
+msgid "Statistics and showcase your Netzero journey."
 msgstr ""
 
-msgid "Step 3"
+msgid "STEP 1"
 msgstr ""
 
-msgid "Step 4"
+msgid "STEP 2"
 msgstr ""
 
-msgid "Step2"
+msgid "STEP 3"
+msgstr ""
+
+msgid "STEP 4"
+msgstr ""
+
+msgid "Submit Success"
 msgstr ""
 
 msgid "Success"
@@ -142,11 +160,17 @@ msgstr ""
 msgid "Vietnamese"
 msgstr ""
 
-msgid "What if we succeeded? ️🏆"
+msgid "What if we succeeded?"
 msgstr ""
 
-msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa,it will create equity in the fight against climate change"
+msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa, it will create equity in the fight against climate change."
 msgstr ""
 
 msgid "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
+msgstr ""
+
+msgid "You Are:"
+msgstr ""
+
+msgid "Your carbon profile"
 msgstr ""

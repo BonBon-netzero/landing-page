@@ -1,9 +1,10 @@
 import { Trans } from '@lingui/macro'
 import Image, { StaticImageData } from 'next/image'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import Slider, { Settings } from 'react-slick'
 import styled from 'styled-components/macro'
 
+import gear from 'assets/icons/gear.svg'
 import image1 from 'assets/images/how_it_work_1.png'
 import image2 from 'assets/images/how_it_work_2.png'
 import image3 from 'assets/images/how_it_work_3.png'
@@ -44,10 +45,18 @@ export default function HowItWorkAndPartners() {
         }}
       >
         <HowItWork />
-        <Box mb={[68, 100]} />
+        <Box mb={[68, 68, 100, 150, 100]} />
         <Partners />
       </Flex>
-      <Box sx={{ position: 'absolute', zIndex: 0, left: '50%', top: '-60px', transform: 'translateX(-50%)' }}>
+      <Box
+        sx={{
+          position: 'absolute',
+          zIndex: 0,
+          left: '50%',
+          top: ['-60px', '-60px', 40, 40, '-60px'],
+          transform: 'translateX(-50%)',
+        }}
+      >
         <Galaxy />
       </Box>
     </Box>
@@ -57,18 +66,42 @@ export default function HowItWorkAndPartners() {
 function HowItWork() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const currentContent = configs[currentSlide]
+  const sliderRef = useRef<Slider>(null)
+  const domRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            if (sliderRef.current) {
+              sliderRef.current.slickPlay?.()
+            }
+          }, 100)
+        }
+      })
+    })
+    if (domRef.current) observer.observe(domRef.current)
+  }, [])
   return (
     <>
       <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
-        <Trans>How BonBon works? ⚙</Trans>
+        <Trans>How BonBon works?</Trans>{' '}
+        <Image
+          src={gear}
+          width={40}
+          height={40}
+          alt=""
+          style={{ position: 'relative', transform: 'translateY(4px)' }}
+        />
       </Type.H3>
-      <Flex sx={{ alignItems: 'center', gap: 40, flexDirection: ['column', 'row'] }}>
+      <Flex sx={{ alignItems: 'center', gap: 40, flexDirection: ['column', 'column', 'row'] }}>
         <Box sx={{ position: 'relative' }}>
           <Box sx={{ position: 'absolute', left: '-15px', top: '-15px', width: 330, height: 675, zIndex: 0 }}>
             <Image src={phoneBorder} fill alt="phone" style={{ objectFit: 'contain' }} />
           </Box>
 
           <Box
+            ref={domRef}
             sx={{
               borderRadius: '40px',
               width: 300,
@@ -81,7 +114,7 @@ function HowItWork() {
                 '& .slick-list': { borderRadius: '40px !important', overflow: 'hidden !important', bg: 'primary2' },
               }}
             >
-              <Slider {...settings} afterChange={(currentSlide) => setCurrentSlide(currentSlide)}>
+              <Slider {...settings} afterChange={(currentSlide) => setCurrentSlide(currentSlide)} ref={sliderRef}>
                 {configs.map((config, index) => (
                   <SliderItem key={index} {...config} />
                 ))}
@@ -90,7 +123,7 @@ function HowItWork() {
           </Box>
         </Box>
 
-        <Box height={330}>
+        <Box sx={{ height: 336, width: 300 }}>
           <SliderContent details={currentContent.details} />
         </Box>
       </Flex>
@@ -99,8 +132,7 @@ function HowItWork() {
 }
 const settings: Settings = {
   speed: 500,
-  autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 3000,
   pauseOnHover: true,
   infinite: true,
   slidesToShow: 1,
@@ -122,20 +154,18 @@ function SliderContent({ details }: { details: Config['details'] }) {
       sx={{
         p: 3,
         width: '100%',
-        maxWidth: 300,
+        height: '100%',
         borderRadius: '16px',
-        textAlign: ['center', 'left'],
-        transition: '0.3s',
-        '& *': {
-          transition: '0.3s',
-        },
+        textAlign: ['center', 'center', 'left'],
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
-      <Type.Body mb={12} color="primary2">
+      <Type.Body mb={12} color="primary2" sx={{ fontWeight: 'bold' }}>
         {details.step}
       </Type.Body>
       <Type.H5 mb={12}>{details.title}</Type.H5>
-      <Type.Body mb={32} color="neutral3" display="block">
+      <Type.Body mb={32} color="neutral3" display="block" sx={{ flex: '1' }}>
         {details.description}
       </Type.Body>
       <DemoButton wrapperSx={{ width: '100%' }} buttonSx={{ justifyContent: 'center' }} />
@@ -151,7 +181,7 @@ function Partners() {
       </Type.H3>
       <Box
         sx={{
-          display: ['none', 'none', 'none', 'flex'],
+          display: ['none', 'none', 'none', 'none', 'flex'],
           alignItems: 'center',
           width: '100%',
           maxWidth: 1260,
@@ -167,12 +197,12 @@ function Partners() {
       </Box>
       <Box
         sx={{
-          display: ['flex', 'flex', 'flex', 'none'],
+          display: ['flex', 'flex', 'flex', 'flex', 'none'],
           alignItems: 'center',
           width: '100%',
           justifyContent: ['center', 'center', 'center', 'space-between'],
           flexWrap: 'wrap',
-          gap: [40, 60, 60, 60],
+          gap: 40,
         }}
       >
         {partners.map((config, index) => (
@@ -192,7 +222,7 @@ function PartnerItem({ image, link }: PartnerConfig) {
   )
 }
 function PartnerItemMobile({ image, link }: PartnerConfig) {
-  const height = 33
+  const height = 32
   const width = (height * (image.width / 2)) / (image.height / 2)
   return (
     <ItemWrapper as="a" href={link} target="_blank">
@@ -223,15 +253,15 @@ const configs: Config[] = [
   {
     image: image1,
     details: {
-      step: <Trans>Step 1</Trans>,
+      step: <Trans>STEP 1</Trans>,
       title: <Trans>Open App</Trans>,
-      description: <Trans>Open the Bonbon app and start your journey</Trans>,
+      description: <Trans>Open the Bonbon app and start your journey.</Trans>,
     },
   },
   {
     image: image2,
     details: {
-      step: <Trans>Step2</Trans>,
+      step: <Trans>STEP 2</Trans>,
       title: <Trans>Find & use green brands</Trans>,
       description: <Trans>Look for your favorite services and brands that you use frequently.</Trans>,
     },
@@ -239,7 +269,7 @@ const configs: Config[] = [
   {
     image: image3,
     details: {
-      step: <Trans>Step 3</Trans>,
+      step: <Trans>STEP 3</Trans>,
       title: <Trans>Received rewards</Trans>,
       description: (
         <Trans>
@@ -252,9 +282,9 @@ const configs: Config[] = [
   {
     image: image4,
     details: {
-      step: <Trans>Step 4</Trans>,
-      title: <Trans>Open App</Trans>,
-      description: <Trans>Open the Bonbon app and start your journey</Trans>,
+      step: <Trans>STEP 4</Trans>,
+      title: <Trans>Your carbon profile</Trans>,
+      description: <Trans>Statistics and showcase your Netzero journey.</Trans>,
     },
   },
 ]

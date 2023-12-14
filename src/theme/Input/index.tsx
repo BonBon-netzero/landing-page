@@ -55,7 +55,7 @@ export const InputWrapper = styled(Flex)<InputWrapperProps>(
       position: 'relative',
       border: props.border ?? 'small',
       borderColor: 'transparent',
-      borderRadius: 'xs',
+      borderRadius: 'md',
 
       px: '14px',
       py: '9px',
@@ -65,10 +65,10 @@ export const InputWrapper = styled(Flex)<InputWrapperProps>(
         borderColor: 'neutral5',
       },
       '&:focus:not([disabled])': {
-        borderColor: 'neutral1',
+        borderColor: 'neutral5',
       },
       '&:focus-within:not([disabled])': {
-        borderColor: 'neutral1',
+        borderColor: 'neutral5',
         bg: 'neutral7',
       },
       '&[disabled]': {
