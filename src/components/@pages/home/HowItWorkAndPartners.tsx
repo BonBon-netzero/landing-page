@@ -123,7 +123,7 @@ function HowItWork() {
           </Box>
         </Box>
 
-        <Box sx={{ height: 336, width: 300 }}>
+        <Box sx={{ height: 350, width: 300 }}>
           <SliderContent details={currentContent.details} />
         </Box>
       </Flex>
@@ -132,7 +132,7 @@ function HowItWork() {
 }
 const settings: Settings = {
   speed: 500,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 8000,
   pauseOnHover: true,
   infinite: true,
   slidesToShow: 1,
@@ -161,10 +161,12 @@ function SliderContent({ details }: { details: Config['details'] }) {
         flexDirection: 'column',
       }}
     >
-      <Type.Body mb={12} color="primary2" sx={{ fontWeight: 'bold' }}>
+      <Type.Body mb={12} color="primary2" sx={{ fontWeight: '500' }}>
         {details.step}
       </Type.Body>
-      <Type.H5 mb={12}>{details.title}</Type.H5>
+      <Type.H5 mb={12} sx={{ fontWeight: '600' }}>
+        {details.title}
+      </Type.H5>
       <Type.Body mb={32} color="neutral3" display="block" sx={{ flex: '1' }}>
         {details.description}
       </Type.Body>
@@ -176,7 +178,7 @@ function SliderContent({ details }: { details: Config['details'] }) {
 function Partners() {
   return (
     <>
-      <Type.H3 as="h2" mb={[32, 48]} color="neutral2" sx={{ textAlign: 'center' }}>
+      <Type.H3 as="h2" mb={[32, 48]} color="neutral2" sx={{ textAlign: 'center', maxWidth: [250, 500] }}>
         <Trans>Our partners and backers</Trans>
       </Type.H3>
       <Box

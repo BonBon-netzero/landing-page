@@ -1,20 +1,28 @@
 // eslint-disable-next-line no-restricted-imports
 import { Trans, t } from '@lingui/macro'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { useMutation } from 'react-query'
 
+import { submitWaitListApi } from 'apis/ldp'
 import useDialogContext from 'hooks/useDialog'
 import Input from 'theme/Input'
 import InputField from 'theme/InputField'
 import Modal from 'theme/Modal'
 import RadioGroup from 'theme/RadioGroup'
-import { Box, Flex } from 'theme/base'
+import { Box, Flex, Type } from 'theme/base'
+import { EMAIL_REGEX } from 'utils/config/constants'
 
 import StyledButton from './@ui/Buttons/StyledButton'
 import Divider from './@ui/Divider'
 
 export default function JoinCommunity() {
+  const router = useRouter()
   const [showModal, setShowModal] = useState(false)
+  const [_, setState] = useState(0)
+  useEffect(() => {
+    setState((prev) => (prev += 1))
+  }, [router.locale])
   const [email, setEmail] = useState('')
 
   const handleOnChange = (e: any) => setEmail(e.target.value)
@@ -70,27 +78,21 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
     setEmail(email)
   }, [isOpen])
   const dialog = useDialogContext()
-  const [loading, setLoading] = useState<boolean>(false)
   const [objective, setObjective] = useState<string>(options[0].value)
   const handleRadioChange = (value: string | number | undefined): void => {
     if (value) {
       setObjective(value.toString())
     }
-    setLoading(false)
   }
 
-  // const submitWaitList = useMutation(submitWaitListApi, {
-  const submitWaitList = useMutation(async () => true, {
-    onMutate: () => setLoading(true),
+  const { mutate, isLoading } = useMutation(submitWaitListApi, {
     onSuccess: () => {
-      setLoading(false)
       onDismiss()
       dialog.success({
         message: <Trans>Submit Success</Trans>,
       })
     },
     onError: (err: any) => {
-      setLoading(false)
       dialog.error({
         error: err,
       })
@@ -99,10 +101,10 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
 
   const onSubmit = () => {
     if (!!_email) {
-      // submitWaitList.mutate({ email, objective })
-      submitWaitList.mutate()
+      mutate({ _email, objective })
     }
   }
+  const error = !_email.match(EMAIL_REGEX)?.length
 
   return (
     <Modal isOpen={isOpen} title={<Trans>You Are:</Trans>} onDismiss={onDismiss} dismissable={false} hasClose>
@@ -118,12 +120,23 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
             onChange={(e) => setEmail(e.target.value)}
             sx={{ mb: 3 }}
             block
+            disabled={isLoading}
           />
+        )}
+        {error && (
+          <Type.Caption mb={3} color="danger2">
+            <Trans>Please enter a correct email</Trans>
+          </Type.Caption>
         )}
         <Box mb={24}>
           <RadioGroup defaultValue={objective} options={options} onChange={handleRadioChange} />
         </Box>
-        <StyledButton onClick={onSubmit} wrapperSx={{ width: '100%' }} disabled={!_email} icon={null}>
+        <StyledButton
+          onClick={onSubmit}
+          wrapperSx={{ width: '100%' }}
+          disabled={!_email || isLoading || error}
+          icon={null}
+        >
           <Trans>Confirm</Trans>
         </StyledButton>
       </Box>
