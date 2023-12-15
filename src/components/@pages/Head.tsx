@@ -1,8 +1,6 @@
 import NextHead from 'next/head'
 
-import { WEBSITE_URL } from 'utils/config/constants'
-
-const SITE = 'https://Bonbon.eco'
+const SITE = 'https://bonbon.eco'
 const AUTHOR = 'Bonbon NetZero'
 const THUMBNAIL_ALT = 'thumbnail_alt'
 
@@ -28,7 +26,7 @@ export default function Head({
       <meta name="description" content={`${description}`} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={`${SITE}`} />
+      <meta name="twitter:site" content={SITE} />
       <meta name="twitter:creator" content={`${AUTHOR}`} />
       <meta name="twitter:title" content={`${title}`} />
       <meta name="twitter:description" content={`${description}`} />
@@ -40,7 +38,7 @@ export default function Head({
       <meta property="og:image" content={`${thumbnail}`} />
       <meta property="og:image:alt" content={`${THUMBNAIL_ALT}`} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${WEBSITE_URL}${path}`} />
+      <meta property="og:url" content={SITE} />
     </NextHead>
   )
 }

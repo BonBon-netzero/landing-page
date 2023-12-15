@@ -3,6 +3,7 @@ import { Fragment, ReactNode, useEffect } from 'react'
 import Marquee from 'react-fast-marquee'
 
 import { Box, Flex, Type } from 'theme/base'
+import { MEDIA_WIDTHS } from 'theme/theme'
 
 import DemoButton from './DemoButton'
 
@@ -47,42 +48,9 @@ export default function HeroSection() {
 }
 
 function Decorators() {
-  useEffect(() => {
-    setTimeout(() => {
-      if (!document) return
-      const videoElement = document.getElementById('background_video') as HTMLVideoElement
-      const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
-      if (!videoElement) return
-      videoElement.play()
-      videoElement.addEventListener('ended', () => {
-        videoLoopElement.style.cssText = 'display: block'
-        setTimeout(() => {
-          videoElement.style.cssText = 'display: none'
-          videoLoopElement.play()
-        }, 0)
-      })
-    }, 100)
-  }, [])
   return (
     <>
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          overflow: 'hidden',
-          zIndex: 0,
-        }}
-      >
-        <Box as="video" id="background_video_loop" muted playsInline loop sx={{ zIndex: 1, ...videoSx }}>
-          <source src="/videos/hero2.mp4" type="video/mp4"></source>
-        </Box>
-        <Box as="video" id="background_video" muted playsInline sx={{ zIndex: 2, ...videoSx }}>
-          <source src="/videos/hero.mp4" type="video/mp4"></source>
-        </Box>
-      </Box>
+      <VideoDecorator />
       <Box
         sx={{
           width: '100%',
@@ -130,7 +98,82 @@ function Decorators() {
     </>
   )
 }
+function VideoDecorator() {
+  useEffect(() => {
+    if (!document || !window) return
+    if (window.innerWidth <= MEDIA_WIDTHS.upToMedium) {
+      const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
+      if (!videoLoopElement) return
+      videoLoopElement.play()
+      videoLoopElement.style.display = 'block'
+    } else {
+      const videoElement = document.getElementById('background_video') as HTMLVideoElement
+      const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
+      if (!videoElement) return
+      videoElement.play()
+      videoElement.style.display = 'block'
+      videoLoopElement.style.display = 'block'
+      videoElement.addEventListener('ended', () => {
+        setTimeout(() => {
+          videoLoopElement.play()
+          videoElement.style.display = 'none'
+        }, 0)
+      })
+      const handleResize = () => {
+        if (window.innerWidth >= MEDIA_WIDTHS.upToLarge) {
+          if (window.innerWidth / window.innerHeight < 16 / 9) {
+            videoElement.style.width = 'auto'
+            videoElement.style.height = '100%'
+            videoLoopElement.style.width = 'auto'
+            videoLoopElement.style.height = '100%'
+          } else {
+            videoElement.style.width = '100%'
+            videoElement.style.height = 'auto'
+            videoLoopElement.style.width = '100%'
+            videoLoopElement.style.height = 'auto'
+          }
+        }
+      }
+      handleResize()
+      window.addEventListener('resize', handleResize)
+      return () => window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+  return (
+    <Box
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        overflow: 'hidden',
+        zIndex: 0,
+        backgroundImage: 'url(/images/hero_bg.jpg)',
+        backgroundSize: 'auto 100%',
+        backgroundPosition: '50%',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <Box
+        as="video"
+        id="background_video_loop"
+        muted
+        playsInline
+        loop
+        sx={{ zIndex: 1, ...videoSx }}
+        poster="url(/images/hero_bg.jpg)"
+      >
+        <source src="/videos/hero2.mp4" type="video/mp4"></source>
+      </Box>
+      <Box as="video" id="background_video" muted playsInline sx={{ zIndex: 2, ...videoSx }}>
+        <source src="/videos/hero.mp4" type="video/mp4"></source>
+      </Box>
+    </Box>
+  )
+}
 const videoSx: any = {
+  display: 'none',
   position: 'absolute',
   left: '50%',
   top: '50%',
@@ -139,6 +182,7 @@ const videoSx: any = {
   height: ['100%', '100%', '100%', '100%', 'auto'],
   aspectRatio: '1920 / 1080',
   objectFit: 'cover',
+  userSelect: 'none',
 }
 
 function ChainText({ text, color }: { text: ReactNode; color: string }) {

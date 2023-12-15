@@ -1,10 +1,9 @@
-import { Envelope } from '@phosphor-icons/react'
-
-import { Box, Flex } from 'theme/base'
+import { Box, Flex, IconBox } from 'theme/base'
 import { LINKS } from 'utils/config/constants'
 
 import GithubIcon from './Icons/GithubIcon'
 import TwitterIcon from './Icons/TwitterIcon'
+import ZaloIcon from './Icons/ZaloIcon'
 
 export default function SocialLinks() {
   return (
@@ -29,7 +28,7 @@ export default function SocialLinks() {
               as="a"
               href={config.link}
               target="_blank"
-              sx={{ lineHeight: 0, bg: 'neutral1', borderRadius: '50%', p: '2px' }}
+              sx={{ lineHeight: 0, bg: 'neutral1', borderRadius: '50%' }}
             >
               {config.icon}
             </Box>
@@ -41,7 +40,7 @@ export default function SocialLinks() {
 }
 
 const links = [
-  { link: LINKS.github, icon: <GithubIcon size={20} /> },
-  { link: LINKS.twitter, icon: <TwitterIcon size={20} /> },
-  { link: LINKS.gmail, icon: <Envelope size={20} weight="fill" /> },
+  { link: LINKS.github, icon: <IconBox icon={<GithubIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.twitter, icon: <IconBox icon={<TwitterIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.zalo, icon: <ZaloIcon /> },
 ]

@@ -143,7 +143,7 @@ const settings: Settings = {
 function SliderItem({ image }: { image: Config['image'] }) {
   return (
     <Box sx={{ position: 'relative', width: 300, height: 645, overflow: 'hidden' }}>
-      <Image src={image} fill alt="opt" style={{ objectFit: 'contain' }} />
+      <Image src={image} fill alt="opt" style={{ objectFit: 'cover' }} />
     </Box>
   )
 }
