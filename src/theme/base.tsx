@@ -74,7 +74,7 @@ export const TextWrapper = styled(Box)`
   color: ${({ theme, color }: { theme: any; color?: string }) => (color ? theme.colors[color] : 'inherit')};
   overflow-wrap: break-word;
   word-break: break-word;
-  letter-spacing: 0.015em;
+  // letter-spacing: 0.015em;
 `
 // export const Link = forwardRef(
 //   (props, ref: ForwardedRef<HTMLAnchorElement>) => (
@@ -90,7 +90,7 @@ export const Type = {
         as="h1"
         fontSize={['40px', '40px', '64px', '64px']}
         lineHeight={['48px', '48px', '64px', '64px']}
-        fontWeight="bolder"
+        fontWeight="bold"
         // letterSpacing="0.015em"
         {...props}
       >
@@ -104,7 +104,7 @@ export const Type = {
         as="h1"
         fontSize={['48px', '48px', '48px', '64px']}
         lineHeight={['56px', '56px', '56px', '72px']}
-        fontWeight="bolder"
+        fontWeight="medium"
         // letterSpacing="1.5%"
         {...props}
       >
@@ -118,7 +118,7 @@ export const Type = {
         as="h2"
         fontSize={['40px', '40px', '40px', '48px']}
         lineHeight={['48px', '48px', '48px', '56px']}
-        fontWeight="medium"
+        fontWeight="500"
         // letterSpacing="0.5%"
         {...props}
       >
@@ -132,7 +132,7 @@ export const Type = {
         as="h3"
         fontSize={['40px', '40px', '40px', '40px']}
         lineHeight={['48px', '48px', '48px', '48px']}
-        fontWeight="bold"
+        fontWeight="500"
         // letterSpacing="0%"
         {...props}
       >
@@ -146,7 +146,7 @@ export const Type = {
         as="h4"
         fontSize={['24px', '24px', '24px', '32px']}
         lineHeight={['32px', '32px', '32px', '40px']}
-        fontWeight="bold"
+        fontWeight="500"
         // letterSpacing="0.25%"
         {...props}
       >
@@ -156,7 +156,7 @@ export const Type = {
   },
   H5({ children, ...props }: TextProps) {
     return (
-      <TextWrapper as="h5" fontSize="24px" lineHeight="32px" fontWeight="bold" {...props}>
+      <TextWrapper as="h5" fontSize="24px" lineHeight="32px" fontWeight="500" {...props}>
         {children}
       </TextWrapper>
     )

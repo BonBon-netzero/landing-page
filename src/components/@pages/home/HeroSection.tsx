@@ -22,18 +22,22 @@ export default function HeroSection() {
           overflow: 'hidden',
         }}
       >
-        <Box sx={{ width: '100%', maxWidth: [300, 400] }}>
-          <Type.Hero color="neutral2" sx={{ textAlign: 'center' }}>
-            <Trans>
-              BonBon <br /> To Netzero
-            </Trans>
-          </Type.Hero>
-          <Type.H5 mt={3} mb={24} as="h2" color="neutral2" sx={{ textAlign: 'center', fontWeight: 'normal' }}>
-            <Trans>Our mission is help the world reach the net-zero goal in 2050</Trans>
-          </Type.H5>
-          <Box mx="auto" width="max-content">
-            <DemoButton />
-          </Box>
+        <Type.Hero color="neutral2" sx={{ textAlign: 'center', width: '100%', maxWidth: [300, 400] }}>
+          <Trans>
+            BonBon <br /> To Netzero
+          </Trans>
+        </Type.Hero>
+        <Type.H5
+          mt={3}
+          mb={24}
+          as="h2"
+          color="neutral2"
+          sx={{ textAlign: 'center', fontWeight: 'normal', width: '100%', maxWidth: [300, 480] }}
+        >
+          <Trans>Our mission is help the world reach the net-zero goal in 2050</Trans>
+        </Type.H5>
+        <Box mx="auto" width="max-content">
+          <DemoButton />
         </Box>
       </Flex>
 

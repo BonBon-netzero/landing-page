@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 msgid "“Above all, the world will definitely reach the net-zero goal in 2050”"
-msgstr ""
+msgstr "“Điều quan trọng nhất, thế giới chắc chắn sẽ đạt được mục tiêu net-zero vào năm 2050”"
 
 msgid "{label} is required"
 msgstr "{label} là bắt buộc"
@@ -32,49 +32,49 @@ msgid "{label} must be less than or equal to {0}"
 msgstr "{label} phải nhỏ hơn hoặc bằng {0}"
 
 msgid "© 2023 BonBon. All right reserved ☕"
-msgstr ""
+msgstr "© 2023 BonBon. All right reserved ☕"
 
 msgid "Accelerating humanity's transition"
-msgstr ""
+msgstr "Tăng tốc quá trình chuyển đổi toàn cầu"
 
 msgid "An error occurs. Please try again"
 msgstr "Đã có lỗi xảy ra, vui lòng thử lại."
 
 msgid "BonBon <0/> To Netzero"
-msgstr ""
+msgstr "BonBon <0/> To Netzero"
 
 msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
-msgstr ""
+msgstr "Doanh nghiệp được thúc đẩy chuyển đổi đến các hoạt động bền vững và áp dụng ESG nhanh chóng hơn, đáp ứng theo sự lựa chọn của người tiêu dùng."
 
 msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
-msgstr ""
+msgstr "Đến năm 2050, thay đổi lối sống của 1 tỷ người trên toàn thế giới để trở nên thân thiện với môi trường, và ưu tiên sử dụng các sản phẩm carbon-neutral."
 
 msgid "Confirm"
-msgstr ""
+msgstr "Xác nhận"
 
 msgid "Creating global equality"
-msgstr ""
+msgstr "Tạo ra sự bình đẳng toàn cầu"
 
 msgid "Credit Carbon Traders"
-msgstr ""
+msgstr "Nhà giao dịch tín chỉ"
 
 msgid "Credits Suppliers"
-msgstr ""
+msgstr "Đơn vị cung cấp"
 
 msgid "Document"
-msgstr ""
+msgstr "Tài liệu"
 
 msgid "English"
 msgstr "Tiếng Anh"
 
 msgid "Enter your email"
-msgstr ""
+msgstr "Nhập địa chỉ email"
 
 msgid "Error"
 msgstr "Lỗi"
 
 msgid "Find & use green brands"
-msgstr ""
+msgstr "Tìm kiếm và tin dùng các thương hiệu xanh"
 
 msgid "Go to our <0>homepage</0> and start fresh."
 msgstr "Trở về <0>trang chủ</0> để bắt đầu lại."
@@ -83,19 +83,19 @@ msgid "Go to page"
 msgstr "Đến trang"
 
 msgid "How BonBon works?"
-msgstr ""
+msgstr "BonBon hoạt động như thế nào?"
 
 msgid "Investors"
-msgstr ""
+msgstr "Nhà đầu tư"
 
 msgid "Join Waitlist"
-msgstr ""
+msgstr "Đăng ký trước"
 
 msgid "Live Demo"
-msgstr ""
+msgstr "Bản Demo"
 
 msgid "Look for your favorite services and brands that you use frequently."
-msgstr ""
+msgstr "Lựa chọn những dịch vụ và thương hiệu xanh yêu thích mà bạn sử dụng."
 
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Trang này không tồn tại."
@@ -107,28 +107,34 @@ msgid "of {total} records"
 msgstr "của {total} dữ liệu"
 
 msgid "Offset Buyers"
-msgstr ""
+msgstr "Đơn vị phát thải"
 
 msgid "Open App"
-msgstr ""
+msgstr "Mở ứng dụng"
 
 msgid "Open the Bonbon app and start your journey."
-msgstr ""
+msgstr "Mở ứng dụng Bonbon và bắt đầu trải nghiệm."
 
 msgid "Our mission is help the world reach the net-zero goal in 2050"
-msgstr ""
+msgstr "Sứ mệnh của chúng tôi là giúp thế giới đạt được mục tiêu net-zero vào năm 2050"
 
 msgid "Our partners and backers"
-msgstr ""
+msgstr "Đối tác và nhà tài trợ"
+
+msgid "Please enter a correct email"
+msgstr "Vui lòng nhập đúng định dạng email"
 
 msgid "Promote business apply ESG"
-msgstr ""
+msgstr "Thúc đẩy doanh nghiệp áp dụng ESG"
 
 msgid "Pseudo"
 msgstr "Pseudo"
 
 msgid "Received rewards"
-msgstr ""
+msgstr "Nhận phần thưởng"
+
+msgid "Request failed. Please try later"
+msgstr "Gửi yêu cầu thất bại, xin thử lại sau"
 
 msgid "Share"
 msgstr "Chia sẻ"
@@ -137,22 +143,22 @@ msgid "Show per page"
 msgstr "Hiện mỗi trang"
 
 msgid "Statistics and showcase your Netzero journey."
-msgstr ""
+msgstr "Thống kê và chia sẻ hành trình Netzero của bạn."
 
 msgid "STEP 1"
-msgstr ""
+msgstr "BƯỚC 1"
 
 msgid "STEP 2"
-msgstr ""
+msgstr "BƯỚC 2"
 
 msgid "STEP 3"
-msgstr ""
+msgstr "BƯỚC 3"
 
 msgid "STEP 4"
-msgstr ""
+msgstr "BƯỚC 4"
 
 msgid "Submit Success"
-msgstr ""
+msgstr "Đã gửi thành công"
 
 msgid "Success"
 msgstr "Thành công"
@@ -161,16 +167,16 @@ msgid "Vietnamese"
 msgstr "Tiếng Việt"
 
 msgid "What if we succeeded?"
-msgstr ""
+msgstr "Điều gì sẽ xảy ra nếu chúng tôi thành công?"
 
 msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa, it will create equity in the fight against climate change."
-msgstr ""
+msgstr "Khi việc giảm 1tCO2 tại Châu Âu có giá trị tương đương với ở Châu Phi, điều này sẽ tạo ra sự công bằng trong cuộc chiến chống biến đổi khí hậu."
 
 msgid "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
-msgstr ""
+msgstr "Khi sử dụng các dịch vụ xanh, bạn đang đóng góp vào việc giảm lượng khí thải. Số lượng token CER bạn nhận được sẽ bằng với lượng giảm phát thải tương ứng ra môi trường."
 
 msgid "You Are:"
-msgstr ""
+msgstr "Bạn là:"
 
 msgid "Your carbon profile"
-msgstr ""
+msgstr "Hồ sơ carbon của bạn"

@@ -58,7 +58,7 @@ export default function StyledButton({
         disabled={disabled}
         {...props}
       >
-        <Type.Body as="p" sx={{ fontWeight: 'bold', height: '21px', mr: 2 }}>
+        <Type.Body as="p" sx={{ fontWeight: '700', lineHeight: '1em', mr: 2 }}>
           {children}
         </Type.Body>
         {icon}

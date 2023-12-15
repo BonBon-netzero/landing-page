@@ -22,7 +22,7 @@ export default function Goals() {
           flexDirection: 'column',
           alignItems: 'center',
           width: '100%',
-          maxWidth: 1260,
+          maxWidth: 1200,
           mx: 'auto',
           minHeight: 'min(100%, 1080px)',
           maxHeight: 'max-content',
@@ -54,7 +54,7 @@ export default function Goals() {
           <GoalMobile />
         </Box>
 
-        <Type.H3 as="h2" mb={24} color="neutral2" sx={{ maxWidth: 660, textAlign: 'center' }}>
+        <Type.H3 as="h2" mb={24} color="neutral2" sx={{ maxWidth: 670, textAlign: 'center' }}>
           <Trans>“Above all, the world will definitely reach the net-zero goal in 2050”</Trans>{' '}
           <Image
             src={earth}
