@@ -17,6 +17,7 @@ export function DialogProvider({ children }: { children: JSX.Element | JSX.Eleme
   const ERRORS = useMemo(
     () => ({
       COMMON: t`An error occurs. Please try again`,
+      ERR_BAD_REQUEST: t`Request failed. Please try later`,
     }),
     []
   )
@@ -24,7 +25,7 @@ export function DialogProvider({ children }: { children: JSX.Element | JSX.Eleme
     success: ({ title = <Trans>Success</Trans>, message }) =>
       toast.success(<ToastBody title={title} message={message} />),
     error: ({ title = <Trans>Error</Trans>, error }) => {
-      const message = getErrorMessage(error, ERRORS)
+      const message = getErrorMessage(error, ERRORS) || t`Request failed. Please try later`
       return toast.error(<ToastBody title={title} message={message} />)
     },
   }

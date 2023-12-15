@@ -121,6 +121,9 @@ msgstr "Sứ mệnh của chúng tôi là giúp thế giới đạt được m�
 msgid "Our partners and backers"
 msgstr "Đối tác và nhà tài trợ"
 
+msgid "Please enter a correct email"
+msgstr "Vui lòng nhập đúng định dạng email"
+
 msgid "Promote business apply ESG"
 msgstr "Thúc đẩy doanh nghiệp áp dụng ESG"
 
@@ -129,6 +132,9 @@ msgstr "Pseudo"
 
 msgid "Received rewards"
 msgstr "Nhận phần thưởng"
+
+msgid "Request failed. Please try later"
+msgstr "Gửi yêu cầu thất bại, xin thử lại sau"
 
 msgid "Share"
 msgstr "Chia sẻ"

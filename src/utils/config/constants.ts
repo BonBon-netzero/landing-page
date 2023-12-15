@@ -17,7 +17,8 @@ export const LINKS = {
 export const WEBSITE_URL = process.env.NEXT_PUBLIC_URL
 export const API_URL = process.env.NEXT_PUBLIC_API
 export const SCAN_URL = process.env.NEXT_PUBLIC_SCAN
-export const WAITLIST_API_URL = process.env.NEXT_WAITLIST_API || 'https://api.excarbon.co'
+// export const WAITLIST_API_URL = process.env.NEXT_WAITLIST_API || 'https://api.excarbon.co'
+export const WAITLIST_API_URL = process.env.NEXT_WAITLIST_API
 
 // export const FONT_FAMILY = 'Barlow'
 export const FONT_FAMILY = 'Inter'

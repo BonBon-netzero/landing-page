@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-imports
 import { Trans, t } from '@lingui/macro'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useMutation } from 'react-query'
 
 import { submitWaitListApi } from 'apis/ldp'
@@ -25,7 +25,7 @@ export default function JoinCommunity() {
   }, [router.locale])
   const [email, setEmail] = useState('')
 
-  const handleOnChange = (e: any) => setEmail(e.target.value)
+  const handleOnChange = (e: any) => setEmail(e.target.value.trim())
   return (
     <Flex
       variant="card"
@@ -50,6 +50,7 @@ export default function JoinCommunity() {
         <Input
           placeholder={t`Enter your email`}
           onChange={handleOnChange}
+          value={email}
           block
           sx={{
             p: 2,
@@ -62,7 +63,7 @@ export default function JoinCommunity() {
       <StyledButton sx={{ px: [2, 24] }} onClick={() => setShowModal(true)}>
         <Trans>Join Waitlist</Trans>
       </StyledButton>
-      <ModalConfirm isOpen={showModal} onDismiss={() => setShowModal(false)} email={email} />
+      {showModal && <ModalConfirm isOpen={showModal} onDismiss={() => setShowModal(false)} email={email} />}
     </Flex>
   )
 }
@@ -74,10 +75,27 @@ interface Objective {
 
 const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss: () => void; email: string }) => {
   const [_email, setEmail] = useState(email)
-  useEffect(() => {
-    setEmail(email)
-  }, [isOpen])
   const dialog = useDialogContext()
+
+  const WAIT_LIST_OBJECTIVE: string[] = useMemo(
+    () => [
+      t`Credits Suppliers`,
+      t`Offset Buyers`,
+      t`Investors`,
+      t`Credit Carbon Traders`,
+      // t`Other`,
+    ],
+    []
+  )
+
+  const options: Objective[] = useMemo(
+    () =>
+      WAIT_LIST_OBJECTIVE.map((obj) => ({
+        label: obj,
+        value: obj,
+      })),
+    [WAIT_LIST_OBJECTIVE]
+  )
   const [objective, setObjective] = useState<string>(options[0].value)
   const handleRadioChange = (value: string | number | undefined): void => {
     if (value) {
@@ -101,10 +119,16 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
 
   const onSubmit = () => {
     if (!!_email) {
-      mutate({ _email, objective })
+      mutate({ email: _email, objective })
     }
   }
   const error = !_email.match(EMAIL_REGEX)?.length
+  const [showInput, setShowInput] = useState(false)
+
+  useEffect(() => {
+    setShowInput(!!error)
+    setEmail(email)
+  }, [isOpen])
 
   return (
     <Modal isOpen={isOpen} title={<Trans>You Are:</Trans>} onDismiss={onDismiss} dismissable={false} hasClose>
@@ -112,12 +136,12 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
         <Divider />
       </Box>
       <Box m={24} mt={10}>
-        {!email && (
+        {showInput && (
           <InputField
             label="Email"
             placeholder={t`Enter your email`}
             value={_email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.trim())}
             sx={{ mb: 3 }}
             block
             disabled={isLoading}
@@ -143,15 +167,3 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
     </Modal>
   )
 }
-const WAIT_LIST_OBJECTIVE: string[] = [
-  t`Credits Suppliers`,
-  t`Offset Buyers`,
-  t`Investors`,
-  t`Credit Carbon Traders`,
-  // t`Other`,
-]
-
-const options: Objective[] = WAIT_LIST_OBJECTIVE.map((obj) => ({
-  label: obj,
-  value: obj,
-}))

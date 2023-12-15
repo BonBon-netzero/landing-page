@@ -121,6 +121,9 @@ msgstr "Our mission is help the world reach the net-zero goal in 2050"
 msgid "Our partners and backers"
 msgstr "Our partners and backers"
 
+msgid "Please enter a correct email"
+msgstr "Please enter a correct email"
+
 msgid "Promote business apply ESG"
 msgstr "Promote business apply ESG"
 
@@ -129,6 +132,9 @@ msgstr "Pseudo"
 
 msgid "Received rewards"
 msgstr "Received rewards"
+
+msgid "Request failed. Please try later"
+msgstr "Request failed. Please try later"
 
 msgid "Share"
 msgstr "Share"
