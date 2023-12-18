@@ -101,43 +101,48 @@ function Decorators() {
 function VideoDecorator() {
   useEffect(() => {
     if (!document || !window) return
+    const videoElement = document.getElementById('background_video') as HTMLVideoElement
+    const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
+    const mainBgElement = document.getElementById('background_main') as HTMLVideoElement
+
     if (window.innerWidth <= MEDIA_WIDTHS.upToMedium) {
-      const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
       if (!videoLoopElement) return
       videoLoopElement.play()
       videoLoopElement.style.display = 'block'
     } else {
-      const videoElement = document.getElementById('background_video') as HTMLVideoElement
-      const videoLoopElement = document.getElementById('background_video_loop') as HTMLVideoElement
-      if (!videoElement) return
+      if (!videoElement || !videoLoopElement || !mainBgElement) return
       videoElement.play()
       videoElement.style.display = 'block'
       videoLoopElement.style.display = 'block'
+      setTimeout(() => {
+        mainBgElement.style.backgroundImage = 'url(/images/hero_bg.jpg)'
+      }, 2000)
       videoElement.addEventListener('ended', () => {
         setTimeout(() => {
           videoLoopElement.play()
           videoElement.style.display = 'none'
         }, 0)
       })
-      const handleResize = () => {
-        if (window.innerWidth >= MEDIA_WIDTHS.upToLarge) {
-          if (window.innerWidth / window.innerHeight < 16 / 9) {
-            videoElement.style.width = 'auto'
-            videoElement.style.height = '100%'
-            videoLoopElement.style.width = 'auto'
-            videoLoopElement.style.height = '100%'
-          } else {
-            videoElement.style.width = '100%'
-            videoElement.style.height = 'auto'
-            videoLoopElement.style.width = '100%'
-            videoLoopElement.style.height = 'auto'
-          }
-        }
-      }
-      handleResize()
-      window.addEventListener('resize', handleResize)
-      return () => window.removeEventListener('resize', handleResize)
     }
+
+    const handleResize = () => {
+      if (window.innerWidth >= MEDIA_WIDTHS.upToLarge && window.innerWidth / window.innerHeight >= 16 / 9) {
+        mainBgElement.style.backgroundSize = '100% auto'
+        videoElement.style.width = '100%'
+        videoElement.style.height = 'auto'
+        videoLoopElement.style.width = '100%'
+        videoLoopElement.style.height = 'auto'
+      } else {
+        mainBgElement.style.backgroundSize = 'auto 100%'
+        videoElement.style.width = 'auto'
+        videoElement.style.height = '100%'
+        videoLoopElement.style.width = 'auto'
+        videoLoopElement.style.height = '100%'
+      }
+    }
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
   return (
     <Box
@@ -149,11 +154,18 @@ function VideoDecorator() {
         bottom: 0,
         overflow: 'hidden',
         zIndex: 0,
-        backgroundImage: 'url(/images/hero_bg.jpg)',
-        backgroundSize: 'auto 100%',
+        backgroundImage: [
+          'url(/images/hero_bg.jpg)',
+          'url(/images/hero_bg.jpg)',
+          'url(/images/hero_bg.jpg)',
+          'url(/images/hero_bg.jpg)',
+          'none',
+        ],
+        backgroundSize: ['auto 100%', 'auto 100%', 'auto 100%', 'auto 100%', '100% auto'],
         backgroundPosition: '50%',
         backgroundRepeat: 'no-repeat',
       }}
+      id="background_main"
     >
       <Box
         as="video"
@@ -178,7 +190,7 @@ const videoSx: any = {
   left: '50%',
   top: '50%',
   transform: 'translateX(-50%) translateY(-50%)',
-  width: ['auto', 'auto', 'auto', 'auto', '112%'],
+  width: ['auto', 'auto', 'auto', 'auto', '100%'],
   height: ['100%', '100%', '100%', '100%', 'auto'],
   aspectRatio: '1920 / 1080',
   objectFit: 'cover',

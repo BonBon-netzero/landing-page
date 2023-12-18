@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro'
 import Image, { StaticImageData } from 'next/image'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useRef } from 'react'
 import Slider, { Settings } from 'react-slick'
 
 import champion from 'assets/icons/champion.svg'
@@ -74,9 +74,25 @@ export default function Goals() {
 }
 
 function GoalMobile() {
+  const sliderRef = useRef<Slider>(null)
+  const domRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            if (sliderRef.current) {
+              sliderRef.current.slickPlay?.()
+            }
+          }, 100)
+        }
+      })
+    })
+    if (domRef.current) observer.observe(domRef.current)
+  }, [])
   return (
-    <HorizontalCarouselWrapper>
-      <Slider {...settings}>
+    <HorizontalCarouselWrapper ref={domRef}>
+      <Slider {...settings} ref={sliderRef}>
         {configs.map((config, index) => (
           <GoalItem key={index} {...config} />
         ))}
@@ -103,8 +119,8 @@ function GoalItem({ image, label, description }: Config) {
 
 const settings: Settings = {
   speed: 500,
-  autoplay: true,
-  autoplaySpeed: 5000,
+  // autoplay: true,
+  autoplaySpeed: 8000,
   pauseOnHover: true,
   infinite: true,
   slidesToShow: 1,
