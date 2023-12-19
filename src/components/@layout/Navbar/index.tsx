@@ -3,7 +3,7 @@ import { useLingui } from '@lingui/react'
 import debounce from 'lodash/debounce'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import styled from 'styled-components/macro'
 
 import flagEn from 'assets/ldp/flag_en.svg'
@@ -17,6 +17,7 @@ import zIndex from 'utils/config/zIndex'
 
 export default function Navbar() {
   const { i18n } = useLingui()
+  const scrollYRef = useRef(0)
 
   const handleScroll = useMemo(() => {
     return debounce(() => {
@@ -26,11 +27,18 @@ export default function Navbar() {
       const bgDesktop = window.scrollY > 100 ? 'white' : 'transparent'
       const bgMobile = window.scrollY > 100 ? 'white' : '#ffffff80'
       const boxShadow = scrollY > 900 ? '0px 3px 5px 0px rgba(0, 0, 0, 0.04)' : 'none'
+      navbar.style.boxShadow = boxShadow
       if (window.innerWidth < MEDIA_WIDTHS.upToLarge) {
-        navbar.style.cssText = `opacity: 1; background-color: ${bgMobile}; box-shadow: ${boxShadow}`
+        navbar.style.backgroundColor = `${bgMobile}`
       } else {
-        navbar.style.cssText = `opacity: 1; background-color: ${bgDesktop}; box-shadow: ${boxShadow}`
+        navbar.style.backgroundColor = `${bgDesktop}`
       }
+      if (window.scrollY > scrollYRef.current && window.scrollY > 100) {
+        navbar.style.opacity = '0'
+      } else {
+        navbar.style.opacity = '1'
+      }
+      scrollYRef.current = window.scrollY
     }, 100)
   }, [])
 

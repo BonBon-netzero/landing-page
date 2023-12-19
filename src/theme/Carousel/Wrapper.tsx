@@ -161,7 +161,7 @@ const CarouselWrapper = styled(Box)`
   .slick-next:hover:not(.slick-disabled),
   .slick-next:focus:not(.slick-disabled) {
     // border-color: ${({ theme }) => theme.colors.neutral5};
-    box-shadow: ${({ theme }) => theme.shadows[1]};
+    // box-shadow: ${({ theme }) => theme.shadows[1]};
 
     outline: none;
     /* background: transparent; */

@@ -130,8 +130,8 @@ export const Type = {
     return (
       <TextWrapper
         as="h3"
-        fontSize={['40px', '40px', '40px', '40px']}
-        lineHeight={['48px', '48px', '48px', '48px']}
+        fontSize={['32px', '32px', '32px', '40px']}
+        lineHeight={['40px', '40px', '40px', '48px']}
         fontWeight="500"
         // letterSpacing="0%"
         {...props}
