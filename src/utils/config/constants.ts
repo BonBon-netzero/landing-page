@@ -4,7 +4,7 @@ export const LINKS = {
   twitter: 'https://twitter.com/bonbon_netzero',
   discord: '',
   substack: '',
-  docs: '',
+  docs: 'https://github.com/BonBon-netzero',
   policy: '',
   termOfUse: '',
   metamask: 'https://metamask.io',
