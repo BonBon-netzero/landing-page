@@ -40,8 +40,8 @@ msgstr "Accelerating humanity's transition"
 msgid "An error occurs. Please try again"
 msgstr "An error occurs. Please try again"
 
-msgid "BonBon <0/> To Netzero"
-msgstr "BonBon <0/> To Netzero"
+msgid "BonBon <0/> to net-zero"
+msgstr "BonBon <0/> to net-zero"
 
 msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
 msgstr "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
@@ -49,20 +49,23 @@ msgstr "Businesses are driven to transition to green practices and apply ESG mor
 msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
 msgstr "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
 
+msgid "Carbon Credit Providers"
+msgstr "Carbon Credit Providers"
+
+msgid "Carbon Trading Enthusiasts"
+msgstr "Carbon Trading Enthusiasts"
+
 msgid "Confirm"
 msgstr "Confirm"
 
 msgid "Creating global equality"
 msgstr "Creating global equality"
 
-msgid "Credit Carbon Traders"
-msgstr "Credit Carbon Traders"
-
-msgid "Credits Suppliers"
-msgstr "Credits Suppliers"
-
 msgid "Document"
 msgstr "Document"
+
+msgid "Eco-conscious Consumers"
+msgstr "Eco-conscious Consumers"
 
 msgid "English"
 msgstr "English"
@@ -82,11 +85,11 @@ msgstr "Go to our <0>homepage</0> and start fresh."
 msgid "Go to page"
 msgstr "Go to page"
 
+msgid "Green Investors"
+msgstr "Green Investors"
+
 msgid "How BonBon works?"
 msgstr "How BonBon works?"
-
-msgid "Investors"
-msgstr "Investors"
 
 msgid "Join Waitlist"
 msgstr "Join Waitlist"
@@ -106,14 +109,11 @@ msgstr "No Data Found"
 msgid "of {total} records"
 msgstr "of {total} records"
 
-msgid "Offset Buyers"
-msgstr "Offset Buyers"
-
 msgid "Open App"
 msgstr "Open App"
 
-msgid "Open the Bonbon app and start your journey."
-msgstr "Open the Bonbon app and start your journey."
+msgid "Open the BonBon app and start your journey."
+msgstr "Open the BonBon app and start your journey."
 
 msgid "Our mission is help the world reach the net-zero goal in 2050"
 msgstr "Our mission is help the world reach the net-zero goal in 2050"
@@ -142,8 +142,8 @@ msgstr "Share"
 msgid "Show per page"
 msgstr "Show per page"
 
-msgid "Statistics and showcase your Netzero journey."
-msgstr "Statistics and showcase your Netzero journey."
+msgid "Statistics and showcase your net-zero journey."
+msgstr "Statistics and showcase your net-zero journey."
 
 msgid "STEP 1"
 msgstr "STEP 1"

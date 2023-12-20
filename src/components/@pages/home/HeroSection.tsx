@@ -25,7 +25,7 @@ export default function HeroSection() {
       >
         <Type.Hero color="neutral2" sx={{ textAlign: 'center', width: '100%', maxWidth: [300, 400] }}>
           <Trans>
-            BonBon <br /> To Netzero
+            BonBon <br /> to net-zero
           </Trans>
         </Type.Hero>
         <Type.H5

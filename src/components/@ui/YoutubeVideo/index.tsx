@@ -22,7 +22,7 @@ const YoutubeVideo = ({ id = '' }: { id?: string }) => {
         // height={0.5625 * width}
         width="100%"
         src={`https://www.youtube.com/embed/${id}`}
-        title="Bonbon"
+        title="BonBon"
         allowFullScreen
         allow="autoplay"
         style={{ aspectRatio: '1 / 0.5625' }}

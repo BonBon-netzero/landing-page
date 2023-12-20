@@ -1,11 +1,11 @@
 import NextHead from 'next/head'
 
 const SITE = 'https://bonbon.eco'
-const AUTHOR = 'Bonbon NetZero'
+const AUTHOR = 'BonBon Net-Zero'
 const THUMBNAIL_ALT = 'thumbnail_alt'
 
 export default function Head({
-  title = 'Bonbon',
+  title = 'BonBon',
   description = 'The social network for neutral-carbon lifestyle',
   thumbnail = './cover.png',
   path = '',

@@ -1,4 +1,5 @@
 import { Trans } from '@lingui/macro'
+import { ArrowLeft, ArrowRight } from '@phosphor-icons/react'
 import Image, { StaticImageData } from 'next/image'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import Slider, { Settings } from 'react-slick'
@@ -15,6 +16,7 @@ import partner3 from 'assets/images/partner_3.png'
 import partner4 from 'assets/images/partner_4.png'
 import partner5 from 'assets/images/partner_5.png'
 import phoneBorder from 'assets/images/phone_border.png'
+import { useResponsive } from 'hooks/helpers/useResponsive'
 import { HorizontalCarouselWrapper } from 'theme/Carousel/Wrapper'
 import { Box, Flex, Type } from 'theme/base'
 
@@ -88,6 +90,8 @@ function HowItWork() {
     if (domRef.current) observer.observe(domRef.current)
     setRef([sliderRef.current, mobileNavSliderRef.current])
   }, [])
+
+  const { md } = useResponsive() ?? {}
   return (
     <>
       <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
@@ -129,8 +133,9 @@ function HowItWork() {
               }}
             >
               <Slider
-                asNavFor={ref[1]}
                 {...settings}
+                swipe={md}
+                asNavFor={ref[1]}
                 afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
                 ref={sliderRef}
               >
@@ -150,16 +155,32 @@ function HowItWork() {
             bottom: '-130px',
           }}
         >
-          <HorizontalCarouselWrapper>
+          <HorizontalCarouselWrapper
+            sx={{
+              '.slick-dots': {
+                bottom: 'auto',
+                top: 1,
+              },
+              '.slick-prev, .slick-next': {
+                top: '36px !important',
+                transform: 'none !important',
+                border: 'none !important',
+              },
+            }}
+          >
             <Slider
-              asNavFor={ref[0]}
               {...settings}
+              swipe={md}
+              nextArrow={<ArrowRight size={20} />}
+              prevArrow={<ArrowLeft size={20} />}
+              asNavFor={ref[0]}
+              arrows={!md}
               afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
               ref={mobileNavSliderRef}
             >
               {configs.map((config, index) => (
-                <Box key={index} sx={{ height: 280 }}>
-                  <SliderContent key={index} {...config} details={config.details} sx={{ boxShadow: 'none' }} />
+                <Box key={index} sx={{ height: 300 }}>
+                  <SliderContent key={index} {...config} details={config.details} sx={{ boxShadow: 'none', pt: 40 }} />
                 </Box>
               ))}
             </Slider>
@@ -217,14 +238,14 @@ function SliderContent({ details, sx }: { details: Config['details']; sx?: any }
       }}
     >
       <Type.Body
-        mb={12}
+        mb={[2, 2, 12]}
         color="primary2"
         sx={{ fontWeight: '500', fontSize: ['14px', '14px', '16px'], lineHeight: ['24px', '24px', '16px'] }}
       >
         {details.step}
       </Type.Body>
       <Type.H5
-        mb={12}
+        mb={[2, 2, 12]}
         sx={{ fontWeight: '600', fontSize: ['18px', '18px', '24px'], lineHeight: ['28px', '28px', '32px'] }}
       >
         {details.title}
@@ -324,7 +345,7 @@ const configs: Config[] = [
     details: {
       step: <Trans>STEP 1</Trans>,
       title: <Trans>Open App</Trans>,
-      description: <Trans>Open the Bonbon app and start your journey.</Trans>,
+      description: <Trans>Open the BonBon app and start your journey.</Trans>,
     },
   },
   {
@@ -353,7 +374,7 @@ const configs: Config[] = [
     details: {
       step: <Trans>STEP 4</Trans>,
       title: <Trans>Your carbon profile</Trans>,
-      description: <Trans>Statistics and showcase your Netzero journey.</Trans>,
+      description: <Trans>Statistics and showcase your net-zero journey.</Trans>,
     },
   },
 ]
