@@ -66,6 +66,11 @@ export default function HowItWorkAndPartners() {
 }
 
 function HowItWork() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const [currentSlide, setCurrentSlide] = useState(0)
   const currentContent = configs[currentSlide]
   const [ref, setRef] = useState<any>([undefined, undefined])
@@ -92,6 +97,16 @@ function HowItWork() {
   }, [])
 
   const { md } = useResponsive() ?? {}
+
+  if (!mounted)
+    return (
+      <>
+        <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
+          <Trans>How BonBon works?</Trans>{' '}
+        </Type.H3>
+      </>
+    )
+
   return (
     <>
       <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
