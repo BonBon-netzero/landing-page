@@ -79,10 +79,10 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
 
   const WAIT_LIST_OBJECTIVE: string[] = useMemo(
     () => [
-      t`Credits Suppliers`,
-      t`Offset Buyers`,
-      t`Investors`,
-      t`Credit Carbon Traders`,
+      t`Carbon Credit Providers`,
+      t`Eco-conscious Consumers`,
+      t`Green Investors`,
+      t`Carbon Trading Enthusiasts`,
       // t`Other`,
     ],
     []

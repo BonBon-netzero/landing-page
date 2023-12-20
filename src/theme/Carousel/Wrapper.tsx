@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 import { Box } from 'theme/base'
 
 const ARROW_SIZE = 32
-const ARROW_POSITION = 0
+const ARROW_POSITION = -16
 const DOTS_POSITION = 32
 const DOTS_SIZE = 10
 
@@ -128,16 +128,16 @@ const CarouselWrapper = styled(Box)`
     width: ${ARROW_SIZE}px;
     height: ${ARROW_SIZE}px;
     padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, 32px);
+    -ms-transform: translate(0, 32px);
+    transform: translate(0, 32px);
 
     cursor: pointer;
 
     border: none;
     outline: none;
     background: transparent;
-    color: ${({ theme }) => theme.colors.primary1};
+    color: ${({ theme }) => theme.colors.primary2};
     & circle {
       color: ${({ theme }) => theme.colors.neutral5};
     }
@@ -161,7 +161,7 @@ const CarouselWrapper = styled(Box)`
   .slick-next:hover:not(.slick-disabled),
   .slick-next:focus:not(.slick-disabled) {
     // border-color: ${({ theme }) => theme.colors.neutral5};
-    box-shadow: ${({ theme }) => theme.shadows[1]};
+    // box-shadow: ${({ theme }) => theme.shadows[1]};
 
     outline: none;
     /* background: transparent; */
@@ -218,10 +218,10 @@ const CarouselWrapper = styled(Box)`
     padding: 0;
 
     cursor: pointer;
-    @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-      width: 14px;
-      height: 14px;
-    }
+    // @media all and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+    //   width: 14px;
+    //   height: 14px;
+    // }
   }
   .slick-dots li button {
     font-size: 0;
@@ -250,11 +250,12 @@ const CarouselWrapper = styled(Box)`
   }
   .slick-dots li button:before {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    border-radius: 8px;
-    width: 6px;
-    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    width: ${DOTS_SIZE}px;
+    height: ${DOTS_SIZE}px;
 
     content: '';
     text-align: center;

@@ -1,4 +1,5 @@
 import { Trans } from '@lingui/macro'
+import { ArrowLeft, ArrowRight } from '@phosphor-icons/react'
 import Image, { StaticImageData } from 'next/image'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import Slider, { Settings } from 'react-slick'
@@ -15,6 +16,7 @@ import partner3 from 'assets/images/partner_3.png'
 import partner4 from 'assets/images/partner_4.png'
 import partner5 from 'assets/images/partner_5.png'
 import phoneBorder from 'assets/images/phone_border.png'
+import { useResponsive } from 'hooks/helpers/useResponsive'
 import { HorizontalCarouselWrapper } from 'theme/Carousel/Wrapper'
 import { Box, Flex, Type } from 'theme/base'
 
@@ -45,7 +47,7 @@ export default function HowItWorkAndPartners() {
         }}
       >
         <HowItWork />
-        <Box mb={[68, 68, 100, 150, 100]} />
+        <Box mb={[180, 180, 150, 150, 100]} />
         <Partners />
       </Flex>
       <Box
@@ -64,9 +66,16 @@ export default function HowItWorkAndPartners() {
 }
 
 function HowItWork() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const [currentSlide, setCurrentSlide] = useState(0)
   const currentContent = configs[currentSlide]
+  const [ref, setRef] = useState<any>([undefined, undefined])
   const sliderRef = useRef<Slider>(null)
+  const mobileNavSliderRef = useRef<Slider>(null)
   const domRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -76,12 +85,28 @@ function HowItWork() {
             if (sliderRef.current) {
               sliderRef.current.slickPlay?.()
             }
+            if (mobileNavSliderRef.current) {
+              mobileNavSliderRef.current.slickPlay?.()
+            }
           }, 100)
         }
       })
     })
     if (domRef.current) observer.observe(domRef.current)
+    setRef([sliderRef.current, mobileNavSliderRef.current])
   }, [])
+
+  const { md } = useResponsive() ?? {}
+
+  if (!mounted)
+    return (
+      <>
+        <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
+          <Trans>How BonBon works?</Trans>{' '}
+        </Type.H3>
+      </>
+    )
+
   return (
     <>
       <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
@@ -94,14 +119,22 @@ function HowItWork() {
           style={{ position: 'relative', transform: 'translateY(4px)' }}
         />
       </Type.H3>
-      <Flex sx={{ alignItems: 'center', gap: 40, flexDirection: ['column', 'column', 'row'] }}>
+      <Flex
+        sx={{
+          alignItems: 'center',
+          gap: 40,
+          flexDirection: ['column', 'column', 'row'],
+          position: 'relative',
+          width: ['100%', '100%', 'auto'],
+        }}
+        ref={domRef}
+      >
         <Box sx={{ position: 'relative' }}>
           <Box sx={{ position: 'absolute', left: '-15px', top: '-15px', width: 330, height: 675, zIndex: 0 }}>
             <Image src={phoneBorder} fill alt="phone" style={{ objectFit: 'contain' }} />
           </Box>
 
           <Box
-            ref={domRef}
             sx={{
               borderRadius: '40px',
               width: 300,
@@ -114,7 +147,13 @@ function HowItWork() {
                 '& .slick-list': { borderRadius: '40px !important', overflow: 'hidden !important', bg: 'primary2' },
               }}
             >
-              <Slider {...settings} afterChange={(currentSlide) => setCurrentSlide(currentSlide)} ref={sliderRef}>
+              <Slider
+                {...settings}
+                swipe={md}
+                asNavFor={ref[1]}
+                afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
+                ref={sliderRef}
+              >
                 {configs.map((config, index) => (
                   <SliderItem key={index} {...config} />
                 ))}
@@ -122,8 +161,59 @@ function HowItWork() {
             </HorizontalCarouselWrapper>
           </Box>
         </Box>
+        <Box
+          sx={{
+            width: '100%',
+            maxWidth: 400,
+            display: ['block', 'block', 'none'],
+            position: 'absolute',
+            bottom: '-130px',
+          }}
+        >
+          <HorizontalCarouselWrapper
+            sx={{
+              '.slick-dots': {
+                bottom: 'auto',
+                top: 1,
+              },
+              '.slick-prev, .slick-next': {
+                top: '36px !important',
+                transform: 'none !important',
+                border: 'none !important',
+              },
+            }}
+          >
+            <Slider
+              {...settings}
+              swipe={md}
+              nextArrow={<ArrowRight size={20} />}
+              prevArrow={<ArrowLeft size={20} />}
+              asNavFor={ref[0]}
+              arrows={!md}
+              afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
+              ref={mobileNavSliderRef}
+            >
+              {configs.map((config, index) => (
+                <Box key={index} sx={{ height: 300 }}>
+                  <SliderContent key={index} {...config} details={config.details} sx={{ boxShadow: 'none', pt: 40 }} />
+                </Box>
+              ))}
+            </Slider>
+          </HorizontalCarouselWrapper>
+        </Box>
 
-        <Box sx={{ height: 350, width: 300 }}>
+        <Box
+          sx={{
+            display: ['none', 'none', 'block'],
+            height: 310,
+            width: ['100%', '100%', 300],
+            maxWidth: 400,
+            position: ['absolute', 'absolute', 'relative'],
+            bottom: ['-32px', '-32px', 'auto'],
+            left: ['50%', '50%', 0],
+            transform: ['translateX(-50%)', 'translateX(-50%)', 'none'],
+          }}
+        >
           <SliderContent details={currentContent.details} />
         </Box>
       </Flex>
@@ -147,7 +237,7 @@ function SliderItem({ image }: { image: Config['image'] }) {
     </Box>
   )
 }
-function SliderContent({ details }: { details: Config['details'] }) {
+function SliderContent({ details, sx }: { details: Config['details']; sx?: any }) {
   return (
     <Box
       variant="card"
@@ -159,15 +249,28 @@ function SliderContent({ details }: { details: Config['details'] }) {
         textAlign: ['center', 'center', 'left'],
         display: 'flex',
         flexDirection: 'column',
+        ...(sx || {}),
       }}
     >
-      <Type.Body mb={12} color="primary2" sx={{ fontWeight: '500' }}>
+      <Type.Body
+        mb={[2, 2, 12]}
+        color="primary2"
+        sx={{ fontWeight: '500', fontSize: ['14px', '14px', '16px'], lineHeight: ['24px', '24px', '16px'] }}
+      >
         {details.step}
       </Type.Body>
-      <Type.H5 mb={12} sx={{ fontWeight: '600' }}>
+      <Type.H5
+        mb={[2, 2, 12]}
+        sx={{ fontWeight: '600', fontSize: ['18px', '18px', '24px'], lineHeight: ['28px', '28px', '32px'] }}
+      >
         {details.title}
       </Type.H5>
-      <Type.Body mb={32} color="neutral3" display="block" sx={{ flex: '1' }}>
+      <Type.Body
+        mb={3}
+        color="neutral3"
+        display="block"
+        sx={{ flex: '1', fontSize: ['14px', '14px', '16px'], lineHeight: ['24px', '24px', '24px'] }}
+      >
         {details.description}
       </Type.Body>
       <DemoButton wrapperSx={{ width: '100%' }} buttonSx={{ justifyContent: 'center' }} />
@@ -257,7 +360,7 @@ const configs: Config[] = [
     details: {
       step: <Trans>STEP 1</Trans>,
       title: <Trans>Open App</Trans>,
-      description: <Trans>Open the Bonbon app and start your journey.</Trans>,
+      description: <Trans>Open the BonBon app and start your journey.</Trans>,
     },
   },
   {
@@ -286,7 +389,7 @@ const configs: Config[] = [
     details: {
       step: <Trans>STEP 4</Trans>,
       title: <Trans>Your carbon profile</Trans>,
-      description: <Trans>Statistics and showcase your Netzero journey.</Trans>,
+      description: <Trans>Statistics and showcase your net-zero journey.</Trans>,
     },
   },
 ]

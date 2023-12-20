@@ -20,7 +20,7 @@ export default function Footer() {
         }}
       >
         <Flex sx={{ flexDirection: 'column', alignItems: ['center', 'start'] }}>
-          <LogoWithText size={40} />
+          <LogoWithText size={32} />
           <Box mb={24} />
           <SocialLinks />
         </Flex>

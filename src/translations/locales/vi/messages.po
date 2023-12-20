@@ -40,8 +40,8 @@ msgstr "Tăng tốc quá trình chuyển đổi toàn cầu"
 msgid "An error occurs. Please try again"
 msgstr "Đã có lỗi xảy ra, vui lòng thử lại."
 
-msgid "BonBon <0/> To Netzero"
-msgstr "BonBon <0/> To Netzero"
+msgid "BonBon <0/> to net-zero"
+msgstr "BonBon <0/> to net-zero"
 
 msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
 msgstr "Doanh nghiệp được thúc đẩy chuyển đổi đến các hoạt động bền vững và áp dụng ESG nhanh chóng hơn, đáp ứng theo sự lựa chọn của người tiêu dùng."
@@ -49,20 +49,23 @@ msgstr "Doanh nghiệp được thúc đẩy chuyển đổi đến các hoạt 
 msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
 msgstr "Đến năm 2050, thay đổi lối sống của 1 tỷ người trên toàn thế giới để trở nên thân thiện với môi trường, và ưu tiên sử dụng các sản phẩm carbon-neutral."
 
+msgid "Carbon Credit Providers"
+msgstr "Đơn vị cung cấp tín chỉ Carbon"
+
+msgid "Carbon Trading Enthusiasts"
+msgstr "Người đam mê giao dịch Carbon"
+
 msgid "Confirm"
 msgstr "Xác nhận"
 
 msgid "Creating global equality"
 msgstr "Tạo ra sự bình đẳng toàn cầu"
 
-msgid "Credit Carbon Traders"
-msgstr "Nhà giao dịch tín chỉ"
-
-msgid "Credits Suppliers"
-msgstr "Đơn vị cung cấp"
-
 msgid "Document"
 msgstr "Tài liệu"
+
+msgid "Eco-conscious Consumers"
+msgstr "Người tiêu dùng xanh"
 
 msgid "English"
 msgstr "Tiếng Anh"
@@ -82,11 +85,11 @@ msgstr "Trở về <0>trang chủ</0> để bắt đầu lại."
 msgid "Go to page"
 msgstr "Đến trang"
 
+msgid "Green Investors"
+msgstr "Nhà đầu tư xanh"
+
 msgid "How BonBon works?"
 msgstr "BonBon hoạt động như thế nào?"
-
-msgid "Investors"
-msgstr "Nhà đầu tư"
 
 msgid "Join Waitlist"
 msgstr "Đăng ký trước"
@@ -106,14 +109,11 @@ msgstr "Không có dữ liệu"
 msgid "of {total} records"
 msgstr "của {total} dữ liệu"
 
-msgid "Offset Buyers"
-msgstr "Đơn vị phát thải"
-
 msgid "Open App"
 msgstr "Mở ứng dụng"
 
-msgid "Open the Bonbon app and start your journey."
-msgstr "Mở ứng dụng Bonbon và bắt đầu trải nghiệm."
+msgid "Open the BonBon app and start your journey."
+msgstr "Mở ứng dụng BonBon và bắt đầu trải nghiệm."
 
 msgid "Our mission is help the world reach the net-zero goal in 2050"
 msgstr "Sứ mệnh của chúng tôi là giúp thế giới đạt được mục tiêu net-zero vào năm 2050"
@@ -142,8 +142,8 @@ msgstr "Chia sẻ"
 msgid "Show per page"
 msgstr "Hiện mỗi trang"
 
-msgid "Statistics and showcase your Netzero journey."
-msgstr "Thống kê và chia sẻ hành trình Netzero của bạn."
+msgid "Statistics and showcase your net-zero journey."
+msgstr "Thống kê và chia sẻ hành trình net-zero của bạn."
 
 msgid "STEP 1"
 msgstr "BƯỚC 1"
