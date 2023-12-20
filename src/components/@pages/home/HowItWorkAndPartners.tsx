@@ -78,6 +78,7 @@ function HowItWork() {
   const mobileNavSliderRef = useRef<Slider>(null)
   const domRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
+    if (!mounted) return
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -94,7 +95,7 @@ function HowItWork() {
     })
     if (domRef.current) observer.observe(domRef.current)
     setRef([sliderRef.current, mobileNavSliderRef.current])
-  }, [])
+  }, [mounted])
 
   const { md } = useResponsive() ?? {}
 
