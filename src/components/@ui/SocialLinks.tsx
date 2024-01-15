@@ -5,7 +5,15 @@ import GithubIcon from './Icons/GithubIcon'
 import TwitterIcon from './Icons/TwitterIcon'
 import ZaloIcon from './Icons/ZaloIcon'
 
-export default function SocialLinks() {
+const COLOR_LIGHT = 'white'
+const COLOR = 'neutral1'
+
+const BG_LIGHT = 'neutral1'
+const BG = 'neutral5'
+
+export default function SocialLinks({ isLight = false }: { isLight?: boolean }) {
+  const _links = isLight ? linksLight : links
+  const _bg = isLight ? BG_LIGHT : BG
   return (
     <>
       <Flex
@@ -21,14 +29,14 @@ export default function SocialLinks() {
           },
         }}
       >
-        {links.map((config, index) => {
+        {_links.map((config, index) => {
           return (
             <Box
               key={index}
               as="a"
               href={config.link}
               target="_blank"
-              sx={{ lineHeight: 0, bg: 'neutral1', borderRadius: '50%' }}
+              sx={{ lineHeight: 0, bg: _bg, borderRadius: '50%' }}
             >
               {config.icon}
             </Box>
@@ -40,7 +48,13 @@ export default function SocialLinks() {
 }
 
 const links = [
-  { link: LINKS.github, icon: <IconBox icon={<GithubIcon size={20} />} sx={{ p: '2px' }} /> },
-  { link: LINKS.twitter, icon: <IconBox icon={<TwitterIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.github, icon: <IconBox color={COLOR} icon={<GithubIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.twitter, icon: <IconBox color={COLOR} icon={<TwitterIcon size={20} />} sx={{ p: '2px' }} /> },
   { link: LINKS.zalo, icon: <ZaloIcon /> },
+]
+
+const linksLight = [
+  { link: LINKS.github, icon: <IconBox color={COLOR_LIGHT} icon={<GithubIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.twitter, icon: <IconBox color={COLOR_LIGHT} icon={<TwitterIcon size={20} />} sx={{ p: '2px' }} /> },
+  { link: LINKS.zalo, icon: <ZaloIcon isLight /> },
 ]

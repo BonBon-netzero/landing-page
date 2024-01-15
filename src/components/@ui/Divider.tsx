@@ -8,6 +8,7 @@ export default function Divider({
   return (
     <Box
       sx={{
+        width: '100%',
         height: '1px',
         bg: isDashed ? 'transparent' : color,
         borderTop: isDashed ? '1px dashed' : undefined,

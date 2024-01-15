@@ -49,6 +49,7 @@ function colors(darkMode: boolean): Colors {
     cardBG: 'rgba(49, 56, 86, 0.20)',
     stroke: '#EEF0F1',
     stroke1: '#E6EAEE',
+    green1: '#6CA938',
   }
 }
 

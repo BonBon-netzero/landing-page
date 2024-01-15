@@ -13,9 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-msgid "“Above all, the world will definitely reach the net-zero goal in 2050”"
-msgstr "“Above all, the world will definitely reach the net-zero goal in 2050”"
-
 msgid "{label} is required"
 msgstr "{label} is required"
 
@@ -34,20 +31,29 @@ msgstr "{label} must be less than or equal to {0}"
 msgid "© 2023 BonBon. All right reserved ☕"
 msgstr "© 2023 BonBon. All right reserved ☕"
 
-msgid "Accelerating humanity's transition"
-msgstr "Accelerating humanity's transition"
+msgid "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
+msgstr "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
 
 msgid "An error occurs. Please try again"
 msgstr "An error occurs. Please try again"
 
-msgid "BonBon <0/> to net-zero"
-msgstr "BonBon <0/> to net-zero"
+msgid "Balance your carbon score with Bonbon. Choose green options and watch your environmental impact drop."
+msgstr "Balance your carbon score with Bonbon. Choose green options and watch your environmental impact drop."
 
-msgid "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
-msgstr "Businesses are driven to transition to green practices and apply ESG more rapidly by consumer choices."
+msgid "Bonbon is a pioneering social network focused on green and sustainable living. Our platform, powered by blockchain technology, connects individuals and businesses committed to reducing their carbon footprint. We offer tools and resources to make eco-friendly choices, track their impact, and ensure the integrity of carbon credits through blockchain."
+msgstr "Bonbon is a pioneering social network focused on green and sustainable living. Our platform, powered by blockchain technology, connects individuals and businesses committed to reducing their carbon footprint. We offer tools and resources to make eco-friendly choices, track their impact, and ensure the integrity of carbon credits through blockchain."
 
-msgid "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
-msgstr "By 2050, we will transform the lifestyles of 1 billion people worldwide to be environmentally friendly, and prioritizing the use of carbon-neutral products."
+msgid "Bonbon is currently available in specific regions, with plans to expand globally. Our mission is to build a worldwide network of individuals and businesses committed to net-zero carbon emissions by 2050, supported by our blockchain technology."
+msgstr "Bonbon is currently available in specific regions, with plans to expand globally. Our mission is to build a worldwide network of individuals and businesses committed to net-zero carbon emissions by 2050, supported by our blockchain technology."
+
+msgid "Bonbon stands out by integrating a social networking platform with a blockchain-based carbon credit system. This unique combination not only fosters a community of eco-conscious individuals but also provides a transparent and secure way to reward sustainable living."
+msgstr "Bonbon stands out by integrating a social networking platform with a blockchain-based carbon credit system. This unique combination not only fosters a community of eco-conscious individuals but also provides a transparent and secure way to reward sustainable living."
+
+msgid "Bonbon uses blockchain technology to ensure the credibility of carbon credits. This technology provides a transparent, immutable ledger for tracking the origin, transfer, and use of each credit, guaranteeing their authenticity and impact."
+msgstr "Bonbon uses blockchain technology to ensure the credibility of carbon credits. This technology provides a transparent, immutable ledger for tracking the origin, transfer, and use of each credit, guaranteeing their authenticity and impact."
+
+msgid "Can businesses participate in Bonbon?"
+msgstr "Can businesses participate in Bonbon?"
 
 msgid "Carbon Credit Providers"
 msgstr "Carbon Credit Providers"
@@ -55,17 +61,41 @@ msgstr "Carbon Credit Providers"
 msgid "Carbon Trading Enthusiasts"
 msgstr "Carbon Trading Enthusiasts"
 
+msgid "CELEBRATE"
+msgstr "CELEBRATE"
+
+msgid "Choose <0>Sustainability</0>"
+msgstr "Choose <0>Sustainability</0>"
+
 msgid "Confirm"
 msgstr "Confirm"
 
-msgid "Creating global equality"
-msgstr "Creating global equality"
+msgid "Connect with a <0>Global Green Community</0>"
+msgstr "Connect with a <0>Global Green Community</0>"
+
+msgid "Curtail"
+msgstr "Curtail"
+
+msgid "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
+msgstr "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
 
 msgid "Document"
 msgstr "Document"
 
+msgid "EARN"
+msgstr "EARN"
+
+msgid "Earn valuable carbon credits with each sustainable choice. Use these credits to offset your carbon footprint or trade them within the Bonbon community."
+msgstr "Earn valuable carbon credits with each sustainable choice. Use these credits to offset your carbon footprint or trade them within the Bonbon community."
+
 msgid "Eco-conscious Consumers"
 msgstr "Eco-conscious Consumers"
+
+msgid "Embark on Your <0>Eco-Journey</0>"
+msgstr "Embark on Your <0>Eco-Journey</0>"
+
+msgid "Empower Your Daily Choices with Bonbon"
+msgstr "Empower Your Daily Choices with Bonbon"
 
 msgid "English"
 msgstr "English"
@@ -76,8 +106,14 @@ msgstr "Enter your email"
 msgid "Error"
 msgstr "Error"
 
-msgid "Find & use green brands"
-msgstr "Find & use green brands"
+msgid "Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
+msgstr "Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
+
+msgid "Expand"
+msgstr "Expand"
+
+msgid "Get involved and make a difference!"
+msgstr "Get involved and make a difference!"
 
 msgid "Go to our <0>homepage</0> and start fresh."
 msgstr "Go to our <0>homepage</0> and start fresh."
@@ -91,17 +127,38 @@ msgstr "Green Investors"
 msgid "How BonBon works?"
 msgstr "How BonBon works?"
 
+msgid "How can I earn carbon credits with Bonbon?"
+msgstr "How can I earn carbon credits with Bonbon?"
+
+msgid "How can I join the Bonbon community?"
+msgstr "How can I join the Bonbon community?"
+
+msgid "How does Bonbon ensure the credibility of carbon credits?"
+msgstr "How does Bonbon ensure the credibility of carbon credits?"
+
+msgid "Is Bonbon available worldwide?"
+msgstr "Is Bonbon available worldwide?"
+
 msgid "Join Waitlist"
 msgstr "Join Waitlist"
+
+msgid "Joining Bonbon is straightforward. Sign up for our waitlist on our website, and you'll be notified when the app becomes available in your region. Start your sustainable journey with our global community, backed by the reliability of blockchain technology."
+msgstr "Joining Bonbon is straightforward. Sign up for our waitlist on our website, and you'll be notified when the app becomes available in your region. Start your sustainable journey with our global community, backed by the reliability of blockchain technology."
+
+msgid "Launch the Bonbon app to explore a world of green choices. Discover eco-friendly products and services tailored to your lifestyle, all at your fingertips."
+msgstr "Launch the Bonbon app to explore a world of green choices. Discover eco-friendly products and services tailored to your lifestyle, all at your fingertips."
 
 msgid "Live Demo"
 msgstr "Live Demo"
 
-msgid "Look for your favorite services and brands that you use frequently."
-msgstr "Look for your favorite services and brands that you use frequently."
-
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Looks Like You've Hit a Dead End."
+
+msgid "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
+msgstr "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
+
+msgid "Neutralize"
+msgstr "Neutralize"
 
 msgid "No Data Found"
 msgstr "No Data Found"
@@ -109,41 +166,41 @@ msgstr "No Data Found"
 msgid "of {total} records"
 msgstr "of {total} records"
 
-msgid "Open App"
-msgstr "Open App"
-
-msgid "Open the BonBon app and start your journey."
-msgstr "Open the BonBon app and start your journey."
-
-msgid "Our mission is help the world reach the net-zero goal in 2050"
-msgstr "Our mission is help the world reach the net-zero goal in 2050"
-
-msgid "Our partners and backers"
-msgstr "Our partners and backers"
-
 msgid "Please enter a correct email"
 msgstr "Please enter a correct email"
-
-msgid "Promote business apply ESG"
-msgstr "Promote business apply ESG"
 
 msgid "Pseudo"
 msgstr "Pseudo"
 
-msgid "Received rewards"
-msgstr "Received rewards"
+msgid "REDEEM"
+msgstr "REDEEM"
+
+msgid "Register your email"
+msgstr "Register your email"
+
+msgid "Register your email to get early access"
+msgstr "Register your email to get early access"
 
 msgid "Request failed. Please try later"
 msgstr "Request failed. Please try later"
 
+msgid "Rewarding your <0>Green Actions</0>"
+msgstr "Rewarding your <0>Green Actions</0>"
+
+msgid "See All FAQs"
+msgstr "See All FAQs"
+
 msgid "Share"
 msgstr "Share"
+
+msgid "Share your journey, learn from others, and join forces with a global network of eco-conscious individuals committed to making a difference."
+msgstr "Share your journey, learn from others, and join forces with a global network of eco-conscious individuals committed to making a difference."
 
 msgid "Show per page"
 msgstr "Show per page"
 
-msgid "Statistics and showcase your net-zero journey."
-msgstr "Statistics and showcase your net-zero journey."
+msgid "Spread the eco-word with Bonbon. Get friends on board and watch your green influence grow."
+msgstr "Spread the eco-word with Bonbon. Get friends on board and watch your green influence grow."
 
 msgid "STEP 1"
 msgstr "STEP 1"
@@ -163,20 +220,23 @@ msgstr "Submit Success"
 msgid "Success"
 msgstr "Success"
 
+msgid "Users earn carbon credits on Bonbon by making sustainable choices. These credits are securely tracked and verified using blockchain technology, ensuring that every eco-friendly action, from choosing sustainable products to reducing energy consumption, is accurately accounted for and rewarded."
+msgstr "Users earn carbon credits on Bonbon by making sustainable choices. These credits are securely tracked and verified using blockchain technology, ensuring that every eco-friendly action, from choosing sustainable products to reducing energy consumption, is accurately accounted for and rewarded."
+
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-msgid "What if we succeeded?"
-msgstr "What if we succeeded?"
+msgid "We got answers"
+msgstr "We got answers"
 
-msgid "When reducing 1tCO2 in Europe is equally valuable as in Africa, it will create equity in the fight against climate change."
-msgstr "When reducing 1tCO2 in Europe is equally valuable as in Africa, it will create equity in the fight against climate change."
+msgid "What is Bonbon and how does it contribute to sustainability?"
+msgstr "What is Bonbon and how does it contribute to sustainability?"
 
-msgid "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
-msgstr "When use green-services, you are helping to reduce emission. The amount of CER token you will receive is equal to the amount reduce emissions accordingly."
+msgid "What makes Bonbon different from other sustainability apps?"
+msgstr "What makes Bonbon different from other sustainability apps?"
+
+msgid "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
+msgstr "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
 
 msgid "You Are:"
 msgstr "You Are:"
-
-msgid "Your carbon profile"
-msgstr "Your carbon profile"

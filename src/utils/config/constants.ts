@@ -10,6 +10,7 @@ export const LINKS = {
   metamask: 'https://metamask.io',
   github: 'https://github.com/BonBon-netzero',
   zalo: 'https://zalo.me/g/arsqwf664',
+  questionsAndAnswers: '/',
 }
 
 export const DEMO_LINKS: { [key: string]: string } = {
@@ -23,8 +24,7 @@ export const API_URL = process.env.NEXT_PUBLIC_API
 export const SCAN_URL = process.env.NEXT_PUBLIC_SCAN
 export const WAITLIST_API_URL = process.env.NEXT_PUBLIC_WAITLIST_API
 
-// export const FONT_FAMILY = 'Barlow'
-export const FONT_FAMILY = 'Inter'
+export const FONT_FAMILY = 'Overpass'
 export const DATE_FORMAT = 'YYYY/MM/DD'
 export const DAYJS_FULL_DATE_FORMAT = 'YYYY/MM/DD - HH:mm A'
 
