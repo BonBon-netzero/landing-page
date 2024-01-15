@@ -32,28 +32,28 @@ msgid "© 2023 BonBon. All right reserved ☕"
 msgstr "© 2023 BonBon. All right reserved ☕"
 
 msgid "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
-msgstr ""
+msgstr "<0>Bắt đầu</0><1>hành trình xanh</1><2>cùng Bonbon</2>"
 
 msgid "An error occurs. Please try again"
 msgstr "Đã có lỗi xảy ra, vui lòng thử lại."
 
 msgid "Balance your carbon score with Bonbon. Choose green options and watch your environmental impact drop."
-msgstr ""
+msgstr "Cân bằng điểm carbon của bạn với Bonbon. Lựa chọn lối sống xanh và theo dõi sự giảm thiểu tác động lên môi trường của bạn."
 
 msgid "Bonbon is a pioneering social network focused on green and sustainable living. Our platform, powered by blockchain technology, connects individuals and businesses committed to reducing their carbon footprint. We offer tools and resources to make eco-friendly choices, track their impact, and ensure the integrity of carbon credits through blockchain."
-msgstr ""
+msgstr "Bonbon là một mạng xã hội tiên phong tập trung vào lối sống xanh và bền vững. Nền tảng của chúng tôi, sử dụng công nghệ blockchain, kết nối cá nhân và doanh nghiệp cam kết giảm lượng carbon của họ. Chúng tôi cung cấp các công cụ và nguồn lực để thực hiện những lựa chọn thân thiện với môi trường, theo dõi tác động của chúng và đảm bảo tính toàn vẹn của tín dụng carbon thông qua blockchain."
 
 msgid "Bonbon is currently available in specific regions, with plans to expand globally. Our mission is to build a worldwide network of individuals and businesses committed to net-zero carbon emissions by 2050, supported by our blockchain technology."
-msgstr ""
+msgstr "Hiện tại, Bonbon chỉ hoạt động ở một số khu vực cụ thể, và đang có kế hoạch mở rộng ra toàn cầu. Sứ mệnh của chúng tôi là xây dựng một mạng lưới toàn cầu cho các cá nhân và doanh nghiệp cam kết đạt tới sự cân bằng net-zero carbon vào năm 2050, được hỗ trợ bởi công nghệ blockchain."
 
 msgid "Bonbon stands out by integrating a social networking platform with a blockchain-based carbon credit system. This unique combination not only fosters a community of eco-conscious individuals but also provides a transparent and secure way to reward sustainable living."
-msgstr ""
+msgstr "Bonbon nổi bật với cách tích hợp một nền tảng mạng xã hội với hệ thống tín chỉ carbon dựa trên blockchain. Sự kết hợp độc đáo này không chỉ khuyến khích sự đoàn kết trong cộng đồng các cá nhân có ý thức về môi trường mà còn cung cấp một cách thức tính toán minh bạch và an toàn để đền đáp cho lối sống bền vững."
 
 msgid "Bonbon uses blockchain technology to ensure the credibility of carbon credits. This technology provides a transparent, immutable ledger for tracking the origin, transfer, and use of each credit, guaranteeing their authenticity and impact."
-msgstr ""
+msgstr "Bonbon sử dụng công nghệ blockchain để đảm bảo tính minh bạch của tín chỉ carbon. Công nghệ này tạo ra một sổ cái minh bạch và không thể thay đổi để theo dõi nguồn gốc, chuyển giao và sử dụng của từng tín chỉ, đảm bảo tính xác thực và tác động của chúng."
 
 msgid "Can businesses participate in Bonbon?"
-msgstr ""
+msgstr "Liệu các doanh nghiệp có thể tham gia vào Bonbon không?"
 
 msgid "Carbon Credit Providers"
 msgstr "Đơn vị cung cấp tín chỉ Carbon"
@@ -62,40 +62,40 @@ msgid "Carbon Trading Enthusiasts"
 msgstr "Người đam mê giao dịch Carbon"
 
 msgid "CELEBRATE"
-msgstr ""
+msgstr "TẬN HƯỞNG"
 
 msgid "Choose <0>Sustainability</0>"
-msgstr ""
+msgstr "Ưa chuộng <0>sự bền vững</0>"
 
 msgid "Confirm"
 msgstr "Xác nhận"
 
 msgid "Connect with a <0>Global Green Community</0>"
-msgstr ""
+msgstr "Kết nối với <0>Cộng đồng Xanh Toàn cầu</0>"
 
 msgid "Curtail"
-msgstr ""
+msgstr "Cắt giảm"
 
 msgid "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
-msgstr ""
-
-msgid "Document"
-msgstr "Tài liệu"
+msgstr "Giảm lượng carbon mỗi khi bạn đưa ra quyết định. Bonbon giúp bạn chọn những thói quen tạo ra sự khác biệt thực sự."
 
 msgid "EARN"
-msgstr ""
+msgstr "Tích lũy"
 
 msgid "Earn valuable carbon credits with each sustainable choice. Use these credits to offset your carbon footprint or trade them within the Bonbon community."
-msgstr ""
+msgstr "Tích lũy những tín dụng carbon quý giá với mỗi sự lựa chọn bền vững. Sử dụng tín chỉ này để đền bù lượng carbon bạn tạo ra hoặc giao dịch chúng trong cộng đồng Bonbon."
 
 msgid "Eco-conscious Consumers"
 msgstr "Người tiêu dùng xanh"
 
-msgid "Embark on Your <0>Eco-Journey</0>"
-msgstr ""
+msgid "Email address"
+msgstr "Tích lũy những tín dụng carbon quý giá với mỗi sự lựa chọn bền vững. Sử dụng tín chỉ này để đền bù lượng carbon bạn tạo ra hoặc giao dịch chúng trong cộng đồng Bonbon."
 
-msgid "Empower Your Daily Choices with Bonbon"
-msgstr ""
+msgid "Embark on Your <0>Eco-Journey</0>"
+msgstr "Bắt đầu vào <0>hành trình sinh thái</0> của bạn"
+
+msgid "Empower your daily choices with Bonbon"
+msgstr "Nâng cao sự lựa chọn hàng ngày với Bonbon"
 
 msgid "English"
 msgstr "Tiếng Anh"
@@ -106,14 +106,17 @@ msgstr "Nhập địa chỉ email"
 msgid "Error"
 msgstr "Lỗi"
 
-msgid "Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
-msgstr ""
+msgid "Every selection you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
+msgstr "Mỗi lựa chọn bạn thực hiện trên Bonbon đều có ý nghĩa. Hãy lựa chọn những phương án thân thiện với môi trường và đưa ra những quyết định có tác động góp phần tạo nên một hành tinh khỏe mạnh hơn."
 
 msgid "Expand"
-msgstr ""
+msgstr "Mở rộng"
+
+msgid "Explore More"
+msgstr "Khám phá thêm"
 
 msgid "Get involved and make a difference!"
-msgstr ""
+msgstr "Tham gia và tạo nên sự khác biệt!"
 
 msgid "Go to our <0>homepage</0> and start fresh."
 msgstr "Trở về <0>trang chủ</0> để bắt đầu lại."
@@ -128,37 +131,34 @@ msgid "How BonBon works?"
 msgstr "BonBon hoạt động như thế nào?"
 
 msgid "How can I earn carbon credits with Bonbon?"
-msgstr ""
+msgstr "Làm thế nào tôi có thể kiếm tín dụng carbon với Bonbon?"
 
 msgid "How can I join the Bonbon community?"
-msgstr ""
+msgstr "Làm thế nào để tôi có thể tham gia vào cộng đồng Bonbon?"
 
 msgid "How does Bonbon ensure the credibility of carbon credits?"
-msgstr ""
+msgstr "Bonbon đảm bảo độ tin cậy của tín chỉ carbon như thế nào?"
 
 msgid "Is Bonbon available worldwide?"
-msgstr ""
+msgstr "Bonbon có khả dụng trên toàn thế giới không?"
 
 msgid "Join Waitlist"
 msgstr "Đăng ký trước"
 
 msgid "Joining Bonbon is straightforward. Sign up for our waitlist on our website, and you'll be notified when the app becomes available in your region. Start your sustainable journey with our global community, backed by the reliability of blockchain technology."
-msgstr ""
+msgstr "Việc tham gia vào Bonbon rất đơn giản. Đăng ký vào danh sách chờ trên trang web của chúng tôi và bạn sẽ được thông báo khi ứng dụng được phát hành trong khu vực của bạn. Bắt đầu hành trình bền vững của bạn cùng cộng đồng toàn cầu của chúng tôi, được hỗ trợ bởi sự đáng tin cậy của công nghệ blockchain."
 
 msgid "Launch the Bonbon app to explore a world of green choices. Discover eco-friendly products and services tailored to your lifestyle, all at your fingertips."
-msgstr ""
-
-msgid "Live Demo"
-msgstr "Bản Demo"
+msgstr "Mở ứng dụng Bonbon để khám phá một thế giới của những lựa chọn xanh. Khám phá các sản phẩm và dịch vụ thân thiện với môi trường phù hợp với lối sống của bạn, tất cả đều nằm trong tầm tay."
 
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Trang này không tồn tại."
 
 msgid "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
-msgstr ""
+msgstr "Thực hiện những <0>thay đổi nhỏ</0> trong cách bạn di chuyển, mua sắm, ăn uống và lưu trữ thực phẩm có thể tạo ra sự <1>khác biệt lớn</1> đối với hành tinh."
 
 msgid "Neutralize"
-msgstr ""
+msgstr "Trung hòa"
 
 msgid "No Data Found"
 msgstr "Không có dữ liệu"
@@ -173,34 +173,34 @@ msgid "Pseudo"
 msgstr "Pseudo"
 
 msgid "REDEEM"
-msgstr ""
+msgstr "ĐỔI THƯỞNG"
 
 msgid "Register your email"
 msgstr "Đăng ký"
-
-msgid "Register your email to get early access"
-msgstr ""
 
 msgid "Request failed. Please try later"
 msgstr "Gửi yêu cầu thất bại, xin thử lại sau"
 
 msgid "Rewarding your <0>Green Actions</0>"
-msgstr ""
+msgstr "Khen thưởng cho <0>hành động xanh</0> của bạn"
 
-msgid "See All FAQs"
-msgstr ""
+msgid "See how we work"
+msgstr "Xem cách chúng tôi hoạt động"
+
+msgid "Send"
+msgstr "Gửi"
 
 msgid "Share"
 msgstr "Chia sẻ"
 
 msgid "Share your journey, learn from others, and join forces with a global network of eco-conscious individuals committed to making a difference."
-msgstr ""
+msgstr "Chia sẻ hành trình của bạn, học hỏi từ người khác, và hợp tác với một mạng lưới toàn cầu của những cá nhân có ý thức về môi trường, cam kết tạo ra sự khác biệt."
 
 msgid "Show per page"
 msgstr "Hiện mỗi trang"
 
 msgid "Spread the eco-word with Bonbon. Get friends on board and watch your green influence grow."
-msgstr ""
+msgstr "Lan toả thông điệp vì môi trường cùng Bonbon. Kêu gọi bạn bè tham gia và chứng kiến sức ảnh hưởng xanh của bạn được lan rộng."
 
 msgid "STEP 1"
 msgstr "BƯỚC 1"
@@ -217,26 +217,29 @@ msgstr "BƯỚC 4"
 msgid "Submit Success"
 msgstr "Đã gửi thành công"
 
+msgid "Subscribe for early access opportunities"
+msgstr "Đăng ký để nhận được cơ hội truy cập sớm"
+
 msgid "Success"
 msgstr "Thành công"
 
 msgid "Users earn carbon credits on Bonbon by making sustainable choices. These credits are securely tracked and verified using blockchain technology, ensuring that every eco-friendly action, from choosing sustainable products to reducing energy consumption, is accurately accounted for and rewarded."
-msgstr ""
+msgstr "Bạn có thể kiếm tín dụng carbon trên Bonbon thông qua việc thực hiện các lựa chọn bền vững. Những tín dụng này được theo dõi và xác minh an toàn bằng công nghệ blockchain, đảm bảo rằng mọi hành động thân thiện với môi trường, từ việc chọn lựa sản phẩm bền vững đến giảm tiêu thụ năng lượng, được tính toán và đền đáp đúng đắn."
 
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
 
-msgid "We got answers"
-msgstr ""
+msgid "We got answers!"
+msgstr "Chúng tôi có câu trả lời dành cho bạn!"
 
 msgid "What is Bonbon and how does it contribute to sustainability?"
-msgstr ""
+msgstr "Bonbon là gì và nó đóng góp như thế nào cho sự bền vững?"
 
 msgid "What makes Bonbon different from other sustainability apps?"
-msgstr ""
+msgstr "Bonbon khác biệt như thế nào so với các ứng dụng bền vững khác?"
 
-msgid "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
-msgstr ""
+msgid "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain- verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
+msgstr "Có, các doanh nghiệp đóng một vai trò quan trọng trong Bonbon. Họ có thể trình bày các sáng kiến xanh của mình, kết nối với người tiêu dùng có ý thức về môi trường và thu mua tín dụng carbon được xác minh bằng blockchain để đền bù tác động môi trường của họ, góp phần vào mục tiêu bền vững chung."
 
 msgid "You Are:"
 msgstr "Bạn là:"

@@ -22,8 +22,8 @@ export default function Goals() {
           width: '100%',
           minHeight: 'min(100%, 1080px)',
           maxHeight: 'max-content',
-          pt: [42, 42, 42, 42, 116],
-          pb: [0, 0, 0, 0, 116],
+          pt: [42, 42, 42, 42, 70],
+          pb: [0, 0, 0, 0, 70],
           position: 'relative',
           zIndex: 1,
         }}
@@ -42,7 +42,7 @@ export default function Goals() {
           <Trans>Empower your daily choices with Bonbon</Trans>
         </TextWrapper>
         <Box
-          mb={[42, 42, 42, 42, 116]}
+          mb={[42, 42, 42, 42, 70]}
           sx={{ display: 'grid', gridTemplateColumns: ['1fr', '1fr', 'repeat(3, 1fr)'], gap: 24 }}
         >
           {configs.map((config, index) => (
@@ -53,7 +53,7 @@ export default function Goals() {
         <Divider display={{ _: 'block', xl: 'none' }} mb={100} />
 
         <Flex
-          my={[0, 0, 0, 0, 138]}
+          mt={[0, 0, 0, 0, 70]}
           sx={{
             width: '100%',
             flexDirection: ['column', 'column', 'column', 'column', 'row'],

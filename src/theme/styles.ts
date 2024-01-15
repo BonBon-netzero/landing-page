@@ -15,7 +15,7 @@ const ThemedGlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    scroll-behavior: default;
+    scroll-behavior: smooth;
     scroll-padding-top: 72px;
   }
   /* prettier-ignore */

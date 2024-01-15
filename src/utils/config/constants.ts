@@ -13,7 +13,7 @@ export const LINKS = {
   questionsAndAnswers: '/',
 }
 
-export const DEMO_LINKS: { [key: string]: string } = {
+export const EXPLORE_LINKS: { [key: string]: string } = {
   en: 'https://www.figma.com/proto/EuYhOJXcPyVJzV2CsOZb72/Carbon?page-id=1%3A27&type=design&node-id=1955-20472&viewport=200%2C-32%2C0.48&t=4qOL4utn7R701vx0-1&scaling=scale-down&starting-point-node-id=1955%3A20472&show-proto-sidebar=1',
   vi: 'https://www.figma.com/proto/EuYhOJXcPyVJzV2CsOZb72/Carbon?page-id=1%3A27&type=design&node-id=2421-20743&viewport=200%2C-32%2C0.48&t=4qOL4utn7R701vx0-1&scaling=scale-down&starting-point-node-id=2421%3A20743&show-proto-sidebar=1',
   pseudo: '',

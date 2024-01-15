@@ -79,9 +79,6 @@ msgstr "Curtail"
 msgid "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
 msgstr "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
 
-msgid "Document"
-msgstr "Document"
-
 msgid "EARN"
 msgstr "EARN"
 
@@ -91,11 +88,14 @@ msgstr "Earn valuable carbon credits with each sustainable choice. Use these cre
 msgid "Eco-conscious Consumers"
 msgstr "Eco-conscious Consumers"
 
+msgid "Email address"
+msgstr "Email address"
+
 msgid "Embark on Your <0>Eco-Journey</0>"
 msgstr "Embark on Your <0>Eco-Journey</0>"
 
-msgid "Empower Your Daily Choices with Bonbon"
-msgstr "Empower Your Daily Choices with Bonbon"
+msgid "Empower your daily choices with Bonbon"
+msgstr "Empower your daily choices with Bonbon"
 
 msgid "English"
 msgstr "English"
@@ -106,11 +106,14 @@ msgstr "Enter your email"
 msgid "Error"
 msgstr "Error"
 
-msgid "Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
-msgstr "Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
+msgid "Every selection you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
+msgstr "Every selection you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that contribute to a healthier planet."
 
 msgid "Expand"
 msgstr "Expand"
+
+msgid "Explore More"
+msgstr "Explore More"
 
 msgid "Get involved and make a difference!"
 msgstr "Get involved and make a difference!"
@@ -148,9 +151,6 @@ msgstr "Joining Bonbon is straightforward. Sign up for our waitlist on our websi
 msgid "Launch the Bonbon app to explore a world of green choices. Discover eco-friendly products and services tailored to your lifestyle, all at your fingertips."
 msgstr "Launch the Bonbon app to explore a world of green choices. Discover eco-friendly products and services tailored to your lifestyle, all at your fingertips."
 
-msgid "Live Demo"
-msgstr "Live Demo"
-
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Looks Like You've Hit a Dead End."
 
@@ -178,17 +178,17 @@ msgstr "REDEEM"
 msgid "Register your email"
 msgstr "Register your email"
 
-msgid "Register your email to get early access"
-msgstr "Register your email to get early access"
-
 msgid "Request failed. Please try later"
 msgstr "Request failed. Please try later"
 
 msgid "Rewarding your <0>Green Actions</0>"
 msgstr "Rewarding your <0>Green Actions</0>"
 
-msgid "See All FAQs"
-msgstr "See All FAQs"
+msgid "See how we work"
+msgstr "See how we work"
+
+msgid "Send"
+msgstr "Send"
 
 msgid "Share"
 msgstr "Share"
@@ -217,6 +217,9 @@ msgstr "STEP 4"
 msgid "Submit Success"
 msgstr "Submit Success"
 
+msgid "Subscribe for early access opportunities"
+msgstr "Subscribe for early access opportunities"
+
 msgid "Success"
 msgstr "Success"
 
@@ -226,8 +229,8 @@ msgstr "Users earn carbon credits on Bonbon by making sustainable choices. These
 msgid "Vietnamese"
 msgstr "Vietnamese"
 
-msgid "We got answers"
-msgstr "We got answers"
+msgid "We got answers!"
+msgstr "We got answers!"
 
 msgid "What is Bonbon and how does it contribute to sustainability?"
 msgstr "What is Bonbon and how does it contribute to sustainability?"
@@ -235,8 +238,8 @@ msgstr "What is Bonbon and how does it contribute to sustainability?"
 msgid "What makes Bonbon different from other sustainability apps?"
 msgstr "What makes Bonbon different from other sustainability apps?"
 
-msgid "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
-msgstr "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
+msgid "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain- verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
+msgstr "Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with eco-conscious consumers, and acquire blockchain- verified carbon credits to offset their environmental impact, contributing to collective sustainability goals."
 
 msgid "You Are:"
 msgstr "You Are:"

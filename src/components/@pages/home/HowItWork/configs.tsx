@@ -48,7 +48,7 @@ export const configs: Config[] = [
       ),
       description: (
         <Trans>
-          Every section you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that
+          Every selection you make on Bonbon counts. Opt for eco-friendly options and make impactful decisions that
           contribute to a healthier planet.
         </Trans>
       ),

@@ -1,4 +1,3 @@
-// import { Trans } from '@lingui/macro'
 import { ArrowCircleLeft } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
@@ -13,18 +12,12 @@ import { Config, configs } from './configs'
 const SLIDE_HEIGHT = 645
 
 export default function HowItWorkDesktop() {
-  // const [mounted, setMounted] = useState(false)
-  // useEffect(() => {
-  //   setMounted(true)
-  // }, [])
-
   const [currentSlide, setCurrentSlide] = useState(0)
   const domRef = useRef<HTMLDivElement>(null)
 
   const containerRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    // if (!containerRef.current || !scrollRef.current || !mounted) return
     if (!containerRef.current || !scrollRef.current) return
     const handleScroll = () => {
       if (!containerRef.current) return
@@ -41,26 +34,16 @@ export default function HowItWorkDesktop() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-  // }, [mounted])
-
-  // if (!mounted)
-  //   return (
-  //     <>
-  //       <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
-  //         <Trans>How BonBon works?</Trans>{' '}
-  //       </Type.H3>
-  //     </>
-  //   )
 
   return (
     <Box ref={containerRef}>
       <Box>
-        <Flex sx={{ justifyContent: 'center', height: 70, position: 'relative', zIndex: 2 }}>
+        <Flex sx={{ justifyContent: 'center', height: 80, position: 'relative', zIndex: 2 }}>
           <HowItWorkTitle />
         </Flex>
 
         <Flex sx={{ width: '100%', bg: '#f8f8f8', px: 100, py: 40, borderRadius: '32px' }} ref={domRef}>
-          <Flex flex="1" sx={{ flexDirection: 'column', alignItems: 'center' }}>
+          <Flex flex="1 0 50%" sx={{ flexDirection: 'column', alignItems: 'center' }}>
             <Box sx={{ position: 'sticky', top: 90 }}>
               <PhoneSlider currentSlide={currentSlide} />
               <Box height={40} />
@@ -68,7 +51,7 @@ export default function HowItWorkDesktop() {
             </Box>
           </Flex>
           <Box
-            flex="1"
+            flex="1 0 50%"
             sx={{
               pl: 36,
               position: 'relative',

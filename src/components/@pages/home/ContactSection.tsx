@@ -32,7 +32,7 @@ export default function ContactSection() {
           <Trans>Get involved and make a difference!</Trans>
         </TextWrapper>
         <Type.Body mb={40} color="neutral4" sx={{ display: 'block', textAlign: 'center' }}>
-          <Trans>Register your email to get early access</Trans>
+          <Trans>Subscribe for early access opportunities</Trans>
         </Type.Body>
         <Box sx={{ maxWidth: 550, mx: 'auto' }}>
           <Box display={{ _: 'block', md: 'none' }}>

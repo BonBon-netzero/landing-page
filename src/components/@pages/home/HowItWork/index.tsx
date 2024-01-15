@@ -11,8 +11,8 @@ export default function HowItWork() {
         width: '100%',
         maxWidth: 1200,
         mx: 'auto',
-        pt: [80],
-        pb: [80, 80, 80, 80, 67],
+        pt: [80, 80, 80, 80, 70],
+        pb: [80, 80, 80, 80, 70],
         minHeight: 'min(100%, 1080px)',
         maxHeight: 'max-content',
       }}

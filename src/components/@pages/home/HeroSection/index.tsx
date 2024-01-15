@@ -2,7 +2,6 @@ import { Trans } from '@lingui/macro'
 import { ArrowCircleDown } from '@phosphor-icons/react'
 import css from '@styled-system/css'
 import Image, { StaticImageData } from 'next/image'
-// import Marquee from 'react-fast-marquee'
 import styled from 'styled-components/macro'
 
 import heroCloud1Desktop from 'assets/images/hero-cloud-1-desktop.png'
@@ -15,7 +14,7 @@ import heroCloud5 from 'assets/images/hero-cloud-5.png'
 import heroCloud6 from 'assets/images/hero-cloud-6.png'
 import heroEarth from 'assets/images/hero-earth.png'
 import heroLeaf from 'assets/images/hero-leaf-1.png'
-import { IconBox, Type, sx } from 'theme/base'
+import { Type, sx } from 'theme/base'
 import { Box, Flex, TextWrapper } from 'theme/base'
 
 import { StarBold, StarStroke } from './Star'
@@ -26,9 +25,6 @@ export default function HeroSection() {
       sx={{
         width: '100%',
         height: ['max(1080px, 100%)', 'max(1080px, 100%)', 'max(1200px, 100%)', 'max(1200px, 100%)', 1080],
-        // '@media all and (min-width: 1500px)': {
-        //   height: 1400,
-        // },
         position: 'relative',
       }}
     >
@@ -88,20 +84,30 @@ export default function HeroSection() {
           as="a"
           sx={{
             display: 'flex',
-            width: 164,
+            minWidth: 164,
+            px: 3,
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: '40px',
             height: 36,
             bg: 'green1',
+            transition: '0.3s',
+            '&:hover': { opacity: 0.8 },
           }}
-          href="/#how_it_work"
+          href="#how_it_work"
         >
           <Type.Body color="white" fontWeight={700}>
             <Trans>See how we work</Trans>
           </Type.Body>
         </Box>
-        <IconBox mt={2} color="#679F24" icon={<ArrowCircleDown size={24} />} />
+        <Box
+          as="a"
+          href="#how_it_work"
+          mt={2}
+          sx={{ color: '#679F24', lineHeight: 0, transition: '0.3s', '&:hover': { opacity: 0.8 } }}
+        >
+          <ArrowCircleDown size={24} />
+        </Box>
       </Flex>
 
       <Decorators />
@@ -118,10 +124,6 @@ const HeroText = styled(TextWrapper).attrs({ as: 'h2' })(
     '@media all and (max-width: 400px)': {
       fontSize: '56px',
     },
-    // '@media all and (min-width: 1500px)': {
-    //   fontSize: '110px',
-    //   lineHeight: '120px',
-    // },
   }),
   sx
 )
@@ -129,7 +131,6 @@ const HeroText = styled(TextWrapper).attrs({ as: 'h2' })(
 function Decorators() {
   return (
     <>
-      {/* <VideoDecorator /> */}
       <Box
         sx={{
           position: 'absolute',
@@ -357,64 +358,10 @@ function Decorators() {
             ],
           }}
         />
-        {/* <Flex
-          sx={{
-            alignItems: 'center',
-            height: [35, 60],
-            bg: 'secondary2',
-            width: '110%',
-            position: 'absolute',
-            zIndex: 1,
-            top: 72,
-            left: '-5%',
-            transform: 'rotate(2.8deg)',
-          }}
-        >
-          <Marquee speed={20} delay={1} direction="right" style={{ alignItems: 'center', gap: 3 }}>
-            <ChainText text="NETZERO" color="white" />
-          </Marquee>
-        </Flex> */}
-        {/* <Flex
-          sx={{
-            alignItems: 'center',
-            height: [35, 60],
-            bg: 'secondary1',
-            width: '110%',
-            position: 'absolute',
-            zIndex: 1,
-            left: '-5%',
-            top: 72,
-            transform: 'rotate(-2.8deg)',
-          }}
-        >
-          <Marquee speed={20} delay={1} style={{ alignItems: 'center', gap: 3 }}>
-            <ChainText text="BONBON" color="neutral3" />
-          </Marquee> 
-        </Flex> */}
       </Box>
     </>
   )
 }
-
-// function ChainText({ text, color }: { text: ReactNode; color: string }) {
-//   return (
-//     <Flex sx={{ alignItems: 'center', gap: 3, ml: 3, height: 24 }}>
-//       {Array.from({ length: 20 }, (_, v) => v).map((v) => {
-//         return (
-//           <Fragment key={v}>
-//             <Box sx={{ width: '6px', height: '6px', bg: color, fontWeight: 'medium', flexShrink: 0 }} />
-//             <Type.H5
-//               color={color}
-//               sx={{ flexShrink: 0, fontSize: ['16px', '24px'], lineHeight: ['16px', '30px'], height: [13, 24] }}
-//             >
-//               {text}
-//             </Type.H5>
-//           </Fragment>
-//         )
-//       })}
-//     </Flex>
-//   )
-// }
 
 function ImageWrapper({
   src,

@@ -6,7 +6,7 @@ import { Box, Flex, TextWrapper, Type } from 'theme/base'
 
 export default function QuestionAndAnswers() {
   return (
-    <Box px={24} pb={[32, 32, 32, 32, 87]} pt={[32, 32, 32, 32, 87]} sx={{ maxWidth: 1200, mx: 'auto' }}>
+    <Box px={24} pb={[32, 32, 32, 32, 70]} pt={[32, 32, 32, 32, 70]} sx={{ maxWidth: 1200, mx: 'auto' }}>
       <TextWrapper
         mb={[4]}
         sx={{
@@ -17,10 +17,10 @@ export default function QuestionAndAnswers() {
           lineHeight: ['40px', '40px', '40px', '40px', '48px'],
         }}
       >
-        <Trans>We got answers</Trans>
+        <Trans>We got answers!</Trans>
       </TextWrapper>
 
-      <Box mb={32}>
+      <Box>
         {configs.map((config, index) => {
           return (
             <Accordion
@@ -90,7 +90,7 @@ const configs = [
     answer: (
       <Trans>
         Yes, businesses play a crucial role in Bonbon. They can showcase their green initiatives, connect with
-        eco-conscious consumers, and acquire blockchain-verified carbon credits to offset their environmental impact,
+        eco-conscious consumers, and acquire blockchain- verified carbon credits to offset their environmental impact,
         contributing to collective sustainability goals.
       </Trans>
     ),
