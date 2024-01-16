@@ -14,6 +14,7 @@ const SLIDE_HEIGHT = 645
 
 export default function HowItWorkDesktop() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [showOverlay, setShowOverlay] = useState<'0' | '1'>('0')
   const domRef = useRef<HTMLDivElement>(null)
 
   const containerRef = useRef<HTMLDivElement>(null)
@@ -29,6 +30,11 @@ export default function HowItWorkDesktop() {
       const remainder = division - quotient
       const slide = quotient + (remainder > 0.8 && remainder < 1.2 ? 1 : 0)
       setCurrentSlide(slide < 0 ? 0 : slide >= configs.length ? configs.length - 1 : slide)
+      if (diff > SLIDE_HEIGHT * configs.length || diff < -200) {
+        setShowOverlay('0')
+      } else {
+        setShowOverlay('1')
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -60,7 +66,7 @@ export default function HowItWorkDesktop() {
               position: 'relative',
               borderLeft: 'small',
               borderLeftColor: 'stroke',
-              overflow: currentSlide === configs.length - 1 ? 'hidden' : 'unset',
+              overflow: showOverlay === '1' ? 'unset' : 'hidden',
             }}
           >
             <Box

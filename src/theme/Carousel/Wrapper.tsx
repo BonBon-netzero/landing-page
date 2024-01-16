@@ -307,13 +307,13 @@ export const HorizontalCarouselWrapper = styled(CarouselWrapper)`
     height: 100%;
   }
 
-  @media screen and (max-width: 1400px) {
-    .slick-slider {
-      overflow: hidden;
-      padding-bottom: ${DOTS_POSITION}px;
-    }
-    .slick-dots {
-      bottom: 0;
-    }
-  }
+  // @media screen and (max-width: 1400px) {
+  //   .slick-slider {
+  //     overflow: hidden;
+  //     padding-bottom: ${DOTS_POSITION}px;
+  //   }
+  //   .slick-dots {
+  //     bottom: 0;
+  //   }
+  // }
 `

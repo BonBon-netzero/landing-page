@@ -164,7 +164,7 @@ function ContentSlider({ sliderRef, ...sliderProps }: Settings & { sliderRef: Re
         height: 410,
         overflow: 'hidden',
         '.slick-dots': {
-          bottom: 'auto',
+          bottom: 'auto !important',
           top: 1,
         },
         '.slick-prev, .slick-next': {
