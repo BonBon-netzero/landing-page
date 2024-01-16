@@ -2,7 +2,8 @@ import { ArrowCircleLeft } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-import phoneBorder from 'assets/images/phone_border.png'
+import phoneBorder from 'assets/images/phone-border.png'
+import FadeInSection from 'components/@ui/FadeInSection'
 import { Box, Flex, IconBox, TextWrapper } from 'theme/base'
 
 import { ExploreMoreButton } from '../Buttons'
@@ -38,9 +39,11 @@ export default function HowItWorkDesktop() {
   return (
     <Box ref={containerRef}>
       <Box>
-        <Flex sx={{ justifyContent: 'center', height: 80, position: 'relative', zIndex: 2 }}>
-          <HowItWorkTitle />
-        </Flex>
+        <FadeInSection direction="y">
+          <Flex sx={{ justifyContent: 'center', height: 80, position: 'relative', zIndex: 2 }}>
+            <HowItWorkTitle />
+          </Flex>
+        </FadeInSection>
 
         <Flex sx={{ width: '100%', bg: '#f8f8f8', px: 100, py: 40, borderRadius: '32px' }} ref={domRef}>
           <Flex flex="1 0 50%" sx={{ flexDirection: 'column', alignItems: 'center' }}>
@@ -138,11 +141,11 @@ function PhoneSlider({ currentSlide }: { currentSlide: number }) {
           position: 'absolute',
           left: '-15px',
           top: '-15px',
-          aspectRatio: '330/675',
-          width: 310,
-          zIndex: 0,
+          aspectRatio: '664/1323',
+          width: 312,
+          zIndex: 2,
           '@media all and (min-width: 1500px)': {
-            width: 330,
+            width: 312,
           },
         }}
       >
@@ -151,13 +154,15 @@ function PhoneSlider({ currentSlide }: { currentSlide: number }) {
 
       <Box
         sx={{
-          borderRadius: '40px',
-          width: 280,
-          aspectRatio: '300/645',
-          boxShadow: '0px 48px 52.9px 0px rgba(0, 0, 0, 0.20)',
           position: 'relative',
+          zIndex: 1,
+          borderRadius: '20px',
+          overflow: 'hidden',
+          width: 280,
+          aspectRatio: '300/640',
+          boxShadow: '0px 48px 52.9px 0px rgba(0, 0, 0, 0.20)',
           '@media all and (min-width: 1500px)': {
-            width: 300,
+            width: 280,
           },
         }}
       >
@@ -176,13 +181,8 @@ function SliderItem({ currentSlide, config }: { currentSlide: number; config: Co
         position: 'absolute',
         top: 0,
         left: 0,
-        width: 280,
-        '@media all and (min-width: 1500px)': {
-          width: 300,
-        },
+        width: '100%',
         aspectRatio: '300/645',
-        overflow: 'hidden',
-        borderRadius: '40px',
         opacity: currentSlide === config.index ? 1 : 0,
         transition: '0.3s',
       }}

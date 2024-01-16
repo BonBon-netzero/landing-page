@@ -43,14 +43,6 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const handleShow = () => {
-      if (!window || !document) return
-      const navbar = document.getElementById('navbar') as HTMLDivElement
-      if (!navbar) return
-      navbar.style.opacity = '1'
-    }
-    setTimeout(() => handleShow(), 2000)
-    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])

@@ -28,8 +28,8 @@ msgstr "{label} phải lớn hơn hoặc bằng {0}"
 msgid "{label} must be less than or equal to {0}"
 msgstr "{label} phải nhỏ hơn hoặc bằng {0}"
 
-msgid "© 2023 BonBon. All right reserved ☕"
-msgstr "© 2023 BonBon. All right reserved ☕"
+msgid "© 2023 Bonbon. All right reserved ☕"
+msgstr ""
 
 msgid "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
 msgstr "<0>Bắt đầu</0><1>hành trình xanh</1><2>cùng Bonbon</2>"
@@ -62,7 +62,7 @@ msgid "Carbon Trading Enthusiasts"
 msgstr "Người đam mê giao dịch Carbon"
 
 msgid "CELEBRATE"
-msgstr "TẬN HƯỞNG"
+msgstr "TẬN HƯỞNG ƯU ĐÃI"
 
 msgid "Choose <0>Sustainability</0>"
 msgstr "Ưa chuộng <0>sự bền vững</0>"
@@ -77,10 +77,10 @@ msgid "Curtail"
 msgstr "Cắt giảm"
 
 msgid "Cut back on carbon with every choice. Bonbon helps you pick habits that make a real difference."
-msgstr "Giảm lượng carbon mỗi khi bạn đưa ra quyết định. Bonbon giúp bạn chọn những thói quen tạo ra sự khác biệt thực sự."
+msgstr "Giảm lượng carbon với mỗi sự lựa chọn của bạn. Bonbon giúp bạn lựa chọn những thói quen xanh làm thay đổi thế giới thực."
 
 msgid "EARN"
-msgstr "Tích lũy"
+msgstr "TÍCH LŨY"
 
 msgid "Earn valuable carbon credits with each sustainable choice. Use these credits to offset your carbon footprint or trade them within the Bonbon community."
 msgstr "Tích lũy những tín dụng carbon quý giá với mỗi sự lựa chọn bền vững. Sử dụng tín chỉ này để đền bù lượng carbon bạn tạo ra hoặc giao dịch chúng trong cộng đồng Bonbon."
@@ -89,7 +89,7 @@ msgid "Eco-conscious Consumers"
 msgstr "Người tiêu dùng xanh"
 
 msgid "Email address"
-msgstr "Tích lũy những tín dụng carbon quý giá với mỗi sự lựa chọn bền vững. Sử dụng tín chỉ này để đền bù lượng carbon bạn tạo ra hoặc giao dịch chúng trong cộng đồng Bonbon."
+msgstr "Địa chỉ email"
 
 msgid "Embark on Your <0>Eco-Journey</0>"
 msgstr "Bắt đầu vào <0>hành trình sinh thái</0> của bạn"
@@ -127,8 +127,8 @@ msgstr "Đến trang"
 msgid "Green Investors"
 msgstr "Nhà đầu tư xanh"
 
-msgid "How BonBon works?"
-msgstr "BonBon hoạt động như thế nào?"
+msgid "How Bonbon works?"
+msgstr ""
 
 msgid "How can I earn carbon credits with Bonbon?"
 msgstr "Làm thế nào tôi có thể kiếm tín dụng carbon với Bonbon?"
@@ -143,7 +143,7 @@ msgid "Is Bonbon available worldwide?"
 msgstr "Bonbon có khả dụng trên toàn thế giới không?"
 
 msgid "Join Waitlist"
-msgstr "Đăng ký trước"
+msgstr "Đăng ký sớm"
 
 msgid "Joining Bonbon is straightforward. Sign up for our waitlist on our website, and you'll be notified when the app becomes available in your region. Start your sustainable journey with our global community, backed by the reliability of blockchain technology."
 msgstr "Việc tham gia vào Bonbon rất đơn giản. Đăng ký vào danh sách chờ trên trang web của chúng tôi và bạn sẽ được thông báo khi ứng dụng được phát hành trong khu vực của bạn. Bắt đầu hành trình bền vững của bạn cùng cộng đồng toàn cầu của chúng tôi, được hỗ trợ bởi sự đáng tin cậy của công nghệ blockchain."
@@ -154,8 +154,8 @@ msgstr "Mở ứng dụng Bonbon để khám phá một thế giới của nhữ
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Trang này không tồn tại."
 
-msgid "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
-msgstr "Thực hiện những <0>thay đổi nhỏ</0> trong cách bạn di chuyển, mua sắm, ăn uống và lưu trữ thực phẩm có thể tạo ra sự <1>khác biệt lớn</1> đối với hành tinh."
+msgid "Making a <0>small change</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
+msgstr "Thực hiện <0>thay đổi nhỏ</0> trong cách bạn di chuyển, mua sắm, ăn uống và lưu trữ thực phẩm có thể tạo ra sự <1>khác biệt lớn</1> đối với hành tinh."
 
 msgid "Neutralize"
 msgstr "Trung hòa"
@@ -176,7 +176,7 @@ msgid "REDEEM"
 msgstr "ĐỔI THƯỞNG"
 
 msgid "Register your email"
-msgstr "Đăng ký"
+msgstr "Nhập địa chỉ email"
 
 msgid "Request failed. Please try later"
 msgstr "Gửi yêu cầu thất bại, xin thử lại sau"
@@ -186,9 +186,6 @@ msgstr "Khen thưởng cho <0>hành động xanh</0> của bạn"
 
 msgid "See how we work"
 msgstr "Xem cách chúng tôi hoạt động"
-
-msgid "Send"
-msgstr "Gửi"
 
 msgid "Share"
 msgstr "Chia sẻ"

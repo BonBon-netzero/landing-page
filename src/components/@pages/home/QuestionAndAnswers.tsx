@@ -1,50 +1,53 @@
 import { Trans } from '@lingui/macro'
 import { Minus, Plus } from '@phosphor-icons/react'
 
+import FadeInSection from 'components/@ui/FadeInSection'
 import Accordion from 'theme/Accordion'
 import { Box, Flex, TextWrapper, Type } from 'theme/base'
 
 export default function QuestionAndAnswers() {
   return (
-    <Box px={24} pb={[32, 32, 32, 32, 70]} pt={[32, 32, 32, 32, 70]} sx={{ maxWidth: 1200, mx: 'auto' }}>
-      <TextWrapper
-        mb={[4]}
-        sx={{
-          display: 'block',
-          textAlign: 'center',
-          fontWeight: 900,
-          fontSize: ['32px', '32px', '32px', '32px', '40px'],
-          lineHeight: ['40px', '40px', '40px', '40px', '48px'],
-        }}
-      >
-        <Trans>We got answers!</Trans>
-      </TextWrapper>
+    <Box px={24} pb={[70, 70, 70, 70, 70]} pt={[32, 32, 32, 70, 70]} sx={{ maxWidth: 1200, mx: 'auto' }}>
+      <FadeInSection direction="y" intersectOffset={100}>
+        <TextWrapper
+          mb={[4]}
+          sx={{
+            display: 'block',
+            textAlign: 'center',
+            fontWeight: 900,
+            fontSize: ['32px', '32px', '32px', '32px', '40px'],
+            lineHeight: ['40px', '40px', '40px', '40px', '48px'],
+          }}
+        >
+          <Trans>We got answers!</Trans>
+        </TextWrapper>
 
-      <Box>
-        {configs.map((config, index) => {
-          return (
-            <Accordion
-              key={index}
-              header={
-                <Flex px={24} py={3}>
-                  <Type.Body sx={{ flexShrink: 0, width: 16, fontSize: '16px', mr: 24 }}>{config.icon}</Type.Body>
-                  <Type.Body sx={{ lineHeight: '26px' }}>{config.question}</Type.Body>
-                </Flex>
-              }
-              body={
-                <Box px={24} py={3}>
-                  <Type.Body color="neutral4" sx={{ lineHeight: '26px' }}>
-                    {config.answer}
-                  </Type.Body>
-                </Box>
-              }
-              wrapperSx={{ mb: 2, border: 'small', borderColor: 'stroke', borderRadius: '16px', overflow: 'hidden' }}
-              icon={Plus}
-              closeIcon={Minus}
-            />
-          )
-        })}
-      </Box>
+        <Box>
+          {configs.map((config, index) => {
+            return (
+              <Accordion
+                key={index}
+                header={
+                  <Flex px={24} py={3}>
+                    <Type.Body sx={{ flexShrink: 0, width: 16, fontSize: '16px', mr: 24 }}>{config.icon}</Type.Body>
+                    <Type.Body sx={{ lineHeight: '26px' }}>{config.question}</Type.Body>
+                  </Flex>
+                }
+                body={
+                  <Box px={24} py={3}>
+                    <Type.Body color="neutral4" sx={{ lineHeight: '26px' }}>
+                      {config.answer}
+                    </Type.Body>
+                  </Box>
+                }
+                wrapperSx={{ mb: 2, border: 'small', borderColor: 'stroke', borderRadius: '16px', overflow: 'hidden' }}
+                icon={Plus}
+                closeIcon={Minus}
+              />
+            )
+          })}
+        </Box>
+      </FadeInSection>
     </Box>
   )
 }

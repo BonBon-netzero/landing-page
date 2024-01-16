@@ -45,15 +45,13 @@ export default function JoinCommunity({
         </StyledButton>
       ) : (
         <Flex
-          variant="card"
+          // variant="card"
           sx={{
             width: '100%',
             alignItems: 'center',
-            gap: [2, 3],
+            gap: 2,
             justifyContent: 'space-between',
-            p: 2,
-            pl: [16, 24],
-            borderRadius: '24px',
+            // borderRadius: '24px',
           }}
         >
           <Box
@@ -70,9 +68,12 @@ export default function JoinCommunity({
               value={email}
               block
               sx={{
+                height: 56,
+                bg: 'white',
+                border: 'small',
+                borderColor: 'stroke',
+                borderRadius: '14px',
                 p: 2,
-                borderRadius: '8px',
-                bg: 'transparent',
                 '& input': { lineHeight: '1em !important', bg: 'transparent' },
               }}
             />

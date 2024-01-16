@@ -27,7 +27,7 @@ export default function Footer() {
         </Flex>
 
         <Type.Body color="neutral4" sx={{ display: 'block', textAlign: 'center' }}>
-          <Trans>© 2023 BonBon. All right reserved ☕</Trans>
+          <Trans>© 2023 Bonbon. All right reserved ☕</Trans>
         </Type.Body>
       </Box>
     </Box>

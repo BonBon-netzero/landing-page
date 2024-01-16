@@ -1,7 +1,8 @@
 import { Trans } from '@lingui/macro'
 import { ArrowCircleDown } from '@phosphor-icons/react'
-import css from '@styled-system/css'
 import Image, { StaticImageData } from 'next/image'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import styled from 'styled-components/macro'
 
 import heroCloud1Desktop from 'assets/images/hero-cloud-1-desktop.png'
@@ -14,31 +15,81 @@ import heroCloud5 from 'assets/images/hero-cloud-5.png'
 import heroCloud6 from 'assets/images/hero-cloud-6.png'
 import heroEarth from 'assets/images/hero-earth.png'
 import heroLeaf from 'assets/images/hero-leaf-1.png'
+import FadeInSection from 'components/@ui/FadeInSection'
 import { Type, sx } from 'theme/base'
 import { Box, Flex, TextWrapper } from 'theme/base'
 
 import { StarBold, StarStroke } from './Star'
 
 export default function HeroSection() {
+  const { locale } = useRouter()
+  const heroTextSx: any =
+    locale === 'vi'
+      ? {
+          fontSize: ['34px', '48px', '48px', '48px', '86px'],
+          lineHeight: ['46px', '56px', '56px', '56px', '86px'],
+          color: 'green1',
+          textAlign: 'center',
+          fontWeight: 900,
+        }
+      : {
+          fontSize: ['60px', '60px', '60px', '60px', '86px'],
+          lineHeight: ['70px', '70px', '70px', '70px', '86px'],
+          color: 'green1',
+          textAlign: 'center',
+          fontWeight: 900,
+          '@media all and (max-width: 400px)': {
+            fontSize: '56px',
+          },
+        }
+
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    const handleShowNavbar = () => {
+      const navbar = document.getElementById('navbar') as HTMLDivElement
+      if (!navbar) return
+      navbar.style.opacity = '1'
+    }
+    const handleShowText = () => {
+      const textWrapper = document.getElementById('text_wrapper') as HTMLDivElement
+      if (!textWrapper) return
+      textWrapper.style.opacity = '1'
+    }
+    setTimeout(() => {
+      handleShowText()
+    }, 400)
+    setTimeout(() => {
+      handleShowNavbar()
+    }, 2000)
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return <Box sx={{ width: '100%', height: 1080 }} />
+
   return (
     <Box
       sx={{
         width: '100%',
-        height: ['max(1080px, 100%)', 'max(1080px, 100%)', 'max(1200px, 100%)', 'max(1200px, 100%)', 1080],
+        height: [900, 1080],
         position: 'relative',
+        overflow: 'hidden',
+        // display: mounted ? 'block' : 'none',
       }}
     >
       <Flex
+        id="text_wrapper"
         sx={{
-          p: 24,
-          pt: [180, 180, 180, 180, 134],
+          p: 12,
+          pt: [120, 180, 180, 180, 134],
           width: '100%',
           height: '100%',
           alignItems: 'center',
           flexDirection: 'column',
           position: 'relative',
           zIndex: 1,
+          opacity: 0,
           overflow: 'hidden',
+          transition: '0.5s',
           '@media all and (min-width: 1500px)': {},
         }}
       >
@@ -48,7 +99,7 @@ export default function HeroSection() {
           sx={{
             lineHeight: ['28px', '28px', '28px', '28px', '30px'],
             fontSize: ['18px', '18px', '18px', '18px', '24px'],
-            fontWeight: [400, 400, 400, 400, 700],
+            fontWeight: 700,
             display: 'flex',
             alignItems: 'center',
             textAlign: 'center',
@@ -63,6 +114,7 @@ export default function HeroSection() {
               borderRadius: '60px',
               borderColor: 'green1',
             },
+            transform: 'translateX(12px)',
           }}
         >
           <Trans>
@@ -71,16 +123,18 @@ export default function HeroSection() {
             <span>with Bonbon</span>
           </Trans>
         </TextWrapper>
-        <HeroText>
+        <HeroText sx={heroTextSx}>
           <Trans>EARN</Trans>
         </HeroText>
-        <HeroText>
+        <HeroText sx={heroTextSx}>
           <Trans>REDEEM</Trans>
         </HeroText>
-        <HeroText>
+        <HeroText sx={heroTextSx}>
           <Trans>CELEBRATE</Trans>
         </HeroText>
+
         <Box
+          mt={12}
           as="a"
           sx={{
             display: 'flex',
@@ -101,9 +155,9 @@ export default function HeroSection() {
           </Type.Body>
         </Box>
         <Box
+          mt={2}
           as="a"
           href="#how_it_work"
-          mt={2}
           sx={{ color: '#679F24', lineHeight: 0, transition: '0.3s', '&:hover': { opacity: 0.8 } }}
         >
           <ArrowCircleDown size={24} />
@@ -114,19 +168,7 @@ export default function HeroSection() {
     </Box>
   )
 }
-const HeroText = styled(TextWrapper).attrs({ as: 'h2' })(
-  css({
-    fontSize: ['60px', '60px', '60px', '60px', '86px'],
-    lineHeight: ['70px', '70px', '70px', '70px', '86px'],
-    color: 'green1',
-    textAlign: 'center',
-    fontWeight: 900,
-    '@media all and (max-width: 400px)': {
-      fontSize: '56px',
-    },
-  }),
-  sx
-)
+const HeroText = styled(TextWrapper).attrs({ as: 'h2' })(sx)
 
 function Decorators() {
   return (
@@ -151,93 +193,79 @@ function Decorators() {
             background: 'radial-gradient(148.67% 69.21% at 50% 78.13%, #FFF 0%, #EDFFDE 100%)',
           }}
         />
-        <Box
-          sx={{
+        <FadeInSection
+          delay={700}
+          style={{
             position: 'absolute',
-            top: 600,
+            top: [500, 600],
             left: '50%',
-            transformOrigin: 'center',
-            transform: 'translateX(-50%)',
             '@media all and (min-width: 1500px)': {},
           }}
         >
-          <Box sx={{ position: 'relative', zIndex: 2 }}>
-            <ImageWrapper src={heroEarth} desktopRatio={1.4} />
+          <Box id="earth" sx={{ position: 'relative', transform: 'translateX(-50%)' }}>
+            <Box sx={{ position: 'relative', zIndex: 2 }}>
+              <ImageWrapper src={heroEarth} desktopRatio={1.4} />
+            </Box>
+            <Box
+              sx={{
+                position: 'absolute',
+                left: 'calc(50% + 100px)',
+                top: ['-82px', '-82px', '-82px', '-82px', '-82px'],
+                zIndex: 1,
+              }}
+            >
+              <ImageWrapper src={heroLeaf} desktopRatio={1.4} />
+            </Box>
           </Box>
-          <Box
-            sx={{
-              position: 'absolute',
-              left: 'calc(50% + 100px)',
-              top: ['-82px', '-82px', '-82px', '-82px', '-82px'],
-              zIndex: 1,
-            }}
-          >
-            <ImageWrapper src={heroLeaf} desktopRatio={1.4} />
-          </Box>
-        </Box>
+        </FadeInSection>
 
         <Box
-          display={{ _: 'none', lg: 'block' }}
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            top: 180,
-            left: 550,
-            '@media all and (min-width: 1500px)': {
-              top: 190,
-              left: 750,
-            },
+            top: '30%',
+            right: '30%',
           }}
         >
           <StarBold size={21} />
         </Box>
         <Box
-          display={{ _: 'none', lg: 'block' }}
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            top: 340,
-            right: 420,
-            '@media all and (min-width: 1500px)': {
-              top: 430,
-              right: 600,
-            },
+            top: '65%',
+            right: '30%',
           }}
         >
           <StarBold size={21} />
         </Box>
         <Box
-          display={{ _: 'none', lg: 'block' }}
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            top: 550,
-            right: 420,
-            '@media all and (min-width: 1500px)': {
-              top: 750,
-              right: 620,
-            },
+            top: '20%',
+            left: '30%',
           }}
         >
           <StarBold size={32} />
         </Box>
         <Box
-          display={{ _: 'none', lg: 'block' }}
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            top: 550,
-            left: 420,
-            '@media all and (min-width: 1500px)': {
-              top: 800,
-              left: 620,
-            },
+            top: '54%',
+            left: '38%',
           }}
         >
           <StarStroke />
         </Box>
 
         <Box
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            right: ['-80px', '-80px', '-80px', 250],
-            top: [75, 75, 75, 75, 400],
+            right: ['-80px', '-80px', '-80px', 0],
+            top: [75, 75, 75, 75, 300],
             '@media all and (min-width: 1500px)': {
               top: 550,
               right: 450,
@@ -248,9 +276,10 @@ function Decorators() {
         </Box>
 
         <Box
+          display={{ _: 'none', xl: 'block' }}
           sx={{
             position: 'absolute',
-            left: ['-40px', '-40px', '-40px', '-40px', 380],
+            left: ['-40px', '-40px', '-40px', '-40px', 180],
             top: [470, 470, 470, 470, 220],
             '@media all and (min-width: 1500px)': {
               left: 580,

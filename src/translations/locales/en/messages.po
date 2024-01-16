@@ -28,8 +28,8 @@ msgstr "{label} must be greater than or equal to {0}"
 msgid "{label} must be less than or equal to {0}"
 msgstr "{label} must be less than or equal to {0}"
 
-msgid "© 2023 BonBon. All right reserved ☕"
-msgstr "© 2023 BonBon. All right reserved ☕"
+msgid "© 2023 Bonbon. All right reserved ☕"
+msgstr "© 2023 Bonbon. All right reserved ☕"
 
 msgid "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
 msgstr "<0>Start your</0><1>green journey</1><2>with Bonbon</2>"
@@ -127,8 +127,8 @@ msgstr "Go to page"
 msgid "Green Investors"
 msgstr "Green Investors"
 
-msgid "How BonBon works?"
-msgstr "How BonBon works?"
+msgid "How Bonbon works?"
+msgstr "How Bonbon works?"
 
 msgid "How can I earn carbon credits with Bonbon?"
 msgstr "How can I earn carbon credits with Bonbon?"
@@ -154,8 +154,8 @@ msgstr "Launch the Bonbon app to explore a world of green choices. Discover eco-
 msgid "Looks Like You've Hit a Dead End."
 msgstr "Looks Like You've Hit a Dead End."
 
-msgid "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
-msgstr "Making a <0>small changes</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
+msgid "Making a <0>small change</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
+msgstr "Making a <0>small change</0> to the way you go, shop, eat and store food can make a <1>big difference</1> to the planet."
 
 msgid "Neutralize"
 msgstr "Neutralize"
@@ -186,9 +186,6 @@ msgstr "Rewarding your <0>Green Actions</0>"
 
 msgid "See how we work"
 msgstr "See how we work"
-
-msgid "Send"
-msgstr "Send"
 
 msgid "Share"
 msgstr "Share"

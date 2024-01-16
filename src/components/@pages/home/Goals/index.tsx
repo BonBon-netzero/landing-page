@@ -1,19 +1,25 @@
 import { Trans } from '@lingui/macro'
 import Image, { StaticImageData } from 'next/image'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
 import image1 from 'assets/images/goal_1.png'
 import image2 from 'assets/images/goal_2.png'
 import image3 from 'assets/images/goal_3.png'
 import Divider from 'components/@ui/Divider'
+import FadeInSection from 'components/@ui/FadeInSection'
 import JoinCommunity from 'components/JoinCommunity'
 import { Box, Flex, TextWrapper } from 'theme/base'
 
 import GoalImage4 from './GoalImage4'
 
 export default function Goals() {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  if (!mounted) return <Box sx={{ width: '100%', height: '100%' }} />
   return (
-    <Box sx={{ position: 'relative', width: '100%', maxWidth: 1200, mx: 'auto' }}>
+    <Box sx={{ position: 'relative', width: '100%', maxWidth: 1200, mx: 'auto', overflow: 'hidden' }}>
       <Flex
         sx={{
           px: 24,
@@ -22,35 +28,40 @@ export default function Goals() {
           width: '100%',
           minHeight: 'min(100%, 1080px)',
           maxHeight: 'max-content',
-          pt: [42, 42, 42, 42, 70],
+          pt: [100, 100, 100, 100, 70],
           pb: [0, 0, 0, 0, 70],
           position: 'relative',
           zIndex: 1,
+          overflow: 'hidden',
         }}
       >
-        <TextWrapper
-          as="h2"
-          mb={4}
-          color="neutral2"
-          sx={{
-            textAlign: 'center',
-            fontWeight: 900,
-            fontSize: ['32px', '32px', '32px', '32px', '40px'],
-            lineHeight: ['40px', '40px', '40px', '40px', '48px'],
-          }}
-        >
-          <Trans>Empower your daily choices with Bonbon</Trans>
-        </TextWrapper>
-        <Box
-          mb={[42, 42, 42, 42, 70]}
-          sx={{ display: 'grid', gridTemplateColumns: ['1fr', '1fr', 'repeat(3, 1fr)'], gap: 24 }}
-        >
-          {configs.map((config, index) => (
-            <GoalItem key={index} {...config} />
-          ))}
-        </Box>
+        <FadeInSection>
+          <TextWrapper
+            as="h2"
+            mb={4}
+            color="neutral2"
+            sx={{
+              textAlign: 'center',
+              fontWeight: 900,
+              fontSize: ['32px', '32px', '32px', '32px', '40px'],
+              lineHeight: ['40px', '40px', '40px', '40px', '48px'],
+            }}
+          >
+            <Trans>Empower your daily choices with Bonbon</Trans>
+          </TextWrapper>
+        </FadeInSection>
+        <FadeInSection direction="y" intersectOffset={300}>
+          <Box
+            mb={[70, 70, 70, 70, 70]}
+            sx={{ display: 'grid', gridTemplateColumns: ['1fr', '1fr', 'repeat(3, 1fr)'], gap: 24 }}
+          >
+            {configs.map((config, index) => (
+              <GoalItem key={index} {...config} />
+            ))}
+          </Box>
+        </FadeInSection>
 
-        <Divider display={{ _: 'block', xl: 'none' }} mb={100} />
+        <Divider display={{ _: 'block', xl: 'none' }} mb={70} />
 
         <Flex
           mt={[0, 0, 0, 0, 70]}
@@ -59,39 +70,48 @@ export default function Goals() {
             flexDirection: ['column', 'column', 'column', 'column', 'row'],
             alignItems: ['center'],
             justifyContent: ['start', 'start', 'start', 'start', 'space-between'],
-            gap: [100, 100, 100, 100, 100, 4],
+            gap: 4,
+            overflow: 'hidden',
           }}
         >
-          <Box sx={{ maxWidth: '520px', order: [2, 2, 2, 2, 1] }}>
-            <TextWrapper
-              as="h2"
-              sx={{
-                fontWeight: 700,
-                textAlign: ['center', 'center', 'center', 'center', 'left'],
-                fontSize: ['24px', '24px', '24px', '40px'],
-                lineHeight: ['32px', '32px', '32px', '48px'],
-              }}
-            >
-              <Trans>
-                Making a{' '}
-                <Box as="span" color="primary2" fontStyle="italic">
-                  small changes
-                </Box>{' '}
-                to the way you go, shop, eat and store food can make a{' '}
-                <Box as="span" color="primary2" fontStyle="italic">
-                  big difference
-                </Box>{' '}
-                to the planet.
-              </Trans>
-            </TextWrapper>
-            <Box mt={24} sx={{ width: '100%', maxWidth: 500, display: ['none', 'none', 'none', 'none', 'block'] }}>
-              <JoinCommunity placeholderKey="registerYourEmail" />
-            </Box>
-          </Box>
+          <Flex sx={{ width: '100%', flexDirection: 'column', alignItems: 'center' }}>
+            <FadeInSection direction="x2">
+              <Box sx={{ maxWidth: '520px', order: [2, 2, 2, 2, 1] }}>
+                <TextWrapper
+                  as="h2"
+                  sx={{
+                    fontWeight: 700,
+                    textAlign: ['center', 'center', 'center', 'center', 'left'],
+                    fontSize: ['24px', '24px', '24px', '40px'],
+                    lineHeight: ['32px', '32px', '32px', '48px'],
+                  }}
+                >
+                  <Trans>
+                    Making a{' '}
+                    <Box as="span" color="primary2" fontStyle="italic">
+                      small change
+                    </Box>{' '}
+                    to the way you go, shop, eat and store food can make a{' '}
+                    <Box as="span" color="primary2" fontStyle="italic">
+                      big difference
+                    </Box>{' '}
+                    to the planet.
+                  </Trans>
+                </TextWrapper>
+                <Box mt={24} sx={{ width: '100%', maxWidth: 500, display: ['none', 'none', 'none', 'none', 'block'] }}>
+                  <JoinCommunity placeholderKey="registerYourEmail" />
+                </Box>
+              </Box>
+            </FadeInSection>
+          </Flex>
 
-          <Box sx={{ width: [201, 201, 201, 201, 370], order: [1, 1, 1, 1, 2] }}>
-            <GoalImage4 />
-          </Box>
+          <Flex sx={{ width: '100%', flexDirection: 'column', alignItems: 'center', overflow: 'hidden' }}>
+            <FadeInSection direction="x1">
+              <Box sx={{ width: [201, 201, 201, 201, 370], order: [1, 1, 1, 1, 2] }}>
+                <GoalImage4 />
+              </Box>
+            </FadeInSection>
+          </Flex>
         </Flex>
 
         <Box

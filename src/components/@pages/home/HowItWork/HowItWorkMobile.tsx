@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { RefObject, useEffect, useRef, useState } from 'react'
 import Slider, { Settings } from 'react-slick'
 
-import phoneBorder from 'assets/images/phone_border.png'
+import phoneBorder from 'assets/images/phone-border.png'
 import { useResponsive } from 'hooks/helpers/useResponsive'
 import { HorizontalCarouselWrapper } from 'theme/Carousel/Wrapper'
 import { Box, Flex, TextWrapper, Type } from 'theme/base'
@@ -19,8 +19,6 @@ export default function HowItWorkMobile() {
     setMounted(true)
   }, [])
 
-  // const [currentSlide, setCurrentSlide] = useState(0)
-  // const currentContent = configs[currentSlide]
   const [ref, setRef] = useState<any>([undefined, undefined])
   const sliderRef = useRef<Slider>(null)
   const mobileNavSliderRef = useRef<Slider>(null)
@@ -51,14 +49,14 @@ export default function HowItWorkMobile() {
     return (
       <>
         <Type.H3 as="h2" mb={64} color="neutral2" sx={{ textAlign: 'center', maxWidth: [300, '100%'] }}>
-          <Trans>How BonBon works?</Trans>{' '}
+          <Trans>How Bonbon works?</Trans>{' '}
         </Type.H3>
       </>
     )
 
   return (
     <>
-      <Flex sx={{ justifyContent: 'center', height: 60, position: 'relative', zIndex: 2 }}>
+      <Flex sx={{ justifyContent: 'center', height: 60, position: 'relative', zIndex: 2, px: 3 }}>
         <HowItWorkTitle />
       </Flex>
       <Box
@@ -84,7 +82,7 @@ export default function HowItWorkMobile() {
           }}
           ref={domRef}
         >
-          <Box mx="auto" width="max-content">
+          <Box mx="auto" width="max-content" sx={{ position: 'relative', zIndex: 1 }}>
             <PhoneSlider
               swipe={md}
               asNavFor={ref[1]}
@@ -101,18 +99,15 @@ export default function HowItWorkMobile() {
               top: 460,
               display: 'flex',
               justifyContent: 'center',
+              zIndex: 2,
             }}
           >
             <Box sx={{ width: '100%', maxWidth: 400 }}>
-              <ContentSlider
-                asNavFor={ref[0]}
-                // afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
-                sliderRef={mobileNavSliderRef}
-              />
+              <ContentSlider asNavFor={ref[0]} sliderRef={mobileNavSliderRef} />
             </Box>
           </Box>
           {/* Correct the height by absolute position */}
-          <Box height={150} />
+          <Box height={220} />
         </Box>
       </Box>
     </>
@@ -122,12 +117,14 @@ export default function HowItWorkMobile() {
 function PhoneSlider({ sliderRef, ...sliderProps }: Settings & { sliderRef: RefObject<Slider> }) {
   return (
     <Box sx={{ position: 'relative' }}>
-      <Box sx={{ position: 'absolute', left: '-15px', top: '-15px', width: 330, height: 675, zIndex: 0 }}>
+      <Box sx={{ position: 'absolute', left: '-15px', top: '-15px', width: 330, aspectRatio: '664/1323', zIndex: 2 }}>
         <Image src={phoneBorder} fill alt="phone" style={{ objectFit: 'contain' }} />
       </Box>
 
       <Box
         sx={{
+          position: 'relative',
+          zIndex: 1,
           borderRadius: '40px',
           width: 300,
           height: 645,
@@ -162,6 +159,10 @@ function ContentSlider({ sliderRef, ...sliderProps }: Settings & { sliderRef: Re
   return (
     <HorizontalCarouselWrapper
       sx={{
+        borderRadius: '16px',
+        bg: 'white',
+        height: 410,
+        overflow: 'hidden',
         '.slick-dots': {
           bottom: 'auto',
           top: 1,
@@ -186,7 +187,7 @@ function ContentSlider({ sliderRef, ...sliderProps }: Settings & { sliderRef: Re
         ref={sliderRef}
       >
         {configs.map((config, index) => (
-          <Box key={index} sx={{ height: 330 }}>
+          <Box key={index} sx={{ height: 410 }}>
             <ContentSliderItem key={index} {...config} details={config.details} sx={{ boxShadow: 'none', pt: 40 }} />
           </Box>
         ))}
@@ -197,12 +198,12 @@ function ContentSlider({ sliderRef, ...sliderProps }: Settings & { sliderRef: Re
 function ContentSliderItem({ details, sx }: { details: Config['details']; sx?: any }) {
   return (
     <Box
-      variant="card"
+      // variant="card"
       sx={{
         p: 3,
         width: '100%',
         height: '100%',
-        borderRadius: '16px',
+        // borderRadius: '16px',
         textAlign: ['center', 'center', 'left'],
         display: 'flex',
         flexDirection: 'column',
@@ -210,14 +211,7 @@ function ContentSliderItem({ details, sx }: { details: Config['details']; sx?: a
         '.main_text': { color: 'primary2' },
       }}
     >
-      {/* <Type.Body
-        mb={[2, 2, 12]}
-        color="primary2"
-        sx={{ fontWeight: '500', fontSize: ['14px', '14px', '16px'], lineHeight: ['24px', '24px', '16px'] }}
-      >
-        {details.step}
-      </Type.Body> */}
-      <TextWrapper mb={[2, 2, 12]} sx={{ fontWeight: 900, fontSize: '28px', lineHeight: '32px' }}>
+      <TextWrapper mt={2} mb={[2, 2, 12]} sx={{ fontWeight: 900, fontSize: '28px', lineHeight: '32px' }}>
         {details.title}
       </TextWrapper>
       <TextWrapper mb={3} color="neutral3" display="block" sx={{ flex: '1', fontSize: '18px', lineHeight: '28px' }}>

@@ -1,6 +1,7 @@
 import { Trans } from '@lingui/macro'
 
 import bgImage from 'assets/images/contact-image.png'
+import FadeInSection from 'components/@ui/FadeInSection'
 import JoinCommunity from 'components/JoinCommunity'
 import { Box, TextWrapper, Type } from 'theme/base'
 
@@ -18,30 +19,29 @@ export default function ContactSection() {
           filter: 'grayscale(100%) opacity(10%)',
         }}
       />
-      <Box sx={{ maxWidth: 1200, mx: 'auto', position: 'relative' }}>
-        <TextWrapper
-          mb={3}
-          sx={{
-            display: 'block',
-            textAlign: 'center',
-            fontSize: ['32px', '32px', '32px', '32px', '40px'],
-            lineHeight: ['40px', '40px', '40px', '40px', '48px'],
-            fontWeight: 900,
-          }}
-        >
-          <Trans>Get involved and make a difference!</Trans>
-        </TextWrapper>
-        <Type.Body mb={40} color="neutral4" sx={{ display: 'block', textAlign: 'center' }}>
-          <Trans>Subscribe for early access opportunities</Trans>
-        </Type.Body>
-        <Box sx={{ maxWidth: 550, mx: 'auto' }}>
-          <Box display={{ _: 'block', md: 'none' }}>
-            <JoinCommunity placeholderKey="emailAddress" buttonText={<Trans>Send</Trans>} />
-          </Box>
-          <Box display={{ _: 'none', md: 'block' }}>
+      <Box sx={{ width: '100%', maxWidth: 1200, mx: 'auto', position: 'relative', overflow: 'hidden' }}>
+        <FadeInSection direction="x2">
+          <TextWrapper
+            mb={3}
+            sx={{
+              display: 'block',
+              textAlign: 'center',
+              fontSize: ['32px', '32px', '32px', '32px', '40px'],
+              lineHeight: ['40px', '40px', '40px', '40px', '48px'],
+              fontWeight: 900,
+            }}
+          >
+            <Trans>Get involved and make a difference!</Trans>
+          </TextWrapper>
+          <Type.Body mb={40} color="neutral4" sx={{ display: 'block', textAlign: 'center' }}>
+            <Trans>Subscribe for early access opportunities</Trans>
+          </Type.Body>
+        </FadeInSection>
+        <FadeInSection direction="x1">
+          <Box sx={{ maxWidth: 550, mx: 'auto' }}>
             <JoinCommunity placeholderKey="registerYourEmail" />
           </Box>
-        </Box>
+        </FadeInSection>
       </Box>
     </Box>
   )

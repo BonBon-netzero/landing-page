@@ -18,7 +18,7 @@ const FadeInSectionWrapper = styled(Box)<{
       ? 'translateX(-10vw)'
       : 'translateY(10vh)'};
   visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
-  transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+  transition: opacity 600ms ease-out, transform 300ms ease-out, visibility 600ms ease-out;
   ${({ delay }) => delay != null && `transition-delay: ${delay}ms;`}
   will-change: opacity, transform, visibility;
 `
