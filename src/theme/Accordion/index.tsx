@@ -1,4 +1,4 @@
-import { CaretDown } from '@phosphor-icons/react'
+import { CaretDown, Icon } from '@phosphor-icons/react'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 
 import { Box, Flex, IconBox } from 'theme/base'
@@ -10,6 +10,8 @@ export default function Accordion({
   wrapperSx,
   disableInternal = false,
   isExpanded = false,
+  icon: Icon = CaretDown,
+  closeIcon: CloseIcon,
   onClick,
 }: {
   header: ReactNode
@@ -18,6 +20,8 @@ export default function Accordion({
   defaultOpen?: boolean
   disableInternal?: boolean
   isExpanded?: boolean
+  icon?: Icon
+  closeIcon?: Icon
   onClick?: () => void
 }) {
   const [isExpand, setIsExpand] = useState(false)
@@ -39,11 +43,16 @@ export default function Accordion({
         }}
         sx={{
           cursor: 'pointer',
+          bg: isExpand ? 'neutral7' : 'transparent',
         }}
       >
-        <Flex sx={{ alignItems: 'center', gap: 3, justifyContent: 'space-between' }}>
+        <Flex sx={{ alignItems: 'center', gap: 2, justifyContent: 'space-between' }}>
           <Box>{header}</Box>
-          <IconBox icon={<CaretDown size={20} />} sx={isExpand ? { transform: 'rotate(180deg)' } : {}} />
+          {CloseIcon ? (
+            <IconBox icon={isExpand ? <CloseIcon size={20} /> : <Icon size={20} />} mr={24} />
+          ) : (
+            <IconBox icon={<Icon size={20} />} sx={isExpand ? { transform: 'rotate(180deg)' } : {}} mr={24} />
+          )}
         </Flex>
       </Box>
       <Box

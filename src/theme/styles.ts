@@ -3,30 +3,6 @@ import { createGlobalStyle } from 'styled-components/macro'
 import { FONT_FAMILY } from 'utils/config/constants'
 
 const ThemedGlobalStyle = createGlobalStyle`
-  // @font-face {
-  //   font-family: 'AeonikPro';
-  //   src: url('/fonts/AeonikPro-Bolder.otf');
-  //   fontWeight: bolder;
-  //   fontStyle: normal;
-  // }
-  // @font-face {
-  //   font-family: 'AeonikPro';
-  //   src: url('/fonts/AeonikPro-Bold.otf');
-  //   fontWeight: bold;
-  //   fontStyle: normal;
-  // }
-  // @font-face {
-  //   font-family: 'AeonikPro';
-  //   src: url('/fonts/AeonikPro-Medium.otf');
-  //   fontWeight: medium;
-  //   fontStyle: normal;
-  // }
-  // @font-face {
-  //   font-family: 'AeonikPro';
-  //   src: url('/fonts/AeonikPro-Regular.otf');
-  //   fontWeight: normal;
-  //   fontStyle: normal;
-  // }
   html, body, #__next {
     height: 100%;
   }
@@ -39,7 +15,7 @@ const ThemedGlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    scroll-behavior: default;
+    scroll-behavior: smooth;
     scroll-padding-top: 72px;
   }
   /* prettier-ignore */

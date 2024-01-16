@@ -49,6 +49,7 @@ export type Colors = {
   cardBG: Color
   stroke: Color
   stroke1: Color
+  green1: Color
 }
 
 export type VariantProps = {

@@ -1,9 +1,11 @@
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next'
 
 import Head from 'components/@pages/Head'
+import ContactSection from 'components/@pages/home/ContactSection'
 import Goals from 'components/@pages/home/Goals'
 import HeroSection from 'components/@pages/home/HeroSection'
-import HowItWorkAndPartners from 'components/@pages/home/HowItWorkAndPartners'
+import HowItWork from 'components/@pages/home/HowItWork'
+import QuestionAndAnswers from 'components/@pages/home/QuestionAndAnswers'
 import { Box } from 'theme/base'
 import { loadCatalog } from 'translations/utils'
 
@@ -20,9 +22,12 @@ export default function Home() {
     <>
       <Head />
       <HeroSection />
-      <Goals />
-      <Box sx={{ height: '16px', boxShadow: '0px 3px 5px 0px rgba(0, 0, 0, 0.04)' }} />
-      <HowItWorkAndPartners />
+      <Box>
+        <Goals />
+        <HowItWork />
+        <QuestionAndAnswers />
+        <ContactSection />
+      </Box>
     </>
   )
 }

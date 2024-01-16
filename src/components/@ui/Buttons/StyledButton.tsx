@@ -37,7 +37,7 @@ export default function StyledButton({
           justifyContent: 'center',
           position: 'relative',
           px: 24,
-          py: '15px',
+          // py: '15px',
           borderRadius: '16px',
           border: 'small',
           borderColor: 'neutral1',

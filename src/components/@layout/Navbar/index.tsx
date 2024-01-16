@@ -1,4 +1,3 @@
-import { Trans } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import debounce from 'lodash/debounce'
 import Image from 'next/image'
@@ -9,10 +8,11 @@ import styled from 'styled-components/macro'
 import flagEn from 'assets/ldp/flag_en.svg'
 import flagVn from 'assets/ldp/flag_vn.svg'
 import { LogoWithText } from 'components/@ui/Logo'
+import SocialLinks from 'components/@ui/SocialLinks'
+import JoinCommunity from 'components/JoinCommunity'
 import Dropdown, { DropdownItem } from 'theme/Dropdown'
-import { Box, Flex, Type } from 'theme/base'
+import { Box, Flex } from 'theme/base'
 import { MEDIA_WIDTHS } from 'theme/theme'
-import { LINKS } from 'utils/config/constants'
 import zIndex from 'utils/config/zIndex'
 
 export default function Navbar() {
@@ -43,14 +43,6 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const handleShow = () => {
-      if (!window || !document) return
-      const navbar = document.getElementById('navbar') as HTMLDivElement
-      if (!navbar) return
-      navbar.style.opacity = '1'
-    }
-    setTimeout(() => handleShow(), 2000)
-    handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -85,12 +77,16 @@ export default function Navbar() {
 
       <NavbarWrapper display={{ _: 'flex', md: 'flex' }}>
         <LogoWithText size={[32, 44]} />
-        <Flex sx={{ alignItems: 'center', gap: 36 }}>
-          <a href={LINKS.docs} rel="noreferrer" target="_blank">
+        <Flex sx={{ alignItems: 'center', gap: 3 }}>
+          {/* <a href={LINKS.docs} rel="noreferrer" target="_blank">
             <Type.Body color={'neutral1'}>
               <Trans>Document</Trans>
             </Type.Body>
-          </a>
+          </a> */}
+          <Box display={{ _: 'none', md: 'flex' }} sx={{ alignItems: 'center', gap: 24 }}>
+            <SocialLinks isLight />
+            <JoinCommunity placeholderKey="registerYourEmail" onlyButton />
+          </Box>
 
           <Dropdown
             menuSx={{

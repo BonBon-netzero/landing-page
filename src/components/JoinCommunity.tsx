@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-imports
 import { Trans, t } from '@lingui/macro'
 import { useRouter } from 'next/router'
-import { useEffect, useMemo, useState } from 'react'
+import { ReactNode, useEffect, useMemo, useState } from 'react'
 import { useMutation } from 'react-query'
 
 import { submitWaitListApi } from 'apis/ldp'
@@ -16,7 +16,15 @@ import { EMAIL_REGEX } from 'utils/config/constants'
 import StyledButton from './@ui/Buttons/StyledButton'
 import Divider from './@ui/Divider'
 
-export default function JoinCommunity() {
+export default function JoinCommunity({
+  placeholderKey,
+  onlyButton = false,
+  buttonText = <Trans>Join Waitlist</Trans>,
+}: {
+  placeholderKey: PlaceholderKey
+  onlyButton?: boolean
+  buttonText?: ReactNode
+}) {
   const router = useRouter()
   const [showModal, setShowModal] = useState(false)
   const [_, setState] = useState(0)
@@ -26,45 +34,57 @@ export default function JoinCommunity() {
   const [email, setEmail] = useState('')
 
   const handleOnChange = (e: any) => setEmail(e.target.value.trim())
+
+  const placeholderMapping = getPlaceholderMapping()
+
   return (
-    <Flex
-      variant="card"
-      sx={{
-        width: '100%',
-        alignItems: 'center',
-        gap: [2, 3],
-        justifyContent: 'space-between',
-        p: 2,
-        pl: [16, 24],
-        borderRadius: '24px',
-      }}
-    >
-      <Box
-        flex={1}
-        sx={{
-          width: '100%',
-          minWidth: '120px',
-          maxWidth: '363px',
-        }}
-      >
-        <Input
-          placeholder={t`Enter your email`}
-          onChange={handleOnChange}
-          value={email}
-          block
+    <>
+      {onlyButton ? (
+        <StyledButton sx={{ px: [2, 24] }} onClick={() => setShowModal(true)}>
+          {buttonText}
+        </StyledButton>
+      ) : (
+        <Flex
+          // variant="card"
           sx={{
-            p: 2,
-            borderRadius: '8px',
-            bg: 'transparent',
-            '& input': { lineHeight: '1em !important', bg: 'transparent' },
+            width: '100%',
+            alignItems: 'center',
+            gap: 2,
+            justifyContent: 'space-between',
+            // borderRadius: '24px',
           }}
-        />
-      </Box>
-      <StyledButton sx={{ px: [2, 24] }} onClick={() => setShowModal(true)}>
-        <Trans>Join Waitlist</Trans>
-      </StyledButton>
+        >
+          <Box
+            flex={1}
+            sx={{
+              width: '100%',
+              minWidth: '120px',
+              maxWidth: '363px',
+            }}
+          >
+            <Input
+              placeholder={placeholderMapping[placeholderKey]}
+              onChange={handleOnChange}
+              value={email}
+              block
+              sx={{
+                height: 56,
+                bg: 'white',
+                border: 'small',
+                borderColor: 'stroke',
+                borderRadius: '14px',
+                p: 2,
+                '& input': { lineHeight: '1em !important', bg: 'transparent' },
+              }}
+            />
+          </Box>
+          <StyledButton sx={{ px: [2, 24] }} onClick={() => setShowModal(true)}>
+            {buttonText}
+          </StyledButton>
+        </Flex>
+      )}
       {showModal && <ModalConfirm isOpen={showModal} onDismiss={() => setShowModal(false)} email={email} />}
-    </Flex>
+    </>
   )
 }
 
@@ -141,7 +161,7 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
             label="Email"
             placeholder={t`Enter your email`}
             value={_email}
-            onChange={(e) => setEmail(e.target.value.trim())}
+            onChange={(e: any) => setEmail(e.target.value.trim())}
             sx={{ mb: 3 }}
             block
             disabled={isLoading}
@@ -166,4 +186,13 @@ const ModalConfirm = ({ isOpen, onDismiss, email }: { isOpen: boolean; onDismiss
       </Box>
     </Modal>
   )
+}
+
+type PlaceholderKey = keyof ReturnType<typeof getPlaceholderMapping>
+
+function getPlaceholderMapping() {
+  return {
+    registerYourEmail: t`Register your email`,
+    emailAddress: t`Email address`,
+  }
 }

@@ -36,14 +36,10 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
-          {/* <link rel="preload" href="/fonts/AeonikPro-Bold.otf" as="font" type="font/otf" crossOrigin="" />
-          <link rel="preload" href="/fonts/AeonikPro-Medium.otf" as="font" type="font/otf" crossOrigin="" />
-          <link rel="preload" href="/fonts/AeonikPro-Regular.otf" as="font" type="font/otf" crossOrigin="" />
-          <link rel="preload" href="/fonts/AeonikPro-Bolder.otf" as="font" type="font/otf" crossOrigin="" /> */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap"
             rel="stylesheet"
           />
         </Head>

@@ -3,11 +3,11 @@ import NextHead from 'next/head'
 import { WEBSITE_URL } from 'utils/config/constants'
 
 const SITE = 'https://bonbon.eco'
-const AUTHOR = 'BonBon Net-Zero'
+const AUTHOR = 'Bonbon Net-Zero'
 const THUMBNAIL_ALT = 'thumbnail_alt'
 
 export default function Head({
-  title = 'BonBon',
+  title = 'Bonbon',
   description = 'The social network for neutral-carbon lifestyle',
   thumbnail = `${WEBSITE_URL}/cover.png`,
   path = '',
