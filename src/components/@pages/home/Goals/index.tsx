@@ -61,10 +61,10 @@ export default function Goals() {
           </Box>
         </FadeInSection>
 
-        <Divider display={{ _: 'block', xl: 'none' }} mb={70} />
+        <Divider display={{ _: 'block', xl: 'none' }} />
 
         <Flex
-          mt={[0, 0, 0, 0, 70]}
+          pt={70}
           sx={{
             width: '100%',
             flexDirection: ['column', 'column', 'column', 'column', 'row'],
